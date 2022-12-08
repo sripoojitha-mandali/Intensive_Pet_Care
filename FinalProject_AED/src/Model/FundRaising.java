@@ -8,6 +8,6 @@ package Model;
  *
  * @author saran
  */
-public class HealthCamp {
+public class FundRaising {
     
 }
