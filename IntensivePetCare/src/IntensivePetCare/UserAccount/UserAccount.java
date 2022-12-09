@@ -16,8 +16,8 @@ public class UserAccount {
     private String ipcname;
     private String ipcuserName;
     private String ipcpassword;
-    private Person ipcperson;
-    private Role ipcrole;
+    private Person person;
+    private Role role;
 //    private WorkQueue workQueue;
 
     public String getIpcname() {
@@ -44,21 +44,23 @@ public class UserAccount {
         this.ipcpassword = ipcpassword;
     }
 
-    public Person getIpcperson() {
-        return ipcperson;
+    public Person getPerson() {
+        return person;
     }
 
-    public void setIpcperson(Person ipcperson) {
-        this.ipcperson = ipcperson;
+    public void setPerson(Person person) {
+        this.person = person;
     }
 
-    public Role getIpcrole() {
-        return ipcrole;
+    public Role getRole() {
+        return role;
     }
 
-    public void setIpcrole(Role ipcrole) {
-        this.ipcrole = ipcrole;
+    public void setRole(Role role) {
+        this.role = role;
     }
+
+    
 
     @Override
     public String toString() {
