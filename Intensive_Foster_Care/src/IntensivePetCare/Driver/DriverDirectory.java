@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package IntensiveFosterCare.Driver;
+package IntensivePetCare.Driver;
 
 import java.util.ArrayList;
 
@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author poojitha
  */
 public class DriverDirectory {
-        private ArrayList<Driver> driverDirectory;
+    private ArrayList<Driver> driverDirectory;
     private Driver driver;
 
     public DriverDirectory() {
@@ -40,34 +40,35 @@ public class DriverDirectory {
         return driver;
     }
 
-    public void updateDriverInfo(Driver driver, String name, String gender, String fosterParent, String healthCamp, String hospitalName) {
-        driver.setName(name);
-        driver.setGender(gender);
-        driver.setFosterParent(fosterParent);
-        driver.setHealthCamp(healthCamp);
-        driver.setHospitalName(hospitalName);
+    
+    public void updateDriverInfo(Driver driver, String ipcname, String ipcpetOwner, String ipcpetType, String ipchealthCamp, String ipchospitalName) {
+        driver.setIpcname(ipcname);
+        driver.setIpcpetType(ipcpetOwner);
+        driver.setIpcpetOwner(ipcpetType);
+        driver.setIpchealthCamp(ipchealthCamp);
+        driver.setIpchospitalName(ipchospitalName);
     }
     
-    public void updateDriverPersonalInfo(Driver driver, String name, String username) {
-        driver.setName(name);
-        driver.setUsername(username);
+    public void updateDriverPersonalInfo(Driver driver, String ipcname, String ipcuserName) {
+        driver.setIpcname(ipcname);
+        driver.setIpcuserName(ipcuserName);
     }
     
-    public void updateDriverHealthCampInfo(Driver driver, String fosterParent, String gender, String healthCamp, String hospitalName){
-        driver.setGender(gender);
-        driver.setFosterParent(fosterParent);
-        driver.setHealthCamp(healthCamp);
-        driver.setHospitalName(hospitalName);
-//        driver.setHospitalName(hospitalName);
+    public void updateDriverHealthCampInfo(Driver driver, String ipcpetOwner, String ipcpetType, String ipchealthCamp, String ipchospitalName){
+        driver.setIpcpetType(ipcpetOwner);
+        driver.setIpcpetOwner(ipcpetType);
+        driver.setIpchealthCamp(ipchealthCamp);
+        driver.setIpchospitalName(ipchospitalName);
+
     }
     
     public void updateDropOffStatus(Driver driver, String status) {
-        driver.setDropOffStatus(status);
+        driver.setIpcdropOffStatus(status);
     }
 
     public void deleteDriver(String username) {
         for (int i = 0; i < driverDirectory.size(); i++) {
-            if (driverDirectory.get(i).getUsername() == username) {
+            if (driverDirectory.get(i).getIpcuserName() == username) {
                 driverDirectory.remove(i);
             }
         }
