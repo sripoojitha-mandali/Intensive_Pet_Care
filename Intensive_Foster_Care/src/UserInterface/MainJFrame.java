@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package Intensive_Foster_Care;
+package UserInterface;
 
 /**
  *
  * @author saran
  */
-public class Intensive_Foster_Care {
+public class MainJFrame {
 
     /**
      * @param args the command line arguments
