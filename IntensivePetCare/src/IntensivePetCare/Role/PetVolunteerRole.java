@@ -12,8 +12,8 @@ import UserInterface.PetVolunteer.PetVolunteer;
  *
  * @author saran
  */
-public class PetVolunteerRole {
-    //@Override
+public class PetVolunteerRole extends Role{
+    @Override
     public JPanel createWorkArea(JPanel ipcuserProcessContainer, UserAccount ipcaccount, Ecosystem ipcsystem) {
           return new PetVolunteer(ipcuserProcessContainer, ipcaccount, ipcsystem);
     }
