@@ -255,7 +255,7 @@ public class HospitalAdminWorkArea extends javax.swing.JPanel {
 
     private void lblManageLabAssistantMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblManageLabAssistantMousePressed
         // TODO add your handling code here:
-        ManageLabAssistant manageLabAssistantJPanel = new ManageLabAssistant(ipcuserProcessContainer,account, ipcsystem);
+        ManageLabAssistant manageLabAssistantJPanel = new ManageLabAssistant(ipcuserProcessContainer,ipcaccount, ipcsystem);
         ipcuserProcessContainer.add("ManageLabAssistant", manageLabAssistantJPanel);
         CardLayout layout = (CardLayout) ipcuserProcessContainer.getLayout();
         layout.next(ipcuserProcessContainer);
@@ -263,7 +263,7 @@ public class HospitalAdminWorkArea extends javax.swing.JPanel {
 
     private void lblmanagehospitalinfoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblmanagehospitalinfoMousePressed
         // TODO add your handling code here:
-        ManageHospitalInfo manageHospitalInfoJPanel = new ManageHospitalInfo(ipcuserProcessContainer,account, ipcsystem);
+        ManageHospitalInfo manageHospitalInfoJPanel = new ManageHospitalInfo(ipcuserProcessContainer,ipcaccount, ipcsystem);
         ipcuserProcessContainer.add("ManageHospitalInfo", manageHospitalInfoJPanel);
         CardLayout layout = (CardLayout) ipcuserProcessContainer.getLayout();
         layout.next(ipcuserProcessContainer);
@@ -272,7 +272,7 @@ public class HospitalAdminWorkArea extends javax.swing.JPanel {
     private void lblmanagepetMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblmanagepetMousePressed
         // TODO add your handling code here:
 
-        ManagePetInfo managePetInfoJPanel = new ManagePetInfo(ipcuserProcessContainer,account, ipcsystem);
+        ManagePetInfo managePetInfoJPanel = new ManagePetInfo(ipcuserProcessContainer,ipcaccount, ipcsystem);
         ipcuserProcessContainer.add("ManagePetInfo", managePetInfoJPanel);
         CardLayout layout = (CardLayout) ipcuserProcessContainer.getLayout();
         layout.next(ipcuserProcessContainer);
@@ -280,7 +280,7 @@ public class HospitalAdminWorkArea extends javax.swing.JPanel {
 
     private void lblManageVetMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblManageVetMousePressed
         // TODO add your handling code here:
-        ManageVet manageVetJPanel = new ManageVet(ipcuserProcessContainer, account, ipcsystem);
+        ManageVet manageVetJPanel = new ManageVet(ipcuserProcessContainer, ipcaccount, ipcsystem);
         ipcuserProcessContainer.add("ManageVet", manageVetJPanel);
         CardLayout layout = (CardLayout) ipcuserProcessContainer.getLayout();
         layout.next(ipcuserProcessContainer);
@@ -288,7 +288,7 @@ public class HospitalAdminWorkArea extends javax.swing.JPanel {
 
     private void lblAddSponsorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAddSponsorMousePressed
         // TODO add your handling code here:
-        ManageSponsor manageSponsorJPanel = new ManageSponsor(ipcuserProcessContainer,account, ipcsystem);
+        ManageSponsor manageSponsorJPanel = new ManageSponsor(ipcuserProcessContainer,ipcaccount, ipcsystem);
         ipcuserProcessContainer.add("ManageSponsorInfo", manageSponsorJPanel);
         CardLayout layout = (CardLayout) ipcuserProcessContainer.getLayout();
         layout.next(ipcuserProcessContainer );
