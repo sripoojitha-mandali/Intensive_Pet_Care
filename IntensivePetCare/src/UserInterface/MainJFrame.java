@@ -5,7 +5,7 @@
  */
 
 package UserInterface;
-//import IntensivePetCare.DB4oUtil.DB4OUtil;
+import IntensivePetCare.DB4oUtil.DB4OUtil;
 import IntensivePetCare.Ecosystem;
 import IntensivePetCare.UserAccount.UserAccount;
 import java.awt.CardLayout;
@@ -18,11 +18,11 @@ public class MainJFrame extends javax.swing.JFrame {
 
     /** Creates new form MainJFrame */
     private Ecosystem ipcsystem;
-    //private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
+    private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
 
     public MainJFrame() {
         initComponents();
-        //ipcsystem = dB4OUtil.retrieveSystem();
+        ipcsystem = dB4OUtil.retrieveSystem();
         this.setSize(1680, 1050);
     }
 
@@ -133,7 +133,7 @@ public class MainJFrame extends javax.swing.JFrame {
         container.add("blank", blankJP);
         CardLayout ipccrdLyt = (CardLayout) container.getLayout();
         ipccrdLyt.next(container);
-        //dB4OUtil.storeSystem(ipcsystem);
+        dB4OUtil.storeSystem(ipcsystem);
         container.setVisible(true);
     }//GEN-LAST:event_btnlogoutActionPerformed
 

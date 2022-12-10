@@ -4,7 +4,7 @@
  */
 package UserInterface.HospitalAdmin;
 import IntensivePetCare.Ecosystem;
-import IntensivePetCare.Role.VetRole;
+import IntensivePetCare.Role.vetRole;
 import IntensivePetCare.UserAccount.UserAccount;
 import IntensivePetCare.Vet.Vet;
 import java.awt.CardLayout;
@@ -288,7 +288,7 @@ public class ManageVet extends javax.swing.JPanel {
     private void btnaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddActionPerformed
         // TODO add your handling code here:
         if (ipcsystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtusername.getText())) {
-            UserAccount userAccount = ipcsystem.getUserAccountDirectory().createUserAccount(txtname.getText(), txtusername.getText(), txtpass.getText(), null, new VetRole());
+            UserAccount userAccount = ipcsystem.getUserAccountDirectory().createUserAccount(txtname.getText(), txtusername.getText(), txtpass.getText(), null, new vetRole());
             Vet vet = ipcsystem.getVetDirectory().createUserAccount(txtusername.getText(), ipcaccount.getIpcname());
             ipcpopulateVetTable();
             txtname.setText("");
@@ -308,7 +308,7 @@ public void ipcpopulateVetTable() {
         tablemodel.setRowCount(0);
         for (UserAccount user : ipcsystem.getUserAccountDirectory().getUserAccountList()) {
 
-            if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.VetRole")) {
+            if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.vetRole")) {
                 Object[] row = new Object[3];
                 row[0] = user.getIpcname();
                 row[1] = user.getIpcuserName();
