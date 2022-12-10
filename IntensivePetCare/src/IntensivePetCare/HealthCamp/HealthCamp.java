@@ -73,7 +73,7 @@ public class HealthCamp {
     
     public void addPetVolunteer(String petVolName) {
         PetVolunteer petVolunteer = new PetVolunteer(petVolName);
-        petVolunteer.setIpchealthCampName(ipchealthCampName);
+        petVolunteer.setIpchealthCamp(ipchealthCampName);
     }
     
      @Override
