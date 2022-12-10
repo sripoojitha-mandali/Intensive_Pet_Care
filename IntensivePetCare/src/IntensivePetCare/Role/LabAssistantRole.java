@@ -3,8 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package IntensivePetCare.Role;
-import IntensiveFostorCare.Ecosystem;
-import IntensiveFostorCare.UserAccount.UserAccount;
+import IntensivePetCare.Ecosystem;
+import IntensivePetCare.UserAccount.UserAccount;
 import UserInterface.HospiitalAdmin.ManageLabAssistant;
 import UserInterface.Hospital.LabAssistantWorkArea;
 import javax.swing.JPanel;
