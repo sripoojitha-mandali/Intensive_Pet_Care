@@ -5,7 +5,7 @@
 package IntensivePetCare.Role;
 import IntensivePetCare.Ecosystem;
 import IntensivePetCare.UserAccount.UserAccount;
-import UserInterface.HospiitalAdmin.ManageLabAssistant;
+import UserInterface.HospitalAdmin.ManageLabAssistant;
 import UserInterface.Hospital.LabAssistantWorkArea;
 import javax.swing.JPanel;
 
