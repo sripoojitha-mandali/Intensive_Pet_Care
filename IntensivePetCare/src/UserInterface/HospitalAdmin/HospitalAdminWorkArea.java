@@ -255,43 +255,43 @@ public class HospitalAdminWorkArea extends javax.swing.JPanel {
 
     private void lblManageLabAssistantMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblManageLabAssistantMousePressed
         // TODO add your handling code here:
-        ManageLabAssistant manageLabAssistantJPanel = new ManageLabAssistant(userProcessContainer,account, system);
-        userProcessContainer.add("ManageLabAssistant", manageLabAssistantJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        ManageLabAssistant manageLabAssistantJPanel = new ManageLabAssistant(ipcuserProcessContainer,account, system);
+        ipcuserProcessContainer.add("ManageLabAssistant", manageLabAssistantJPanel);
+        CardLayout layout = (CardLayout) ipcuserProcessContainer.getLayout();
+        layout.next(ipcuserProcessContainer);
     }//GEN-LAST:event_lblManageLabAssistantMousePressed
 
     private void lblmanagehospitalinfoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblmanagehospitalinfoMousePressed
         // TODO add your handling code here:
-        ManageHospitalInfo manageHospitalInfoJPanel = new ManageHospitalInfo(userProcessContainer,account, system);
-        userProcessContainer.add("ManageHospitalInfo", manageHospitalInfoJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        ManageHospitalInfo manageHospitalInfoJPanel = new ManageHospitalInfo(ipcuserProcessContainer,account, system);
+        ipcuserProcessContainer.add("ManageHospitalInfo", manageHospitalInfoJPanel);
+        CardLayout layout = (CardLayout) ipcuserProcessContainer.getLayout();
+        layout.next(ipcuserProcessContainer);
     }//GEN-LAST:event_lblmanagehospitalinfoMousePressed
 
     private void lblmanagepetMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblmanagepetMousePressed
         // TODO add your handling code here:
 
-        ManagePetInfo managePetInfoJPanel = new ManagePetInfo(userProcessContainer,account, system);
-        userProcessContainer.add("ManagePetInfo", managePetInfoJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        ManagePetInfo managePetInfoJPanel = new ManagePetInfo(ipcuserProcessContainer,account, system);
+        ipcuserProcessContainer.add("ManagePetInfo", managePetInfoJPanel);
+        CardLayout layout = (CardLayout) ipcuserProcessContainer.getLayout();
+        layout.next(ipcuserProcessContainer);
     }//GEN-LAST:event_lblmanagepetMousePressed
 
     private void lblManageVetMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblManageVetMousePressed
         // TODO add your handling code here:
         ManageVet manageVetJPanel = new ManageVet(userProcessContainer, account, system);
-        userProcessContainer.add("ManageVet", manageVetJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        ipcuserProcessContainer.add("ManageVet", manageVetJPanel);
+        CardLayout layout = (CardLayout) ipcuserProcessContainer.getLayout();
+        layout.next(ipcuserProcessContainer);
     }//GEN-LAST:event_lblManageVetMousePressed
 
     private void lblAddSponsorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAddSponsorMousePressed
         // TODO add your handling code here:
-        ManageSponsor manageSponsorJPanel = new ManageSponsor(userProcessContainer,account, system);
-        userProcessContainer.add("ManageSponsorInfo", manageSponsorJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        ManageSponsor manageSponsorJPanel = new ManageSponsor(ipcuserProcessContainer,account, system);
+        ipcuserProcessContainer.add("ManageSponsorInfo", manageSponsorJPanel);
+        CardLayout layout = (CardLayout) ipcuserProcessContainer.getLayout();
+        layout.next(ipcuserProcessContainer);
     }//GEN-LAST:event_lblAddSponsorMousePressed
 
 
