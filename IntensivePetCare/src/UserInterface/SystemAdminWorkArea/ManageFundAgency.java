@@ -25,14 +25,14 @@ public class ManageFundAgency extends javax.swing.JPanel {
      * Creates new form ManageFundAgency
      */
     
-    JPanel userProcessContainer;
-    Ecosystem system;
-    private UserAccount account;
-    public ManageFundAgency(JPanel userProcessContainer, Ecosystem system) {
+    JPanel ipcuserProcessContainer;
+    Ecosystem ipcsystem;
+    private UserAccount ipcaccount;
+    public ManageFundAgency(JPanel ipcuserProcessContainer, Ecosystem system) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.system = system;
-        this.account = account;
+        this.ipcuserProcessContainer = ipcuserProcessContainer;
+        this.ipcsystem = ipcsystem;
+        this.ipcaccount = ipcaccount;
         populateFundRaisingTable();
     }
 
@@ -179,9 +179,9 @@ public class ManageFundAgency extends javax.swing.JPanel {
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        ipcuserProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) ipcuserProcessContainer.getLayout();
+        layout.previous(ipcuserProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
@@ -211,8 +211,8 @@ public class ManageFundAgency extends javax.swing.JPanel {
         String name = (String) tblfundagency.getValueAt(selectRow, 0);
         String username = (String) tblfundagency.getValueAt(selectRow, 1);
         String password = (String) tblfundagency.getValueAt(selectRow, 2);
-        account = system.getUserAccountDirectory().authenticateUser(username, password);
-        system.getUserAccountDirectory().updateUserAccount(account, txtname.getText(), txtusername.getText(), txtpass.getText());
+        ipcaccount = ipcsystem.getUserAccountDirectory().authenticateUser(username, password);
+        ipcsystem.getUserAccountDirectory().updateUserAccount(ipcaccount, txtname.getText(), txtusername.getText(), txtpass.getText());
         populateFundRaisingTable();
 
         txtname.setText("");
@@ -235,10 +235,10 @@ public class ManageFundAgency extends javax.swing.JPanel {
             if (selectionResult == JOptionPane.YES_OPTION) {
                 String username = (String) tblfundagency.getValueAt(selectedRow, 1);
                 String pwd = (String) tblfundagency.getValueAt(selectedRow, 2);
-                UserAccount user = system.getUserAccountDirectory().authenticateUser(username, pwd);
+                UserAccount user = ipcsystem.getUserAccountDirectory().authenticateUser(username, pwd);
 
-                system.getUserAccountDirectory().deleteUserAccount(user);
-                system.getFundRaisingDirectory().deleteFundRaiser(user.getIpcuserName());
+                ipcsystem.getUserAccountDirectory().deleteUserAccount(user);
+                ipcsystem.getFundRaisingDirectory().deleteFundRaiser(user.getIpcuserName());
                 populateFundRaisingTable();
             }
         } else {
@@ -248,9 +248,9 @@ public class ManageFundAgency extends javax.swing.JPanel {
 
     private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
         // TODO add your handling code here:
-        if (system.getUserAccountDirectory().checkIfUsernameIsUnique(txtusername.getText())) {
-            UserAccount userAccount = system.getUserAccountDirectory().createUserAccount(txtname.getText(), txtusername.getText(), txtpass.getText(), null, new FundRaisingRole());
-            FundRaising fundRaising = system.getFundRaisingDirectory().createUserAccount(txtusername.getText());
+        if (ipcsystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtusername.getText())) {
+            UserAccount userAccount = ipcsystem.getUserAccountDirectory().createUserAccount(txtname.getText(), txtusername.getText(), txtpass.getText(), null, new FundRaisingRole());
+            FundRaising fundRaising = ipcsystem.getFundRaisingDirectory().createUserAccount(txtusername.getText());
             populateFundRaisingTable();
             txtname.setText("");
             txtusername.setText("");
@@ -265,7 +265,7 @@ public class ManageFundAgency extends javax.swing.JPanel {
          DefaultTableModel tablemodel = (DefaultTableModel) tblfundagency.getModel();
 
         tablemodel.setRowCount(0);
-        for (UserAccount user : system.getUserAccountDirectory().getUserAccountList()) {
+        for (UserAccount user : ipcsystem.getUserAccountDirectory().getUserAccountList()) {
 
             if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.FundRaisingRole")) {
                 Object[] row = new Object[3];
