@@ -3,10 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package IntensivePetCare.Role;
-import IntensiveFostorCare.Ecosystem;
-import IntensiveFostorCare.UserAccount.UserAccount;
-import IntensiveFostorCare.HealthCamp.MainPageOrganiser;
-import IntensiveFostorCare.PetVolunteer.PetVolunteerDirectory;
+import IntensivePetCare.Ecosystem;
+import IntensivePetCare.UserAccount.UserAccount;
+import UserInterface.HealthCamp.MainPageOrganiser;
+import IntensivePetCare.PetVolunteer.PetVolunteerDirectory;
 import javax.swing.JPanel;
 
 /**
