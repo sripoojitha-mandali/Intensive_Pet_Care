@@ -5,8 +5,8 @@
 package IntensivePetCare.Role;
 import IntensivePetCare.Ecosystem;
 import IntensivePetCare.UserAccount.UserAccount;
-import UserInterface.HospiitalAdmin.HospitalAdminWorkArea;
-import UserInterface.HospiitalAdmin.ManageVet;
+import UserInterface.HospitalAdmin.HospitalAdminWorkArea;
+import UserInterface.HospitalAdmin.ManageVet;
 import UserInterface.Hospital.VetWorkarea;
 import javax.swing.JPanel;
 
@@ -14,7 +14,7 @@ import javax.swing.JPanel;
  *
  * @author saran
  */
-public class VetRole extends Role{
+public class vetRole extends Role{
     @Override
     public JPanel createWorkArea(JPanel ipcuserProcessContainer, UserAccount ipcaccount, Ecosystem ipcsystem) {
         return new VetWorkarea(ipcuserProcessContainer, ipcsystem);

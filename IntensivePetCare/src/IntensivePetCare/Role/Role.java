@@ -12,7 +12,7 @@ import IntensivePetCare.UserAccount.UserAccount;
  *
  * @author saran
  */
-public class Role {
+public abstract class Role {
    public enum RoleType {
         SysAdmin("Sysadmin"),
         HospitalAdmin("HospitalAdmin"),

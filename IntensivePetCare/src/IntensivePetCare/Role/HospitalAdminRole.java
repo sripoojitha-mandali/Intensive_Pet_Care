@@ -7,7 +7,7 @@ package IntensivePetCare.Role;
 import javax.swing.JPanel;
 import IntensivePetCare.Ecosystem;
 import IntensivePetCare.UserAccount.UserAccount;
-import UserInterface.HospiitalAdmin.HospitalAdminWorkArea;
+import UserInterface.HospitalAdmin.HospitalAdminWorkArea;
 /**
  *
  * @author saran
