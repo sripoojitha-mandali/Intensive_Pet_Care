@@ -72,9 +72,9 @@ public class ManageSponsor extends javax.swing.JPanel {
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 24, 38, 30));
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(63, 40, 101));
+        jLabel1.setForeground(new java.awt.Color(153, 0, 0));
         jLabel1.setText("MANAGE SPONSORS");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
         tblSponsors.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -97,10 +97,10 @@ public class ManageSponsor extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblSponsors);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 410, 92));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 660, 160));
 
         btnView.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnView.setForeground(new java.awt.Color(63, 40, 101));
+        btnView.setForeground(new java.awt.Color(153, 0, 0));
         btnView.setText("VIEW");
         btnView.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnView.addActionListener(new java.awt.event.ActionListener() {
@@ -108,10 +108,10 @@ public class ManageSponsor extends javax.swing.JPanel {
                 btnViewActionPerformed(evt);
             }
         });
-        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 90, 30));
+        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, 90, 30));
 
         btnUpdate.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnUpdate.setForeground(new java.awt.Color(63, 40, 101));
+        btnUpdate.setForeground(new java.awt.Color(153, 0, 0));
         btnUpdate.setText("UPDATE");
         btnUpdate.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
@@ -119,10 +119,10 @@ public class ManageSponsor extends javax.swing.JPanel {
                 btnUpdateActionPerformed(evt);
             }
         });
-        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 290, 70, 30));
+        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 70, 30));
 
         btnDelete.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnDelete.setForeground(new java.awt.Color(63, 40, 101));
+        btnDelete.setForeground(new java.awt.Color(153, 0, 0));
         btnDelete.setText("DELETE");
         btnDelete.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -130,32 +130,31 @@ public class ManageSponsor extends javax.swing.JPanel {
                 btnDeleteActionPerformed(evt);
             }
         });
-        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 290, 70, 30));
-        add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, 130, 30));
+        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 240, 70, 30));
+        add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 300, 200, 30));
 
         lblname.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblname.setForeground(new java.awt.Color(63, 40, 101));
+        lblname.setForeground(new java.awt.Color(255, 255, 255));
         lblname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblname.setText("NAME");
-        add(lblname, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, 90, 30));
+        add(lblname, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 300, 90, 30));
 
         lblusername.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblusername.setForeground(new java.awt.Color(63, 40, 101));
+        lblusername.setForeground(new java.awt.Color(255, 255, 255));
         lblusername.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblusername.setText("USERNAME");
-        add(lblusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 400, -1, 30));
-        add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 400, 128, 30));
-        add(txtpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 460, 130, 30));
+        add(lblusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 340, -1, 30));
+        add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 340, 200, 30));
+        add(txtpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, 200, 30));
 
         lblpassword.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblpassword.setForeground(new java.awt.Color(63, 40, 101));
+        lblpassword.setForeground(new java.awt.Color(255, 255, 255));
         lblpassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblpassword.setText("PASSWORD");
-        add(lblpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, 90, 30));
+        add(lblpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 390, 130, 30));
 
-        btnsave.setBackground(new java.awt.Color(255, 255, 255));
         btnsave.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnsave.setForeground(new java.awt.Color(63, 40, 101));
+        btnsave.setForeground(new java.awt.Color(153, 0, 0));
         btnsave.setText("ADD SPONSOR");
         btnsave.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnsave.addActionListener(new java.awt.event.ActionListener() {
@@ -166,7 +165,7 @@ public class ManageSponsor extends javax.swing.JPanel {
         add(btnsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 520, 120, 30));
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/raining_money-1.gif"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img2/ezgif.com-gif-maker (19) (1).gif"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 1130, 730));
     }// </editor-fold>//GEN-END:initComponents
 

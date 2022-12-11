@@ -66,7 +66,7 @@ public class FundraiserWorkArea extends javax.swing.JPanel {
         lblManageInfo = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(214, 209, 222));
+        setBackground(new java.awt.Color(255, 204, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblfundraiser.setModel(new javax.swing.table.DefaultTableModel(
@@ -82,10 +82,10 @@ public class FundraiserWorkArea extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblfundraiser);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 560, 90));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 640, 240));
 
         btnAddSponsor.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnAddSponsor.setForeground(new java.awt.Color(63, 40, 101));
+        btnAddSponsor.setForeground(new java.awt.Color(153, 0, 51));
         btnAddSponsor.setText("ADD SPONSOR");
         btnAddSponsor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAddSponsor.addActionListener(new java.awt.event.ActionListener() {
@@ -93,36 +93,37 @@ public class FundraiserWorkArea extends javax.swing.JPanel {
                 btnAddSponsorActionPerformed(evt);
             }
         });
-        add(btnAddSponsor, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, 130, 30));
+        add(btnAddSponsor, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 270, 130, 30));
 
-        jPanel1.setBackground(new java.awt.Color(63, 40, 101));
+        jPanel1.setBackground(new java.awt.Color(102, 0, 51));
 
         lblManageInfo.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         lblManageInfo.setForeground(new java.awt.Color(255, 255, 255));
-        lblManageInfo.setText("FUNDRAISER WORK AREA");
+        lblManageInfo.setText("FUNDRAISER MANAGEMENT");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(282, Short.MAX_VALUE)
+                .addContainerGap(287, Short.MAX_VALUE)
                 .addComponent(lblManageInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(272, 272, 272))
+                .addGap(267, 267, 267))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
                 .addComponent(lblManageInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 6, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, -1));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 100));
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(63, 40, 101));
-        jLabel2.setText("You are logged in as a fundraiser..");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 280, -1));
+        jLabel2.setForeground(new java.awt.Color(153, 0, 51));
+        jLabel2.setText("You can add the sponsers now !!");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, 390, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddSponsorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddSponsorActionPerformed

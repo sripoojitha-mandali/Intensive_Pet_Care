@@ -47,7 +47,7 @@ public class VetWorkarea extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         lblManageInfo = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(214, 209, 222));
+        setBackground(new java.awt.Color(255, 204, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblVetPetOwners.setModel(new javax.swing.table.DefaultTableModel(
@@ -63,33 +63,33 @@ public class VetWorkarea extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblVetPetOwners);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 640, 116));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 770, 170));
 
         btnFurtherExaminationLab.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         btnFurtherExaminationLab.setForeground(new java.awt.Color(63, 40, 101));
-        btnFurtherExaminationLab.setText("ASSIGN LAB");
+        btnFurtherExaminationLab.setText("ALLOCATE/ASSIGN LAB");
         btnFurtherExaminationLab.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnFurtherExaminationLab.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFurtherExaminationLabActionPerformed(evt);
             }
         });
-        add(btnFurtherExaminationLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, 139, 32));
+        add(btnFurtherExaminationLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 230, 40));
 
-        jPanel1.setBackground(new java.awt.Color(63, 40, 101));
+        jPanel1.setBackground(new java.awt.Color(102, 0, 51));
 
         lblManageInfo.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         lblManageInfo.setForeground(new java.awt.Color(255, 255, 255));
-        lblManageInfo.setText("LAB ASSISTANT WORK AREA");
+        lblManageInfo.setText("LAB REPRESENTATIVE MANAGEMENT");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(326, 326, 326)
-                .addComponent(lblManageInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(558, Short.MAX_VALUE))
+                .addGap(254, 254, 254)
+                .addComponent(lblManageInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(543, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

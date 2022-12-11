@@ -74,10 +74,10 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 20, 40, 30));
 
         lblPetVolunteer.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        lblPetVolunteer.setForeground(new java.awt.Color(63, 40, 101));
+        lblPetVolunteer.setForeground(new java.awt.Color(255, 255, 255));
         lblPetVolunteer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPetVolunteer.setText("MANAGE PET VOLUNTEER");
-        add(lblPetVolunteer, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 42, 420, 50));
+        add(lblPetVolunteer, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 420, 50));
 
         tblPetVolunteer.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         tblPetVolunteer.setModel(new javax.swing.table.DefaultTableModel(
@@ -101,10 +101,10 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblPetVolunteer);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 97, 409, 100));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 409, 100));
 
         btnView.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnView.setForeground(new java.awt.Color(63, 40, 101));
+        btnView.setForeground(new java.awt.Color(153, 0, 0));
         btnView.setText("VIEW");
         btnView.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnView.addActionListener(new java.awt.event.ActionListener() {
@@ -115,7 +115,7 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
         add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 232, 70, 30));
 
         btnUpdate.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnUpdate.setForeground(new java.awt.Color(63, 40, 101));
+        btnUpdate.setForeground(new java.awt.Color(153, 0, 0));
         btnUpdate.setText("UPDATE");
         btnUpdate.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
@@ -126,7 +126,7 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
         add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(354, 232, 80, 30));
 
         btnDelete.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnDelete.setForeground(new java.awt.Color(63, 40, 101));
+        btnDelete.setForeground(new java.awt.Color(153, 0, 0));
         btnDelete.setText("DELETE");
         btnDelete.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -148,25 +148,25 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
         add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(372, 403, 190, 30));
 
         lblPassword.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblPassword.setForeground(new java.awt.Color(63, 40, 101));
+        lblPassword.setForeground(new java.awt.Color(255, 255, 255));
         lblPassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPassword.setText("PASSWORD");
         add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 403, 180, 30));
 
         lblUserName.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        lblUserName.setForeground(new java.awt.Color(63, 40, 101));
+        lblUserName.setForeground(new java.awt.Color(255, 255, 255));
         lblUserName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblUserName.setText("USERNAME");
         add(lblUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 343, 180, 30));
 
         lblName.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblName.setForeground(new java.awt.Color(63, 40, 101));
+        lblName.setForeground(new java.awt.Color(255, 255, 255));
         lblName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblName.setText("NAME");
         add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 283, 170, 30));
 
         btnSubmit.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnSubmit.setForeground(new java.awt.Color(63, 40, 101));
+        btnSubmit.setForeground(new java.awt.Color(153, 0, 0));
         btnSubmit.setText("SUBMIT");
         btnSubmit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -177,7 +177,7 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
         add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 469, 110, 30));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/How-to-Start-an-Animal-Rescue-featured.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img2/ezgif.com-gif-maker.gif"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 710));
     }// </editor-fold>//GEN-END:initComponents
 

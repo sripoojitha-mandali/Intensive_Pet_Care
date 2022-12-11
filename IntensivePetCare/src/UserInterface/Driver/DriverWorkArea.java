@@ -6,25 +6,24 @@
 package UserInterface.Driver;
 
 import IntensivePetCare.Driver.Driver;
-import javax.mail.Message;
-import javax.mail.MessagingException;
+import IntensivePetCare.Ecosystem;
+import IntensivePetCare.UserAccount.UserAccount;
 import java.util.Properties;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 //import javax.mail;
-
-
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.swing.JOptionPane;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.UserAccount.UserAccount;
+
 /**
  *
- * @author poojitha
+ * @author rashmisingh
  */
 public class DriverWorkArea extends javax.swing.JPanel {
 
@@ -62,7 +61,7 @@ public class DriverWorkArea extends javax.swing.JPanel {
         lblManageInfo = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(214, 209, 222));
+        setBackground(new java.awt.Color(255, 204, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblDriver.setModel(new javax.swing.table.DefaultTableModel(
@@ -78,33 +77,33 @@ public class DriverWorkArea extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblDriver);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 660, 137));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 790, 240));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(63, 40, 101));
-        jLabel1.setText("Status");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 310, 54, -1));
+        jLabel1.setForeground(new java.awt.Color(153, 0, 51));
+        jLabel1.setText("Update Status ");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 470, 100, -1));
 
         txtStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtStatusActionPerformed(evt);
             }
         });
-        add(txtStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, 138, -1));
+        add(txtStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 470, 180, -1));
 
         btnChangeStatus.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        btnChangeStatus.setForeground(new java.awt.Color(63, 40, 101));
-        btnChangeStatus.setText("Change Status");
+        btnChangeStatus.setForeground(new java.awt.Color(153, 0, 51));
+        btnChangeStatus.setText("Update Status");
         btnChangeStatus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnChangeStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnChangeStatusActionPerformed(evt);
             }
         });
-        add(btnChangeStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 360, 132, 41));
+        add(btnChangeStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 520, 132, 41));
 
         bntSendWindow.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        bntSendWindow.setForeground(new java.awt.Color(63, 40, 101));
+        bntSendWindow.setForeground(new java.awt.Color(153, 0, 51));
         bntSendWindow.setText("Send Email");
         bntSendWindow.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         bntSendWindow.addActionListener(new java.awt.event.ActionListener() {
@@ -112,36 +111,37 @@ public class DriverWorkArea extends javax.swing.JPanel {
                 bntSendWindowActionPerformed(evt);
             }
         });
-        add(bntSendWindow, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 360, 126, 41));
+        add(bntSendWindow, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 520, 126, 41));
 
-        jPanel1.setBackground(new java.awt.Color(63, 40, 101));
+        jPanel1.setBackground(new java.awt.Color(102, 0, 0));
 
         lblManageInfo.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         lblManageInfo.setForeground(new java.awt.Color(255, 255, 255));
-        lblManageInfo.setText("DRIVER WORK AREA");
+        lblManageInfo.setText("DRIVER MANAGEMENT");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(482, Short.MAX_VALUE)
+                .addContainerGap(471, Short.MAX_VALUE)
                 .addComponent(lblManageInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(402, 402, 402))
+                .addGap(413, 413, 413))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 6, Short.MAX_VALUE)
-                .addComponent(lblManageInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(lblManageInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, -1));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 90));
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(63, 40, 101));
-        jLabel2.setText("You are logged in as a driver...");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 280, -1));
+        jLabel2.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel2.setText("You are now viewing the driver management profile!!");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 380, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStatusActionPerformed
@@ -179,7 +179,7 @@ public class DriverWorkArea extends javax.swing.JPanel {
 
     private void bntSendWindowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntSendWindowActionPerformed
         // TODO add your handling code here:
-        sendMailToPetOwner("poojitha.mandali@gmail.com","","");
+        sendMailToPetOwner("rashmisingh337@gmail.com","","");
     }//GEN-LAST:event_bntSendWindowActionPerformed
 
 
@@ -197,8 +197,8 @@ public class DriverWorkArea extends javax.swing.JPanel {
 
     public void sendMailToPetOwner(String toMail, String msg, String username){
         System.out.println("Now start sending Email!");
-        final String usname = "saranya73.n@gmail.com";
-        final String passwrd = "Ipc@123";
+        final String usname = "nronson93@gmail.com";
+        final String passwrd = "Scam2022@";
         
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
@@ -217,14 +217,14 @@ public class DriverWorkArea extends javax.swing.JPanel {
         
         try{
          Message message=new MimeMessage(session);
-         message.setFrom(new InternetAddress("poojitha.mandali@gmail.com"));
+         message.setFrom(new InternetAddress("rashmisingh@gmail.com"));
          message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toMail));
          message.setSubject("Status Update ");
-         message.setContent("<font color=black> Your pet is at the location dropped safely ! <b>" +
-                 "<font color=black> Have a great day ! <b>","text/html");
+         message.setContent("<font color=black> Pet has been dropped to the destination ! <b>" +
+                 "<font color=black> It's been a real pleasure serving you ! <b>","text/html");
 
          Transport.send(message);
-         JOptionPane.showMessageDialog(null, "Destination reached - pet at location!");
+         JOptionPane.showMessageDialog(null, "Pet has been dropped to the destination!");
      }
         catch(MessagingException e){
         e.printStackTrace();

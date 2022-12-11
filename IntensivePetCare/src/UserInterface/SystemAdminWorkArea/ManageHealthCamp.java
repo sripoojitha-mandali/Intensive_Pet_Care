@@ -62,10 +62,9 @@ public class ManageHealthCamp extends javax.swing.JPanel {
         btnAdd = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(187, 177, 205));
+        setBackground(new java.awt.Color(255, 204, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnBack.setBackground(new java.awt.Color(255, 255, 255));
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-back-arrow-64 (2) (1).png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -76,9 +75,9 @@ public class ManageHealthCamp extends javax.swing.JPanel {
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 40, 40));
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(63, 40, 101));
+        jLabel1.setForeground(new java.awt.Color(153, 0, 51));
         jLabel1.setText("MANAGE HEALTH CAMP");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, 300, 40));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 300, 40));
 
         tblHealthCamp.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -101,10 +100,10 @@ public class ManageHealthCamp extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblHealthCamp);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, 670, 140));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 640, 170));
 
         btnView.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnView.setForeground(new java.awt.Color(63, 40, 101));
+        btnView.setForeground(new java.awt.Color(153, 0, 51));
         btnView.setText("VIEW");
         btnView.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnView.addActionListener(new java.awt.event.ActionListener() {
@@ -112,10 +111,10 @@ public class ManageHealthCamp extends javax.swing.JPanel {
                 btnViewActionPerformed(evt);
             }
         });
-        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 80, 30));
+        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 210, 80, 30));
 
         btnUpdate.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnUpdate.setForeground(new java.awt.Color(63, 40, 101));
+        btnUpdate.setForeground(new java.awt.Color(153, 0, 51));
         btnUpdate.setText("UPDATE");
         btnUpdate.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
@@ -123,10 +122,10 @@ public class ManageHealthCamp extends javax.swing.JPanel {
                 btnUpdateActionPerformed(evt);
             }
         });
-        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 80, 30));
+        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 210, 80, 30));
 
         btnDelete.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnDelete.setForeground(new java.awt.Color(63, 40, 101));
+        btnDelete.setForeground(new java.awt.Color(153, 0, 0));
         btnDelete.setText("Delete");
         btnDelete.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -134,7 +133,7 @@ public class ManageHealthCamp extends javax.swing.JPanel {
                 btnDeleteActionPerformed(evt);
             }
         });
-        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 230, 90, 30));
+        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 210, 90, 30));
 
         txtname.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
         txtname.addActionListener(new java.awt.event.ActionListener() {
@@ -142,34 +141,33 @@ public class ManageHealthCamp extends javax.swing.JPanel {
                 txtnameActionPerformed(evt);
             }
         });
-        add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 330, 120, 30));
+        add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 310, 120, 30));
 
         txtusername.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, 120, 30));
+        add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 350, 120, 30));
 
         txtpass.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        add(txtpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 430, 120, 30));
+        add(txtpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 390, 120, 30));
 
         lblpassword.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblpassword.setForeground(new java.awt.Color(63, 40, 101));
+        lblpassword.setForeground(new java.awt.Color(153, 0, 51));
         lblpassword.setText("PASSWORD");
-        add(lblpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, 90, 30));
+        add(lblpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 390, 90, 30));
 
         lblusername.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblusername.setForeground(new java.awt.Color(63, 40, 101));
+        lblusername.setForeground(new java.awt.Color(153, 0, 51));
         lblusername.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblusername.setText("USERNAME");
-        add(lblusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, 90, 30));
+        add(lblusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 350, 90, 30));
 
         lblname.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblname.setForeground(new java.awt.Color(63, 40, 101));
+        lblname.setForeground(new java.awt.Color(153, 0, 51));
         lblname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblname.setText("NAME");
-        add(lblname, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, 80, 30));
+        add(lblname, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 310, 80, 30));
 
-        btnAdd.setBackground(new java.awt.Color(255, 255, 255));
         btnAdd.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnAdd.setForeground(new java.awt.Color(63, 40, 101));
+        btnAdd.setForeground(new java.awt.Color(153, 0, 0));
         btnAdd.setText("ADD HEALTH CAMP");
         btnAdd.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -177,11 +175,12 @@ public class ManageHealthCamp extends javax.swing.JPanel {
                 btnAddActionPerformed(evt);
             }
         });
-        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 530, 190, 30));
+        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 460, 190, 30));
 
+        jLabel2.setBackground(new java.awt.Color(255, 153, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/pehealth.jpeg"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, 700));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img2/doggie5.gif"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1110, 790));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

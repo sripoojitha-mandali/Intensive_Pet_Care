@@ -57,14 +57,14 @@ public class MainPageOrganiser extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(245, 225, 193));
 
-        sidepane.setBackground(new java.awt.Color(63, 40, 101));
+        sidepane.setBackground(new java.awt.Color(102, 0, 51));
         sidepane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        manageorginfo.setBackground(new java.awt.Color(187, 177, 205));
+        manageorginfo.setBackground(new java.awt.Color(255, 204, 204));
         manageorginfo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblmanageorginfo.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
-        lblmanageorginfo.setForeground(new java.awt.Color(54, 34, 86));
+        lblmanageorginfo.setForeground(new java.awt.Color(153, 0, 51));
         lblmanageorginfo.setText("MANAGE ORGANISATION INFO");
         lblmanageorginfo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -74,13 +74,13 @@ public class MainPageOrganiser extends javax.swing.JPanel {
         manageorginfo.add(lblmanageorginfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 180, 22));
         manageorginfo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 40));
 
-        sidepane.add(manageorginfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 220, 40));
+        sidepane.add(manageorginfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 220, 40));
 
-        managepetvol.setBackground(new java.awt.Color(187, 177, 205));
+        managepetvol.setBackground(new java.awt.Color(255, 204, 204));
         managepetvol.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblManagePetVolunteer.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
-        lblManagePetVolunteer.setForeground(new java.awt.Color(54, 34, 86));
+        lblManagePetVolunteer.setForeground(new java.awt.Color(153, 0, 51));
         lblManagePetVolunteer.setText("MANAGE PET VOLUNTEERS");
         lblManagePetVolunteer.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -90,7 +90,7 @@ public class MainPageOrganiser extends javax.swing.JPanel {
         managepetvol.add(lblManagePetVolunteer, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 170, 24));
         managepetvol.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
-        sidepane.add(managepetvol, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 220, 40));
+        sidepane.add(managepetvol, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 220, 40));
 
         jSeparator2.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator2.setForeground(new java.awt.Color(63, 40, 101));
@@ -99,23 +99,26 @@ public class MainPageOrganiser extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel4.setText("Health Camp owner..");
+        jLabel4.setText("of Health Camp....");
         jLabel4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jLabel4.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        sidepane.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 190, 30));
+        sidepane.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 190, 30));
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel5.setText("You are logged in as a ");
+        jLabel5.setText("Welcome to the owner ");
         jLabel5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jLabel5.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        sidepane.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 210, 30));
+        sidepane.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 210, 30));
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/giffy.gif"))); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img2/v2.jpg"))); // NOI18N
+        jLabel3.setMaximumSize(new java.awt.Dimension(800, 450));
+        jLabel3.setMinimumSize(new java.awt.Dimension(800, 450));
+        jLabel3.setPreferredSize(new java.awt.Dimension(800, 450));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -124,16 +127,16 @@ public class MainPageOrganiser extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(sidepane, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 866, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(sidepane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
+            .addComponent(sidepane, javax.swing.GroupLayout.DEFAULT_SIZE, 681, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 

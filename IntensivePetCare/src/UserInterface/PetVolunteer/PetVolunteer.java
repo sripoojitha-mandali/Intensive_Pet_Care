@@ -60,15 +60,15 @@ public class PetVolunteer extends javax.swing.JPanel {
         lblManageInfo1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(214, 209, 222));
+        setBackground(new java.awt.Color(255, 204, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(63, 40, 101));
+        jLabel1.setForeground(new java.awt.Color(153, 0, 51));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("WELCOME PET VOLUNTEER");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 148, 340, 50));
+        jLabel1.setText(" PET VOLUNTEER ");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 380, 50));
 
         txtpetowner.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
         txtpetowner.addActionListener(new java.awt.event.ActionListener() {
@@ -85,25 +85,25 @@ public class PetVolunteer extends javax.swing.JPanel {
         add(txtHealthCamp, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 358, 130, 30));
 
         lblpetowner.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblpetowner.setForeground(new java.awt.Color(63, 40, 101));
+        lblpetowner.setForeground(new java.awt.Color(153, 0, 51));
         lblpetowner.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblpetowner.setText("PET OWNER");
         add(lblpetowner, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 100, 40));
 
         lblpettype.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblpettype.setForeground(new java.awt.Color(63, 40, 101));
+        lblpettype.setForeground(new java.awt.Color(153, 0, 51));
         lblpettype.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblpettype.setText("PET TYPE");
-        add(lblpettype, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 80, 40));
+        add(lblpettype, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 80, 40));
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(63, 40, 101));
+        jLabel2.setForeground(new java.awt.Color(153, 0, 51));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("HEALTH CAMP");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 358, 140, 30));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 140, 30));
 
         btnSavePetVolunteer.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnSavePetVolunteer.setForeground(new java.awt.Color(63, 40, 101));
+        btnSavePetVolunteer.setForeground(new java.awt.Color(153, 0, 51));
         btnSavePetVolunteer.setText("SAVE");
         btnSavePetVolunteer.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnSavePetVolunteer.addActionListener(new java.awt.event.ActionListener() {
@@ -111,7 +111,7 @@ public class PetVolunteer extends javax.swing.JPanel {
                 btnSavePetVolunteerActionPerformed(evt);
             }
         });
-        add(btnSavePetVolunteer, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 418, 90, 40));
+        add(btnSavePetVolunteer, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 420, 90, 40));
 
         tblHealthCamps.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         tblHealthCamps.setModel(new javax.swing.table.DefaultTableModel(
@@ -127,20 +127,20 @@ public class PetVolunteer extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblHealthCamps);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 204, 355, 269));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 355, 269));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(63, 40, 101));
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(153, 0, 51));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Choose the health camp");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(405, 148, 340, 50));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, 300, 40));
 
-        jPanel2.setBackground(new java.awt.Color(63, 40, 101));
+        jPanel2.setBackground(new java.awt.Color(102, 0, 51));
 
         lblManageInfo1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         lblManageInfo1.setForeground(new java.awt.Color(255, 255, 255));
-        lblManageInfo1.setText("PET VOLUNTEER WORK AREA");
+        lblManageInfo1.setText("PET VOLUNTEER MANAGEMENT");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -162,7 +162,6 @@ public class PetVolunteer extends javax.swing.JPanel {
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(63, 40, 101));
-        jLabel4.setText("You are logged in as a pet volunteer...");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, 20));
     }// </editor-fold>//GEN-END:initComponents
 

@@ -74,12 +74,12 @@ public class ManageHospitalInfo extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         lblManageInfo1 = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(214, 209, 222));
+        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
         jPanel1.setPreferredSize(new java.awt.Dimension(770, 772));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblhospitaladmin.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblhospitaladmin.setForeground(new java.awt.Color(63, 40, 101));
+        lblhospitaladmin.setForeground(new java.awt.Color(153, 0, 51));
         lblhospitaladmin.setText("HOSPITAL ADMIN");
         jPanel1.add(lblhospitaladmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 140, 30));
 
@@ -92,7 +92,7 @@ public class ManageHospitalInfo extends javax.swing.JPanel {
         jPanel1.add(txthospitaladmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 180, 200, 30));
 
         lblhospitalname.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblhospitalname.setForeground(new java.awt.Color(63, 40, 101));
+        lblhospitalname.setForeground(new java.awt.Color(153, 0, 51));
         lblhospitalname.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblhospitalname.setText("HOSPITAL NAME");
         jPanel1.add(lblhospitalname, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 130, 30));
@@ -101,7 +101,7 @@ public class ManageHospitalInfo extends javax.swing.JPanel {
         jPanel1.add(txthospitalname, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, 200, 30));
 
         lblhospitaladdress.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblhospitaladdress.setForeground(new java.awt.Color(63, 40, 101));
+        lblhospitaladdress.setForeground(new java.awt.Color(153, 0, 51));
         lblhospitaladdress.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblhospitaladdress.setText("HOSPITAL ADDRESS");
         jPanel1.add(lblhospitaladdress, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, 150, 30));
@@ -115,7 +115,7 @@ public class ManageHospitalInfo extends javax.swing.JPanel {
         jPanel1.add(txthospitaladdress, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, 200, 30));
 
         lblhospitalphone.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblhospitalphone.setForeground(new java.awt.Color(63, 40, 101));
+        lblhospitalphone.setForeground(new java.awt.Color(153, 0, 51));
         lblhospitalphone.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblhospitalphone.setText("HOSPITAL PHONE");
         jPanel1.add(lblhospitalphone, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 340, 130, 30));
@@ -129,7 +129,7 @@ public class ManageHospitalInfo extends javax.swing.JPanel {
         jPanel1.add(txthospitalphone, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 340, 200, 30));
 
         btnsave.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnsave.setForeground(new java.awt.Color(63, 40, 101));
+        btnsave.setForeground(new java.awt.Color(153, 0, 51));
         btnsave.setText("SAVE");
         btnsave.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnsave.addActionListener(new java.awt.event.ActionListener() {
@@ -137,10 +137,10 @@ public class ManageHospitalInfo extends javax.swing.JPanel {
                 btnsaveActionPerformed(evt);
             }
         });
-        jPanel1.add(btnsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 490, 80, 30));
+        jPanel1.add(btnsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 470, 80, 30));
 
         btnupdate.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnupdate.setForeground(new java.awt.Color(63, 40, 101));
+        btnupdate.setForeground(new java.awt.Color(153, 0, 51));
         btnupdate.setText("UPDATE");
         btnupdate.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnupdate.addActionListener(new java.awt.event.ActionListener() {
@@ -148,10 +148,10 @@ public class ManageHospitalInfo extends javax.swing.JPanel {
                 btnupdateActionPerformed(evt);
             }
         });
-        jPanel1.add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 490, 90, 30));
+        jPanel1.add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 470, 90, 30));
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(63, 40, 101));
+        jLabel1.setForeground(new java.awt.Color(153, 0, 51));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("HOSPITAL DRIVER");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 400, 150, 30));
@@ -160,7 +160,7 @@ public class ManageHospitalInfo extends javax.swing.JPanel {
         jPanel1.add(txtHospitalDriver, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 400, 200, 30));
 
         lblManageInfo.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        lblManageInfo.setForeground(new java.awt.Color(63, 40, 101));
+        lblManageInfo.setForeground(new java.awt.Color(153, 0, 51));
         lblManageInfo.setText("MANAGE HOSPITAL INFORMATION");
         jPanel1.add(lblManageInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 466, 72));
 
@@ -171,11 +171,11 @@ public class ManageHospitalInfo extends javax.swing.JPanel {
         });
         jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 40, 40));
 
-        jPanel2.setBackground(new java.awt.Color(63, 40, 101));
+        jPanel2.setBackground(new java.awt.Color(153, 0, 51));
 
         lblManageInfo1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         lblManageInfo1.setForeground(new java.awt.Color(255, 255, 255));
-        lblManageInfo1.setText("HOSPITAL ADMIN WORK AREA");
+        lblManageInfo1.setText("HOSPITAL ADMIN MANAGEMENT");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
