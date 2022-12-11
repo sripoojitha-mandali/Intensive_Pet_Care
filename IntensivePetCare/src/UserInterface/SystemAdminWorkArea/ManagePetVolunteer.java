@@ -250,6 +250,7 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
 
     private void btnSubmit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmit1ActionPerformed
         // TODO add your handling code here:
+        if(ipcValidateInputFields()){
         if (ipcSystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtUserName1.getText())) {
             UserAccount userAccount = ipcSystem.getUserAccountDirectory().createUserAccount(txtName1.getText(), txtUserName1.getText(), txtPassword1.getText(), null, new PetVolunteerRole());
             PetVolunteer petVolunteer = ipcSystem.getPetVolunteerDirectory().createUserAccount(txtUserName1.getText());
@@ -259,6 +260,7 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
             txtPassword1.setText("");
         } else {
             JOptionPane.showMessageDialog(null, "Please enter Unique User Name");
+        }
         }
     }//GEN-LAST:event_btnSubmit1ActionPerformed
 

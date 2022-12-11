@@ -248,6 +248,7 @@ public class ManageFundAgency extends javax.swing.JPanel {
 
     private void btnSave1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSave1ActionPerformed
         // TODO add your handling code here:
+        if(ipcValidateInputFields()){
         if (ipcSystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtUsername1.getText())) {
             UserAccount userAccount = ipcSystem.getUserAccountDirectory().createUserAccount(txtName1.getText(), txtUsername1.getText(), txtPassword1.getText(), null, new FundRaisingRole());
             FundRaising fundRaising = ipcSystem.getFundRaisingDirectory().createUserAccount(txtUsername1.getText());
@@ -258,7 +259,7 @@ public class ManageFundAgency extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "Please enter Unique User Name");
         }
-
+        }
     }//GEN-LAST:event_btnSave1ActionPerformed
 
     public void ipcPopulateFundRaisingTable(){

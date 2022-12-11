@@ -241,6 +241,7 @@ public class ManageHospitalNetwork extends javax.swing.JPanel {
 
     private void btnAddHospitalNet1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddHospitalNet1ActionPerformed
         // TODO add your handling code here:
+        if(ipcValidateInputFields()){
         if (ipcSystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtUsername1.getText())) {
             UserAccount userAccount = ipcSystem.getUserAccountDirectory().createUserAccount(txtName1.getText(), txtUsername1.getText(), txtPassword1.getText(), null, new HospitalAdminRole());
             Hospital hospital = ipcSystem.getHospitalDirectory().createUserAccount(txtUsername1.getText(), txtName1.getText());
@@ -250,6 +251,7 @@ public class ManageHospitalNetwork extends javax.swing.JPanel {
             txtPassword1.setText("");
         } else {
             JOptionPane.showMessageDialog(null, "Username is not unique");
+        }
         }
     }//GEN-LAST:event_btnAddHospitalNet1ActionPerformed
 
