@@ -44,39 +44,39 @@ public class ManageSponsor extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnBack = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        btnBack1 = new javax.swing.JButton();
+        lb1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblSponsors = new javax.swing.JTable();
-        btnView = new javax.swing.JButton();
-        btnUpdate = new javax.swing.JButton();
-        btnDelete = new javax.swing.JButton();
-        txtname = new javax.swing.JTextField();
-        lblname = new javax.swing.JLabel();
-        lblusername = new javax.swing.JLabel();
-        txtusername = new javax.swing.JTextField();
-        txtpass = new javax.swing.JPasswordField();
-        lblpassword = new javax.swing.JLabel();
-        btnsave = new javax.swing.JButton();
+        tbSponsors = new javax.swing.JTable();
+        btnView1 = new javax.swing.JButton();
+        btnUpdate1 = new javax.swing.JButton();
+        btnDelete1 = new javax.swing.JButton();
+        txtName = new javax.swing.JTextField();
+        lbName = new javax.swing.JLabel();
+        lbUserName = new javax.swing.JLabel();
+        txtUserName = new javax.swing.JTextField();
+        txtPassword = new javax.swing.JPasswordField();
+        lbPassword = new javax.swing.JLabel();
+        btnSave1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(214, 209, 222));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-back-arrow-64 (2) (1).png"))); // NOI18N
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btnBack1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-back-arrow-64 (2) (1).png"))); // NOI18N
+        btnBack1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btnBack1ActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 24, 38, 30));
+        add(btnBack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 24, 38, 30));
 
-        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 0, 0));
-        jLabel1.setText("MANAGE SPONSORS");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+        lb1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        lb1.setForeground(new java.awt.Color(153, 0, 0));
+        lb1.setText("MANAGE SPONSORS");
+        add(lb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
-        tblSponsors.setModel(new javax.swing.table.DefaultTableModel(
+        tbSponsors.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -95,118 +95,118 @@ public class ManageSponsor extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblSponsors);
+        jScrollPane1.setViewportView(tbSponsors);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 660, 160));
 
-        btnView.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnView.setForeground(new java.awt.Color(153, 0, 0));
-        btnView.setText("VIEW");
-        btnView.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnView.addActionListener(new java.awt.event.ActionListener() {
+        btnView1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        btnView1.setForeground(new java.awt.Color(153, 0, 0));
+        btnView1.setText("VIEW");
+        btnView1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnView1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewActionPerformed(evt);
+                btnView1ActionPerformed(evt);
             }
         });
-        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, 90, 30));
+        add(btnView1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, 90, 30));
 
-        btnUpdate.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnUpdate.setForeground(new java.awt.Color(153, 0, 0));
-        btnUpdate.setText("UPDATE");
-        btnUpdate.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+        btnUpdate1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        btnUpdate1.setForeground(new java.awt.Color(153, 0, 0));
+        btnUpdate1.setText("UPDATE");
+        btnUpdate1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnUpdate1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateActionPerformed(evt);
+                btnUpdate1ActionPerformed(evt);
             }
         });
-        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 70, 30));
+        add(btnUpdate1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 70, 30));
 
-        btnDelete.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnDelete.setForeground(new java.awt.Color(153, 0, 0));
-        btnDelete.setText("DELETE");
-        btnDelete.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+        btnDelete1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        btnDelete1.setForeground(new java.awt.Color(153, 0, 0));
+        btnDelete1.setText("DELETE");
+        btnDelete1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnDelete1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteActionPerformed(evt);
+                btnDelete1ActionPerformed(evt);
             }
         });
-        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 240, 70, 30));
-        add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 300, 200, 30));
+        add(btnDelete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 240, 70, 30));
+        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 300, 200, 30));
 
-        lblname.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblname.setForeground(new java.awt.Color(255, 255, 255));
-        lblname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblname.setText("NAME");
-        add(lblname, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 300, 90, 30));
+        lbName.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        lbName.setForeground(new java.awt.Color(255, 255, 255));
+        lbName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbName.setText("NAME");
+        add(lbName, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 300, 90, 30));
 
-        lblusername.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblusername.setForeground(new java.awt.Color(255, 255, 255));
-        lblusername.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblusername.setText("USERNAME");
-        add(lblusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 340, -1, 30));
-        add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 340, 200, 30));
-        add(txtpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, 200, 30));
+        lbUserName.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        lbUserName.setForeground(new java.awt.Color(255, 255, 255));
+        lbUserName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbUserName.setText("USERNAME");
+        add(lbUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 340, -1, 30));
+        add(txtUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 340, 200, 30));
+        add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, 200, 30));
 
-        lblpassword.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblpassword.setForeground(new java.awt.Color(255, 255, 255));
-        lblpassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblpassword.setText("PASSWORD");
-        add(lblpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 390, 130, 30));
+        lbPassword.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        lbPassword.setForeground(new java.awt.Color(255, 255, 255));
+        lbPassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbPassword.setText("PASSWORD");
+        add(lbPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 390, 130, 30));
 
-        btnsave.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnsave.setForeground(new java.awt.Color(153, 0, 0));
-        btnsave.setText("ADD SPONSOR");
-        btnsave.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnsave.addActionListener(new java.awt.event.ActionListener() {
+        btnSave1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        btnSave1.setForeground(new java.awt.Color(153, 0, 0));
+        btnSave1.setText("ADD SPONSOR");
+        btnSave1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnSave1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnsaveActionPerformed(evt);
+                btnSave1ActionPerformed(evt);
             }
         });
-        add(btnsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 520, 120, 30));
+        add(btnSave1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 520, 120, 30));
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img2/ezgif.com-gif-maker (19) (1).gif"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 1130, 730));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btnBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack1ActionPerformed
         // TODO add your handling code here:
         ipcUserProcessContainer.remove(this);
         CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
         layout.previous(ipcUserProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btnBack1ActionPerformed
 
-    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+    private void btnView1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnView1ActionPerformed
         // TODO add your handling code here:
 
-        int selectRow = tblSponsors.getSelectedRow();
+        int selectRow = tbSponsors.getSelectedRow();
 
         if (selectRow >= 0) {
-            String name = (String) tblSponsors.getValueAt(selectRow, 0);
-            String username = (String) tblSponsors.getValueAt(selectRow, 1);
-            String password = (String) tblSponsors.getValueAt(selectRow, 2);
+            String name = (String) tbSponsors.getValueAt(selectRow, 0);
+            String username = (String) tbSponsors.getValueAt(selectRow, 1);
+            String password = (String) tbSponsors.getValueAt(selectRow, 2);
 
-            txtname.setText(name + "");
-            txtusername.setText(username + "");
-            txtpass.setText(password + "");
-            btnsave.setEnabled(false);
+            txtName.setText(name + "");
+            txtUserName.setText(username + "");
+            txtPassword.setText(password + "");
+            btnSave1.setEnabled(false);
         }
         
         else  
         {
             JOptionPane.showMessageDialog(null, "to view the Sponsor details, Please select a row");
         }  
-    }//GEN-LAST:event_btnViewActionPerformed
+    }//GEN-LAST:event_btnView1ActionPerformed
 
-    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+    private void btnDelete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelete1ActionPerformed
         // TODO add your handling code here:
-        int selectedRow = tblSponsors.getSelectedRow();
+        int selectedRow = tbSponsors.getSelectedRow();
         if (selectedRow >= 0) {
             int selectionButton = JOptionPane.YES_NO_OPTION;
             int selectionResult = JOptionPane.showConfirmDialog(null, "Confirm delete?", "Warning", selectionButton);
             if (selectionResult == JOptionPane.YES_OPTION) {
-                String username = (String) tblSponsors.getValueAt(selectedRow, 1);
-                String pwd = (String) tblSponsors.getValueAt(selectedRow, 2);
+                String username = (String) tbSponsors.getValueAt(selectedRow, 1);
+                String pwd = (String) tbSponsors.getValueAt(selectedRow, 2);
                 UserAccount user = ipcSystem.getUserAccountDirectory().authenticateUser(username, pwd);
 
                 ipcSystem.getUserAccountDirectory().deleteUserAccount(user);
@@ -216,45 +216,45 @@ public class ManageSponsor extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "to delete the Sponsor details, Please select a row");
         }
-    }//GEN-LAST:event_btnDeleteActionPerformed
+    }//GEN-LAST:event_btnDelete1ActionPerformed
 
-    private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
+    private void btnSave1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSave1ActionPerformed
         // TODO add your handling code here:
-        if (ipcSystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtusername.getText())) {
-        UserAccount userAccount = ipcSystem.getUserAccountDirectory().createUserAccount(txtname.getText(), txtusername.getText(), txtpass.getText(), null, new SponsorRole());
-        Sponsor sponsor = ipcSystem.getSponsorDirectory().createUserAccount(txtusername.getText());
+        if (ipcSystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtUserName.getText())) {
+        UserAccount userAccount = ipcSystem.getUserAccountDirectory().createUserAccount(txtName.getText(), txtUserName.getText(), txtPassword.getText(), null, new SponsorRole());
+        Sponsor sponsor = ipcSystem.getSponsorDirectory().createUserAccount(txtUserName.getText());
         JOptionPane.showMessageDialog(null, "Sponsor details added successfully");
         ipcPopulateSponsorTable();
-        txtname.setText("");
-        txtpass.setText("");
-        txtusername.setText("");
+        txtName.setText("");
+        txtPassword.setText("");
+        txtUserName.setText("");
         }
-    }//GEN-LAST:event_btnsaveActionPerformed
+    }//GEN-LAST:event_btnSave1ActionPerformed
 
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+    private void btnUpdate1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdate1ActionPerformed
         // TODO add your handling code here:
         
-        int selectRow = tblSponsors.getSelectedRow();
+        int selectRow = tbSponsors.getSelectedRow();
         if (selectRow >= 0) {
-        String name = (String) tblSponsors.getValueAt(selectRow, 0);
-        String username = (String) tblSponsors.getValueAt(selectRow, 1);
-        String password = (String) tblSponsors.getValueAt(selectRow, 2);
+        String name = (String) tbSponsors.getValueAt(selectRow, 0);
+        String username = (String) tbSponsors.getValueAt(selectRow, 1);
+        String password = (String) tbSponsors.getValueAt(selectRow, 2);
         user = ipcSystem.getUserAccountDirectory().authenticateUser(username, password);
-        ipcSystem.getUserAccountDirectory().updateUserAccount(user, txtname.getText(), txtusername.getText(), txtpass.getText());
+        ipcSystem.getUserAccountDirectory().updateUserAccount(user, txtName.getText(), txtUserName.getText(), txtPassword.getText());
         ipcPopulateSponsorTable();
 
-        txtname.setText("");
-        txtusername.setText("");
-        txtpass.setText("");
+        txtName.setText("");
+        txtUserName.setText("");
+        txtPassword.setText("");
         }
         else  
         {
             JOptionPane.showMessageDialog(null, "to update the Sponsor details, Please select a row");
         }  
-    }//GEN-LAST:event_btnUpdateActionPerformed
+    }//GEN-LAST:event_btnUpdate1ActionPerformed
       private void ipcPopulateSponsorTable() {
 
-        DefaultTableModel tablemodel = (DefaultTableModel) tblSponsors.getModel();
+        DefaultTableModel tablemodel = (DefaultTableModel) tbSponsors.getModel();
         tablemodel.setRowCount(0);
 
         for (UserAccount user : ipcSystem.getUserAccountDirectory().getUserAccountList()) {
@@ -270,33 +270,33 @@ public class ManageSponsor extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnDelete;
-    private javax.swing.JButton btnUpdate;
-    private javax.swing.JButton btnView;
-    private javax.swing.JButton btnsave;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnBack1;
+    private javax.swing.JButton btnDelete1;
+    private javax.swing.JButton btnSave1;
+    private javax.swing.JButton btnUpdate1;
+    private javax.swing.JButton btnView1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblname;
-    private javax.swing.JLabel lblpassword;
-    private javax.swing.JLabel lblusername;
-    private javax.swing.JTable tblSponsors;
-    private javax.swing.JTextField txtname;
-    private javax.swing.JPasswordField txtpass;
-    private javax.swing.JTextField txtusername;
+    private javax.swing.JLabel lb1;
+    private javax.swing.JLabel lbName;
+    private javax.swing.JLabel lbPassword;
+    private javax.swing.JLabel lbUserName;
+    private javax.swing.JTable tbSponsors;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JPasswordField txtPassword;
+    private javax.swing.JTextField txtUserName;
     // End of variables declaration//GEN-END:variables
 
 private boolean validateInputFields() {
 
         Pattern p = Pattern.compile("^[A-Za-z0-9 ]+$");
-        Matcher m = p.matcher(txtname.getText());
+        Matcher m = p.matcher(txtName.getText());
         
         Pattern p7 = Pattern.compile("^[A-Za-z0-9]+$");
-        Matcher m7 = p7.matcher(txtusername.getText());
+        Matcher m7 = p7.matcher(txtUserName.getText());
         
         Pattern p1 = Pattern.compile("^[A-Za-z0-9]+$");
-        Matcher m1 = p1.matcher(txtpass.getText());
+        Matcher m1 = p1.matcher(txtPassword.getText());
         
         
         if (!m.matches()) {
