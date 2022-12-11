@@ -23,7 +23,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author rashmisingh
+ * @author poojitha
  */
 public class DriverWorkArea extends javax.swing.JPanel {
 
@@ -52,19 +52,19 @@ public class DriverWorkArea extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblDriver = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        txtStatus = new javax.swing.JTextField();
-        btnChangeStatus = new javax.swing.JButton();
-        bntSendWindow = new javax.swing.JButton();
+        tblDM = new javax.swing.JTable();
+        lbUpdateStatus = new javax.swing.JLabel();
+        txtUpdateStatus = new javax.swing.JTextField();
+        btnUpdateStatus = new javax.swing.JButton();
+        bntSendEmail = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        lblManageInfo = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lbDM = new javax.swing.JLabel();
+        lbWelcome = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 204, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tblDriver.setModel(new javax.swing.table.DefaultTableModel(
+        tblDM.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -75,49 +75,49 @@ public class DriverWorkArea extends javax.swing.JPanel {
                 "Pet Owner", "Pet Type", "Health Camp", "Hospital Name", "Status"
             }
         ));
-        jScrollPane1.setViewportView(tblDriver);
+        jScrollPane1.setViewportView(tblDM);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 790, 240));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 0, 51));
-        jLabel1.setText("Update Status ");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 470, 100, -1));
+        lbUpdateStatus.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        lbUpdateStatus.setForeground(new java.awt.Color(153, 0, 51));
+        lbUpdateStatus.setText("Update Status ");
+        add(lbUpdateStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 470, 100, -1));
 
-        txtStatus.addActionListener(new java.awt.event.ActionListener() {
+        txtUpdateStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtStatusActionPerformed(evt);
+                txtUpdateStatusActionPerformed(evt);
             }
         });
-        add(txtStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 470, 180, -1));
+        add(txtUpdateStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 470, 180, -1));
 
-        btnChangeStatus.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        btnChangeStatus.setForeground(new java.awt.Color(153, 0, 51));
-        btnChangeStatus.setText("Update Status");
-        btnChangeStatus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnChangeStatus.addActionListener(new java.awt.event.ActionListener() {
+        btnUpdateStatus.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        btnUpdateStatus.setForeground(new java.awt.Color(153, 0, 51));
+        btnUpdateStatus.setText("Update Status");
+        btnUpdateStatus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnUpdateStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnChangeStatusActionPerformed(evt);
+                btnUpdateStatusActionPerformed(evt);
             }
         });
-        add(btnChangeStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 520, 132, 41));
+        add(btnUpdateStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 520, 132, 41));
 
-        bntSendWindow.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        bntSendWindow.setForeground(new java.awt.Color(153, 0, 51));
-        bntSendWindow.setText("Send Email");
-        bntSendWindow.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bntSendWindow.addActionListener(new java.awt.event.ActionListener() {
+        bntSendEmail.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        bntSendEmail.setForeground(new java.awt.Color(153, 0, 51));
+        bntSendEmail.setText("Send Email");
+        bntSendEmail.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bntSendEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bntSendWindowActionPerformed(evt);
+                bntSendEmailActionPerformed(evt);
             }
         });
-        add(bntSendWindow, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 520, 126, 41));
+        add(bntSendEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 520, 126, 41));
 
         jPanel1.setBackground(new java.awt.Color(102, 0, 0));
 
-        lblManageInfo.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        lblManageInfo.setForeground(new java.awt.Color(255, 255, 255));
-        lblManageInfo.setText("DRIVER MANAGEMENT");
+        lbDM.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        lbDM.setForeground(new java.awt.Color(255, 255, 255));
+        lbDM.setText("DRIVER MANAGEMENT");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -125,35 +125,35 @@ public class DriverWorkArea extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(471, Short.MAX_VALUE)
-                .addComponent(lblManageInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbDM, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(413, 413, 413))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(lblManageInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbDM, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 90));
 
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 0, 0));
-        jLabel2.setText("You are now viewing the driver management profile!!");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 380, -1));
+        lbWelcome.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        lbWelcome.setForeground(new java.awt.Color(153, 0, 0));
+        lbWelcome.setText("You are now viewing the driver management profile!!");
+        add(lbWelcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 380, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStatusActionPerformed
+    private void txtUpdateStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUpdateStatusActionPerformed
         // TODO add your handling code here:
         
-    }//GEN-LAST:event_txtStatusActionPerformed
+    }//GEN-LAST:event_txtUpdateStatusActionPerformed
 
-    private void btnChangeStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeStatusActionPerformed
+    private void btnUpdateStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateStatusActionPerformed
         // TODO add your handling code here:
         for(Driver driver: system.getDriverDirectory().getDriverDirectory()) {
             if(account.getIpcuserName().equals(driver.getIpcuserName())) {
-                system.getDriverDirectory().updateDropOffStatus(driver,txtStatus.getText());
+                system.getDriverDirectory().updateDropOffStatus(driver,txtUpdateStatus.getText());
             }
         }
         populateTable();
@@ -161,7 +161,7 @@ public class DriverWorkArea extends javax.swing.JPanel {
     }                                               
 
     public void populateTable() {
-        DefaultTableModel tablemodel = (DefaultTableModel) tblDriver.getModel();
+        DefaultTableModel tablemodel = (DefaultTableModel) tblDM.getModel();
         tablemodel.setRowCount(0);
         for(Driver driver: system.getDriverDirectory().getDriverDirectory()) {
             if(account.getIpcuserName().equals(driver.getIpcuserName())) {
@@ -175,30 +175,30 @@ public class DriverWorkArea extends javax.swing.JPanel {
             }
         }
     
-    }//GEN-LAST:event_btnChangeStatusActionPerformed
+    }//GEN-LAST:event_btnUpdateStatusActionPerformed
 
-    private void bntSendWindowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntSendWindowActionPerformed
+    private void bntSendEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntSendEmailActionPerformed
         // TODO add your handling code here:
-        sendMailToPetOwner("rashmisingh337@gmail.com","","");
-    }//GEN-LAST:event_bntSendWindowActionPerformed
+        sendMailToPetOwner("poojitha.mandali@gmail.com","","");
+    }//GEN-LAST:event_bntSendEmailActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bntSendWindow;
-    private javax.swing.JButton btnChangeStatus;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton bntSendEmail;
+    private javax.swing.JButton btnUpdateStatus;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblManageInfo;
-    private javax.swing.JTable tblDriver;
-    private javax.swing.JTextField txtStatus;
+    private javax.swing.JLabel lbDM;
+    private javax.swing.JLabel lbUpdateStatus;
+    private javax.swing.JLabel lbWelcome;
+    private javax.swing.JTable tblDM;
+    private javax.swing.JTextField txtUpdateStatus;
     // End of variables declaration//GEN-END:variables
 
     public void sendMailToPetOwner(String toMail, String msg, String username){
         System.out.println("Now start sending Email!");
-        final String usname = "nronson93@gmail.com";
-        final String passwrd = "Scam2022@";
+        final String usname = "saranya73.n@gmail.com";
+        final String passwrd = "Ipc@123";
         
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
@@ -217,14 +217,14 @@ public class DriverWorkArea extends javax.swing.JPanel {
         
         try{
          Message message=new MimeMessage(session);
-         message.setFrom(new InternetAddress("rashmisingh@gmail.com"));
+         message.setFrom(new InternetAddress("poojitha.mandali@gmail.com"));
          message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toMail));
          message.setSubject("Status Update ");
-         message.setContent("<font color=black> Pet has been dropped to the destination ! <b>" +
-                 "<font color=black> It's been a real pleasure serving you ! <b>","text/html");
+         message.setContent("<font color=black> Your pet is at the location dropped safely ! <b>" +
+                 "<font color=black> Have a great day ! <b>","text/html");
 
          Transport.send(message);
-         JOptionPane.showMessageDialog(null, "Pet has been dropped to the destination!");
+         JOptionPane.showMessageDialog(null, "Destination reached - pet at location!");
      }
         catch(MessagingException e){
         e.printStackTrace();
