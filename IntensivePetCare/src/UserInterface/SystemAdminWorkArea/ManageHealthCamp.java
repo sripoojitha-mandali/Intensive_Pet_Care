@@ -4,18 +4,18 @@
  */
 package UserInterface.SystemAdminWorkArea;
 
-import Model.Ecosystem;
 import Model.HealthCamp.HealthCamp;
 import Model.Hospital.Hospital;
 import Model.Role.HealthCampRole;
 import Model.Role.HospitalAdminRole;
+import Model.Ecosystem;
 import Model.UserAccount.UserAccount;
-import java.awt.CardLayout;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
+import java.awt.CardLayout;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.JPanel;
+import javax.swing.JOptionPane;
 /**
  *
  * @author varshakuruva
@@ -26,15 +26,15 @@ public class ManageHealthCamp extends javax.swing.JPanel {
      * Creates new form ManageHealthCamp
      */
     
-    JPanel userProcessContainer;
-    Ecosystem system;
+    JPanel ipcUserProcessContainer;
+    Ecosystem ipcSystem;
     private UserAccount user; 
     
-    public ManageHealthCamp(JPanel userProcessContainer, Ecosystem system) {
+    public ManageHealthCamp(JPanel ipcUserProcessContainer, Ecosystem ipcSystem) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.system = system;
-        populateHealthCampTable();
+        this.ipcUserProcessContainer = ipcUserProcessContainer;
+        this.ipcSystem = ipcSystem;
+        ipcPopulateHealthCampTable();
     }
 
     /**
@@ -185,9 +185,9 @@ public class ManageHealthCamp extends javax.swing.JPanel {
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        ipcUserProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
+        layout.previous(ipcUserProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
@@ -218,9 +218,9 @@ public class ManageHealthCamp extends javax.swing.JPanel {
         String name = (String) tblHealthCamp.getValueAt(selectRow, 0);
         String username = (String) tblHealthCamp.getValueAt(selectRow, 1);
         String password = (String) tblHealthCamp.getValueAt(selectRow, 2);
-        user = system.getUserAccountDirectory().authenticateUser(username, password);
-        system.getUserAccountDirectory().updateUserAccount(user, txtname.getText(), txtusername.getText(), txtpass.getText());
-        populateHealthCampTable();
+        user = ipcSystem.getUserAccountDirectory().authenticateUser(username, password);
+        ipcSystem.getUserAccountDirectory().updateUserAccount(user, txtname.getText(), txtusername.getText(), txtpass.getText());
+        ipcPopulateHealthCampTable();
 
         txtname.setText("");
         txtusername.setText("");
@@ -242,11 +242,11 @@ public class ManageHealthCamp extends javax.swing.JPanel {
             if (selectionResult == JOptionPane.YES_OPTION) {
                 String username = (String) tblHealthCamp.getValueAt(selectedRow, 1);
                 String pwd = (String) tblHealthCamp.getValueAt(selectedRow, 2);
-                UserAccount user = system.getUserAccountDirectory().authenticateUser(username, pwd);
+                UserAccount user = ipcSystem.getUserAccountDirectory().authenticateUser(username, pwd);
 
-                system.getUserAccountDirectory().deleteUserAccount(user);
-                system.getHealthCampDirectory().deleteHealthCamp(user.getIpcuserName());
-                populateHealthCampTable();
+                ipcSystem.getUserAccountDirectory().deleteUserAccount(user);
+                ipcSystem.getHealthCampDirectory().deleteHealthCamp(user.getIpcuserName());
+                ipcPopulateHealthCampTable();
             }
         } else {
             JOptionPane.showMessageDialog(null, "Please select a row to delete the HealthCamp details");
@@ -259,11 +259,11 @@ public class ManageHealthCamp extends javax.swing.JPanel {
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
-        if (system.getUserAccountDirectory().checkIfUsernameIsUnique(txtusername.getText())) {
-            UserAccount userAccount = system.getUserAccountDirectory().createUserAccount(txtname.getText(), txtusername.getText(), txtpass.getText(), null, new HealthCampRole());
-            HealthCamp healthCamp = system.getHealthCampDirectory().createUserAccount(txtusername.getText());
+        if (ipcSystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtusername.getText())) {
+            UserAccount userAccount = ipcSystem.getUserAccountDirectory().createUserAccount(txtname.getText(), txtusername.getText(), txtpass.getText(), null, new HealthCampRole());
+            HealthCamp healthCamp = ipcSystem.getHealthCampDirectory().createUserAccount(txtusername.getText());
             System.out.println("health camp username while adding : "+ txtusername.getText());
-            populateHealthCampTable();
+            ipcPopulateHealthCampTable();
             txtname.setText("");
             txtusername.setText("");
             txtpass.setText("");
@@ -272,11 +272,11 @@ public class ManageHealthCamp extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnAddActionPerformed
 
-    public void populateHealthCampTable() {
+    public void ipcPopulateHealthCampTable() {
         DefaultTableModel tablemodel = (DefaultTableModel) tblHealthCamp.getModel();
 
         tablemodel.setRowCount(0);
-        for (UserAccount user : system.getUserAccountDirectory().getUserAccountList()) {
+        for (UserAccount user : ipcSystem.getUserAccountDirectory().getUserAccountList()) {
 
             if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.HealthCampRole")) {
                 Object[] row = new Object[3];
