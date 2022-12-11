@@ -42,9 +42,9 @@ public class LabAssistantWorkArea extends javax.swing.JPanel {
                 System.out.println("Lab assistant : " + labAssistant.getIpcpetOwner());
                 System.out.println("Lab assistant : " + labAssistant.getIpcpetType());
                 Object[] row = new Object[4];
+                row[2] = labAssistant.getIpchealthCamp();
                 row[0] = labAssistant.getIpcpetOwner();
                 row[1] = labAssistant.getIpcpetType();
-                row[2] = labAssistant.getIpchealthCamp();
                 row[3] = labAssistant.getIpclabResultStatus() == null ? "N/A" : labAssistant.getIpclabResultStatus();
                 tablemodel.addRow(row);
             }
@@ -168,4 +168,20 @@ public class LabAssistantWorkArea extends javax.swing.JPanel {
     private javax.swing.JTable tbllabassitant;
     private javax.swing.JTextField txtlabresult;
     // End of variables declaration//GEN-END:variables
+    
+     public void populatelabTable() {
+        DefaultTableModel tablemodel = (DefaultTableModel) tbllabassitant.getModel();
+        tablemodel.setRowCount(0);
+        for (LabAssistant labAssistant : ipcsystem.getLabAssistantDirectory().getLabAssistantDirectory()) {
+            
+                Object[] row = new Object[4];
+                row[2] = labAssistant.getIpchealthCamp();
+                row[0] = labAssistant.getIpcpetOwner();
+                row[1] = labAssistant.getIpcpetType();
+                row[3] = labAssistant.getIpclabResultStatus() == null ? "N/A" : labAssistant.getIpclabResultStatus();
+                tablemodel.addRow(row);
+            }
+
+        }
+    }
 }
