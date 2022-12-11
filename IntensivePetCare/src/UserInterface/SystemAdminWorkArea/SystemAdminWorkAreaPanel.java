@@ -5,8 +5,8 @@
 package UserInterface.SystemAdminWorkArea;
 
 import Model.Ecosystem;
-import java.awt.CardLayout;
 import javax.swing.JPanel;
+import java.awt.CardLayout;
 /**
  *
  * @author varshakuruva
@@ -17,13 +17,13 @@ public class SystemAdminWorkAreaPanel extends javax.swing.JPanel {
      * Creates new form SystemAdminWorkAreaPanel
      */
     
-    JPanel userProcessContainer;
+    JPanel ipcUserProcessContainer;
     Ecosystem ecosystem;
     
-    public SystemAdminWorkAreaPanel(JPanel userProcessContainer, Ecosystem ecosystem) {
+    public SystemAdminWorkAreaPanel(JPanel ipcUserProcessContainer, Ecosystem ecosystem) {
         initComponents();
         
-        this.userProcessContainer = userProcessContainer;
+        this.ipcUserProcessContainer = ipcUserProcessContainer;
         this.ecosystem = ecosystem;
     }
 
@@ -297,10 +297,10 @@ public class SystemAdminWorkAreaPanel extends javax.swing.JPanel {
 
     private void txtHospitalNetworkMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtHospitalNetworkMousePressed
         // TODO add your handling code here:
-        ManageHospitalNetwork manageHospitalNetworkJPanel = new ManageHospitalNetwork(userProcessContainer, ecosystem);
-        userProcessContainer.add("ManageHospitals", manageHospitalNetworkJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        ManageHospitalNetwork manageHospitalNetworkJPanel = new ManageHospitalNetwork(ipcUserProcessContainer, ecosystem);
+        ipcUserProcessContainer.add("ManageHospitals", manageHospitalNetworkJPanel);
+        CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
+        layout.next(ipcUserProcessContainer);
     }//GEN-LAST:event_txtHospitalNetworkMousePressed
 
     private void txtHospitalNetworkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHospitalNetworkActionPerformed
@@ -313,10 +313,10 @@ public class SystemAdminWorkAreaPanel extends javax.swing.JPanel {
 
     private void txtManageSponsorsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtManageSponsorsMousePressed
         // TODO add your handling code here:
-        ManageSponsor manageSponsorJPanel = new ManageSponsor(userProcessContainer, ecosystem);
-        userProcessContainer.add("ManageSponsors", manageSponsorJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        ManageSponsor manageSponsorJPanel = new ManageSponsor(ipcUserProcessContainer, ecosystem);
+        ipcUserProcessContainer.add("ManageSponsors", manageSponsorJPanel);
+        CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
+        layout.next(ipcUserProcessContainer);
     }//GEN-LAST:event_txtManageSponsorsMousePressed
 
     private void txtManageSponsorsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtManageSponsorsActionPerformed
@@ -329,10 +329,10 @@ public class SystemAdminWorkAreaPanel extends javax.swing.JPanel {
 
     private void txtManagePetVolunteerMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtManagePetVolunteerMousePressed
         // TODO add your handling code here:
-        ManagePetVolunteer managePetVolunteerJPanel = new ManagePetVolunteer(userProcessContainer, ecosystem);
-        userProcessContainer.add("ManagePetVolunteers", managePetVolunteerJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        ManagePetVolunteer managePetVolunteerJPanel = new ManagePetVolunteer(ipcUserProcessContainer, ecosystem);
+        ipcUserProcessContainer.add("ManagePetVolunteers", managePetVolunteerJPanel);
+        CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
+        layout.next(ipcUserProcessContainer);
     }//GEN-LAST:event_txtManagePetVolunteerMousePressed
 
     private void txtManagePetVolunteerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtManagePetVolunteerActionPerformed
@@ -345,10 +345,10 @@ public class SystemAdminWorkAreaPanel extends javax.swing.JPanel {
 
     private void txtFundRaisingAgencyMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtFundRaisingAgencyMousePressed
         // TODO add your handling code here:
-        ManageFundAgency manageFundRaisingAgencyJPanel = new ManageFundAgency(userProcessContainer, ecosystem);
-        userProcessContainer.add("ManageFundRaisingAgency", manageFundRaisingAgencyJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        ManageFundAgency manageFundRaisingAgencyJPanel = new ManageFundAgency(ipcUserProcessContainer, ecosystem);
+        ipcUserProcessContainer.add("ManageFundRaisingAgency", manageFundRaisingAgencyJPanel);
+        CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
+        layout.next(ipcUserProcessContainer);
     }//GEN-LAST:event_txtFundRaisingAgencyMousePressed
 
     private void manageFundRaisongAgencyMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageFundRaisongAgencyMousePressed
@@ -357,10 +357,10 @@ public class SystemAdminWorkAreaPanel extends javax.swing.JPanel {
 
     private void txtManageHealthCampMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtManageHealthCampMousePressed
         // TODO add your handling code here:
-        ManageHealthCamp manageHealthCampJPanel = new ManageHealthCamp(userProcessContainer, ecosystem);
-        userProcessContainer.add("ManageHealthCamp", manageHealthCampJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        ManageHealthCamp manageHealthCampJPanel = new ManageHealthCamp(ipcUserProcessContainer, ecosystem);
+        ipcUserProcessContainer.add("ManageHealthCamp", manageHealthCampJPanel);
+        CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
+        layout.next(ipcUserProcessContainer);
     }//GEN-LAST:event_txtManageHealthCampMousePressed
 
     private void manageHealthCampMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageHealthCampMousePressed
@@ -369,10 +369,10 @@ public class SystemAdminWorkAreaPanel extends javax.swing.JPanel {
 
     private void lblManageDriversMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblManageDriversMousePressed
         // TODO add your handling code here:
-        Managedriver manageDriverJPanel = new Managedriver(userProcessContainer, ecosystem);
-        userProcessContainer.add("ManageDrivers", manageDriverJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        Managedriver manageDriverJPanel = new Managedriver(ipcUserProcessContainer, ecosystem);
+        ipcUserProcessContainer.add("ManageDrivers", manageDriverJPanel);
+        CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
+        layout.next(ipcUserProcessContainer);
     }//GEN-LAST:event_lblManageDriversMousePressed
 
 
