@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 /**
  *
- * @author rashmisingh
+ * @author poojitha
  */
 public class ManageOrgInfo extends javax.swing.JPanel {
 
