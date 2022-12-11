@@ -5,16 +5,16 @@
 package UserInterface.SystemAdminWorkArea;
 
 
-import Model.Ecosystem;
-import Model.PetVolunteer.PetVolunteer;
-import Model.Role.PetVolunteerRole;
 import Model.UserAccount.UserAccount;
-import java.awt.CardLayout;
-import java.util.regex.Matcher;
+import Model.Role.PetVolunteerRole;
+import Model.PetVolunteer.PetVolunteer;
+import Model.Ecosystem;
 import java.util.regex.Pattern;
-import javax.swing.JOptionPane;
+import java.util.regex.Matcher;
+import java.awt.CardLayout;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.JOptionPane;
 /**
  *
  * @author varshakuruva
@@ -25,16 +25,16 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
      * Creates new form ManagePetVolunteer
      */
     
-    JPanel userProcessContainer;
-    Ecosystem system;
+    JPanel ipcUserProcessContainer;
+    Ecosystem ipcSystem;
     private UserAccount user;
     
-    public ManagePetVolunteer(JPanel userProcessContainer, Ecosystem system) {
+    public ManagePetVolunteer(JPanel ipcUserProcessContainer, Ecosystem ipcSystem) {
         initComponents();
         
-        this.userProcessContainer = userProcessContainer;
-        this.system = system;
-        populatePetVolunteerTable();
+        this.ipcUserProcessContainer = ipcUserProcessContainer;
+        this.ipcSystem = ipcSystem;
+        ipcPopulatePetVolunteerTable();
     }
 
     /**
@@ -183,9 +183,9 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        ipcUserProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
+        layout.previous(ipcUserProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
@@ -203,7 +203,7 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
         }
         else  
         {
-            JOptionPane.showMessageDialog(null, "Please select a row to view the PetVolunteer details");
+            JOptionPane.showMessageDialog(null, "to view the Pet Volunteer details, Please select a row");
         }  
     }//GEN-LAST:event_btnViewActionPerformed
 
@@ -214,9 +214,9 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
         String name = (String) tblPetVolunteer.getValueAt(selectRow, 0);
         String username = (String) tblPetVolunteer.getValueAt(selectRow, 1);
         String password = (String) tblPetVolunteer.getValueAt(selectRow, 2);
-        user = system.getUserAccountDirectory().authenticateUser(username, password);
-        system.getUserAccountDirectory().updateUserAccount(user, txtName.getText(), txtUserName.getText(), txtPassword.getText());
-        populatePetVolunteerTable();
+        user = ipcSystem.getUserAccountDirectory().authenticateUser(username, password);
+        ipcSystem.getUserAccountDirectory().updateUserAccount(user, txtName.getText(), txtUserName.getText(), txtPassword.getText());
+        ipcPopulatePetVolunteerTable();
 
         txtName.setText("");
         txtUserName.setText("");
@@ -224,7 +224,7 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
         }
         else  
         {
-            JOptionPane.showMessageDialog(null, "Please select a row to update the PetVolunteer details");
+            JOptionPane.showMessageDialog(null, "to update the Pet Volunteer details, Please select a row");
         }  
     }//GEN-LAST:event_btnUpdateActionPerformed
 
@@ -237,37 +237,37 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
             if (selectionResult == JOptionPane.YES_OPTION) {
                 String username = (String) tblPetVolunteer.getValueAt(selectedRow, 1);
                 String pwd = (String) tblPetVolunteer.getValueAt(selectedRow, 2);
-                UserAccount user = system.getUserAccountDirectory().authenticateUser(username, pwd);
+                UserAccount user = ipcSystem.getUserAccountDirectory().authenticateUser(username, pwd);
 
-                system.getUserAccountDirectory().deleteUserAccount(user);
-                system.getHospitalDirectory().deleteHospital(user.getIpcuserName());
-                populatePetVolunteerTable();
+                ipcSystem.getUserAccountDirectory().deleteUserAccount(user);
+                ipcSystem.getHospitalDirectory().deleteHospital(user.getIpcuserName());
+                ipcPopulatePetVolunteerTable();
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Please select a row to delete the PetVolunteer details");
+            JOptionPane.showMessageDialog(null, "to delete the Pet Volunteer details, Please select a row");
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         // TODO add your handling code here:
-        if (system.getUserAccountDirectory().checkIfUsernameIsUnique(txtUserName.getText())) {
-            UserAccount userAccount = system.getUserAccountDirectory().createUserAccount(txtName.getText(), txtUserName.getText(), txtPassword.getText(), null, new PetVolunteerRole());
-            PetVolunteer petVolunteer = system.getPetVolunteerDirectory().createUserAccount(txtUserName.getText());
-            populatePetVolunteerTable();
+        if (ipcSystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtUserName.getText())) {
+            UserAccount userAccount = ipcSystem.getUserAccountDirectory().createUserAccount(txtName.getText(), txtUserName.getText(), txtPassword.getText(), null, new PetVolunteerRole());
+            PetVolunteer petVolunteer = ipcSystem.getPetVolunteerDirectory().createUserAccount(txtUserName.getText());
+            ipcPopulatePetVolunteerTable();
             txtName.setText("");
             txtUserName.setText("");
             txtPassword.setText("");
         } else {
-            JOptionPane.showMessageDialog(null, "Username is not unique");
+            JOptionPane.showMessageDialog(null, "Please enter Unique User Name");
         }
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     
-    public void populatePetVolunteerTable() {
+    public void ipcPopulatePetVolunteerTable() {
         DefaultTableModel tablemodel = (DefaultTableModel) tblPetVolunteer.getModel();
 
         tablemodel.setRowCount(0);
-        for (UserAccount user : system.getUserAccountDirectory().getUserAccountList()) {
+        for (UserAccount user : ipcSystem.getUserAccountDirectory().getUserAccountList()) {
 
             if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.PetVolunteerRole")) {
                 Object[] row = new Object[3];
@@ -311,16 +311,16 @@ private boolean validateInputFields() {
         
         if (!m.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Error in provided name,Please Try agian!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided Name has Error");
             return false;
         } else if (!m7.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Error in provided username ,Please Try agian!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided User Name has Error");
             return false;
         }
         else if (!m1.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Error in provided password ,Please Try agian!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided Password has Error");
             return false;
         }
         else {

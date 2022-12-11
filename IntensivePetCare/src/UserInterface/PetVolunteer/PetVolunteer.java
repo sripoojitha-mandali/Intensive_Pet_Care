@@ -226,7 +226,7 @@ private boolean validateInputFields() {
         
        {
 
-            JOptionPane.showMessageDialog(this, "Please enter correct input format for owner");
+            JOptionPane.showMessageDialog(this, "Incorrect input format for Owner! Please enter again.");
             return false;
         } 
         
@@ -234,13 +234,13 @@ private boolean validateInputFields() {
         
         {
 
-            JOptionPane.showMessageDialog(this, "Please enter correct input format for hospitalname ");
+            JOptionPane.showMessageDialog(this, "Incorrect input format for Hospital Name! Please enter again.");
             return false;
         }
         else if (!m1.matches()) 
         {
 
-            JOptionPane.showMessageDialog(this, "Please enter correct input format for address ");
+            JOptionPane.showMessageDialog(this, "Incorrect input format for Address! Please enter again.");
             return false;
         }
         else 

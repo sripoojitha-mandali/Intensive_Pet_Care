@@ -131,7 +131,7 @@ public class SponsorWorkArea extends javax.swing.JPanel {
             }
         }
 
-        JOptionPane.showMessageDialog(this,"Funds has been approved successfully");
+        JOptionPane.showMessageDialog(this,"Successful Approval of Funds!");
     }//GEN-LAST:event_btnApproveFundsActionPerformed
 
 

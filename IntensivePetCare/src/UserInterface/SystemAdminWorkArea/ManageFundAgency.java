@@ -200,7 +200,7 @@ public class ManageFundAgency extends javax.swing.JPanel {
             btnsave.setEnabled(false);
         }
    else {
-            JOptionPane.showMessageDialog(null, "Please select a row to view the FundAgency details");
+            JOptionPane.showMessageDialog(null, "To view the Fund Agency details, Please select a row ");
         }
     }//GEN-LAST:event_btnViewActionPerformed
 
@@ -221,7 +221,7 @@ public class ManageFundAgency extends javax.swing.JPanel {
         btnsave.setEnabled(true);
         }
    else {
-            JOptionPane.showMessageDialog(null, "Please select a row to update the FundAgency details");
+            JOptionPane.showMessageDialog(null, "to update the Fund Agency details, Please select a row");
         }
     }//GEN-LAST:event_btnUpdateActionPerformed
 
@@ -242,7 +242,7 @@ public class ManageFundAgency extends javax.swing.JPanel {
                 ipcPopulateFundRaisingTable();
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Please select a row to delete the FundAgency details");
+            JOptionPane.showMessageDialog(null, "to delete the Fund Agency details, Please select a row");
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
 
@@ -256,7 +256,7 @@ public class ManageFundAgency extends javax.swing.JPanel {
             txtusername.setText("");
             txtpass.setText("");
         } else {
-            JOptionPane.showMessageDialog(null, "Username is not unique");
+            JOptionPane.showMessageDialog(null, "Please enter Unique User Name");
         }
 
     }//GEN-LAST:event_btnsaveActionPerformed
@@ -309,16 +309,16 @@ private boolean validateInputFields() {
         
         if (!m.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Error in provided name,Please Try agian!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided Name has Error");
             return false;
         } else if (!m7.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Error in provided username ,Please Try agian!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided User Name has Error");
             return false;
         }
         else if (!m1.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Error in provided password ,Please Try agian!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided Password has Error");
             return false;
         }
         else {

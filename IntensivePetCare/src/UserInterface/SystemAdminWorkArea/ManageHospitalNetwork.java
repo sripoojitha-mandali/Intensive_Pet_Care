@@ -214,7 +214,7 @@ public class ManageHospitalNetwork extends javax.swing.JPanel {
         }
         else  
         {
-            JOptionPane.showMessageDialog(null, "Please select a row to view the Hospital network details");
+            JOptionPane.showMessageDialog(null, "to view the Hospital network details, Please select a row");
         }         
              
     }//GEN-LAST:event_btnViewHospitalActionPerformed
@@ -235,7 +235,7 @@ public class ManageHospitalNetwork extends javax.swing.JPanel {
                 ipcPopulateHospitalTable();
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Please select a row to delete the Hospital network details");
+            JOptionPane.showMessageDialog(null, "to delete the Hospital network details, Please select a row");
         }
     }//GEN-LAST:event_btnDeleteHospitalActionPerformed
 
@@ -270,7 +270,7 @@ public class ManageHospitalNetwork extends javax.swing.JPanel {
         txtPassword.setText("");
         
         } else {
-            JOptionPane.showMessageDialog(null, "Please select a row to update the Hospital network details");
+            JOptionPane.showMessageDialog(null, "to update the Hospital network details, Please select a row");
         }
     }//GEN-LAST:event_btnUpdateHospital1ActionPerformed
 
@@ -322,16 +322,16 @@ private boolean validateInputFields() {
         
         if (!m.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Error in provided name,Please Try agian!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided Name has Error");
             return false;
         } else if (!m7.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Error in provided username ,Please Try agian!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided User Name has Error");
             return false;
         }
         else if (!m1.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Error in provided password ,Please Try agian!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided Password has Error");
             return false;
         }
         else {
