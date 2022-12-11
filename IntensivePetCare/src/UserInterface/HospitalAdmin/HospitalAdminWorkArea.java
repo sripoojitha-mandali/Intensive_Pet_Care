@@ -293,7 +293,9 @@ public class HospitalAdminWorkArea extends javax.swing.JPanel {
         ManageSponsor manageSponsorJPanel = new ManageSponsor(ipcuserProcessContainer,ipcaccount, ipcsystem);
         ipcuserProcessContainer.add("ManageSponsorInfo", manageSponsorJPanel);
         CardLayout layout = (CardLayout) ipcuserProcessContainer.getLayout();
+
         layout.next(ipcuserProcessContainer);
+
     }//GEN-LAST:event_lblAddSponsorMousePressed
 
 
