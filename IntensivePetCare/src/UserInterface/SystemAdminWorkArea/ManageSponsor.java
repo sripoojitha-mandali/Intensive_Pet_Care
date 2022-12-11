@@ -4,12 +4,12 @@
  */
 package UserInterface.SystemAdminWorkArea;
 
-import IntensivePetCare.Ecosystem;
+import Model.Ecosystem;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
-import IntensivePetCare.Role.SponsorRole;
-import IntensivePetCare.Sponsor.Sponsor;
-import IntensivePetCare.UserAccount.UserAccount;
+import Model.Role.SponsorRole;
+import Model.Sponsor.Sponsor;
+import Model.UserAccount.UserAccount;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;

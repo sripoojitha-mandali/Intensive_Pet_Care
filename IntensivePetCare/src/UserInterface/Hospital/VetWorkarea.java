@@ -4,10 +4,10 @@
  */
 package UserInterface.Hospital;
 
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.LabAssistant.LabAssistant;
-import IntensivePetCare.PetVolunteer.PetVolunteer;
-import IntensivePetCare.Vet.Vet;
+import Model.Ecosystem;
+import Model.LabAssistant.LabAssistant;
+import Model.PetVolunteer.PetVolunteer;
+import Model.Vet.Vet;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;

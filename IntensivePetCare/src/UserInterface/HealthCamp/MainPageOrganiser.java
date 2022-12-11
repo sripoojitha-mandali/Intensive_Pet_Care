@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 package UserInterface.HealthCamp;
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.PetVolunteer.PetVolunteerDirectory;
-import IntensivePetCare.UserAccount.UserAccount;
+import Model.Ecosystem;
+import Model.PetVolunteer.PetVolunteerDirectory;
+import Model.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 /**

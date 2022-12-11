@@ -4,10 +4,10 @@
  */
 package UserInterface.SystemAdminWorkArea;
 
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.Hospital.Hospital;
-import IntensivePetCare.Role.HospitalAdminRole;
-import IntensivePetCare.UserAccount.UserAccount;
+import Model.Ecosystem;
+import Model.Hospital.Hospital;
+import Model.Role.HospitalAdminRole;
+import Model.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
