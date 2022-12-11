@@ -168,7 +168,22 @@ public class PetVolunteer extends javax.swing.JPanel {
     private void txtpetownerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpetownerActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtpetownerActionPerformed
+    
+    private void ipcPopulatePettable() {
 
+        DefaultTableModel tablemodel = (DefaultTableModel) tblHealthCamps.getModel();
+
+        tablemodel.setRowCount(0);
+        
+        for(HealthCamp healthCamp: system.getHealthCampDirectory().getHealthCampDirectory()) {
+        
+            Object[] row = new Object[1];
+            row[0] = healthCamp.getIpchealthCampName();
+            tablemodel.addRow(row);
+            
+        } 
+}
+    
     private void btnSavePetVolunteerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavePetVolunteerActionPerformed
         // TODO add your handling code here:
         for (Model.PetVolunteer.PetVolunteer petVolunteer : system.getPetVolunteerDirectory().getPetVolunteerDirectory()) {
