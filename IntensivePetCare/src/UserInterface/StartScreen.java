@@ -28,20 +28,20 @@ public class StartScreen extends javax.swing.JFrame {
     private void initComponents() {
 
         loadingprogressBar = new javax.swing.JProgressBar();
-        lblVetRelief = new javax.swing.JLabel();
-        loadingNumber = new javax.swing.JLabel();
+        lb2 = new javax.swing.JLabel();
+        lb1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         loadingprogressBar.setBackground(new java.awt.Color(0, 153, 153));
         loadingprogressBar.setForeground(new java.awt.Color(0, 153, 153));
 
-        lblVetRelief.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        lblVetRelief.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/entry.jpg"))); // NOI18N
+        lb2.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        lb2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/entry.jpg"))); // NOI18N
 
-        loadingNumber.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        loadingNumber.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        loadingNumber.setText("99%");
+        lb1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        lb1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb1.setText("99%");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -51,12 +51,12 @@ public class StartScreen extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(lblVetRelief, javax.swing.GroupLayout.PREFERRED_SIZE, 883, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lb2, javax.swing.GroupLayout.PREFERRED_SIZE, 883, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(302, 302, 302)
                         .addComponent(loadingprogressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(loadingNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lb1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -68,9 +68,9 @@ public class StartScreen extends javax.swing.JFrame {
                         .addComponent(loadingprogressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addComponent(loadingNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lb1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblVetRelief, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lb2, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -113,8 +113,8 @@ public class StartScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel lblVetRelief;
-    public javax.swing.JLabel loadingNumber;
+    public javax.swing.JLabel lb1;
+    private javax.swing.JLabel lb2;
     public javax.swing.JProgressBar loadingprogressBar;
     // End of variables declaration//GEN-END:variables
 }

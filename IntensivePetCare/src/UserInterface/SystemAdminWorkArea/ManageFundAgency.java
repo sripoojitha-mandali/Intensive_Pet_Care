@@ -6,15 +6,15 @@ package UserInterface.SystemAdminWorkArea;
 
 
 import Model.Ecosystem;
-import Model.FundRaising.FundRaising;
-import Model.Role.FundRaisingRole;
 import Model.UserAccount.UserAccount;
-import java.awt.CardLayout;
-import java.util.regex.Matcher;
+import Model.Role.FundRaisingRole;
+import Model.FundRaising.FundRaising;
 import java.util.regex.Pattern;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
+import java.util.regex.Matcher;
+import java.awt.CardLayout;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.JPanel;
+import javax.swing.JOptionPane;
 /**
  *
  * @author varshakuruva
@@ -25,15 +25,15 @@ public class ManageFundAgency extends javax.swing.JPanel {
      * Creates new form ManageFundAgency
      */
     
-    JPanel ipcuserProcessContainer;
-    Ecosystem ipcsystem;
-    private UserAccount ipcaccount;
-    public ManageFundAgency(JPanel ipcuserProcessContainer, Ecosystem system) {
+    JPanel ipcUserProcessContainer;
+    Ecosystem ipcSystem;
+    private UserAccount ipcAccount;
+    public ManageFundAgency(JPanel ipcUserProcessContainer, Ecosystem ipcSystem) {
         initComponents();
-        this.ipcuserProcessContainer = ipcuserProcessContainer;
-        this.ipcsystem = ipcsystem;
-        this.ipcaccount = ipcaccount;
-        populateFundRaisingTable();
+        this.ipcUserProcessContainer = ipcUserProcessContainer;
+        this.ipcSystem = ipcSystem;
+//        this.ipcAccount = ipcAccount;
+        ipcPopulateFundRaisingTable();
     }
 
     /**
@@ -45,40 +45,40 @@ public class ManageFundAgency extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnBack = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        btnBack1 = new javax.swing.JButton();
+        lbl1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblfundagency = new javax.swing.JTable();
-        btnView = new javax.swing.JButton();
-        btnUpdate = new javax.swing.JButton();
-        btnDelete = new javax.swing.JButton();
-        txtname = new javax.swing.JTextField();
-        txtusername = new javax.swing.JTextField();
-        txtpass = new javax.swing.JPasswordField();
-        lblusername = new javax.swing.JLabel();
-        lblname = new javax.swing.JLabel();
-        lblpassword = new javax.swing.JLabel();
-        btnsave = new javax.swing.JButton();
+        tbFundAgency = new javax.swing.JTable();
+        btnView1 = new javax.swing.JButton();
+        btnUpdate1 = new javax.swing.JButton();
+        btnDelete1 = new javax.swing.JButton();
+        txtName1 = new javax.swing.JTextField();
+        txtUsername1 = new javax.swing.JTextField();
+        txtPassword1 = new javax.swing.JPasswordField();
+        lbUsername = new javax.swing.JLabel();
+        lbName = new javax.swing.JLabel();
+        lbPassword = new javax.swing.JLabel();
+        btnSave1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(214, 209, 222));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-back-arrow-64 (2) (1).png"))); // NOI18N
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btnBack1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-back-arrow-64 (2) (1).png"))); // NOI18N
+        btnBack1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btnBack1ActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 40, 36));
+        add(btnBack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 40, 36));
 
-        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("MANAGE FUND AGENCY");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 310, 50));
+        lbl1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        lbl1.setForeground(new java.awt.Color(255, 255, 255));
+        lbl1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl1.setText("MANAGE FUND AGENCY");
+        add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 310, 50));
 
-        tblfundagency.setModel(new javax.swing.table.DefaultTableModel(
+        tbFundAgency.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -97,177 +97,177 @@ public class ManageFundAgency extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblfundagency);
+        jScrollPane1.setViewportView(tbFundAgency);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 600, 200));
 
-        btnView.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnView.setForeground(new java.awt.Color(63, 40, 101));
-        btnView.setText("VIEW");
-        btnView.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnView.addActionListener(new java.awt.event.ActionListener() {
+        btnView1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        btnView1.setForeground(new java.awt.Color(63, 40, 101));
+        btnView1.setText("VIEW");
+        btnView1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnView1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewActionPerformed(evt);
+                btnView1ActionPerformed(evt);
             }
         });
-        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, 80, 30));
+        add(btnView1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, 80, 30));
 
-        btnUpdate.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnUpdate.setForeground(new java.awt.Color(63, 40, 101));
-        btnUpdate.setText("UPDATE");
-        btnUpdate.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+        btnUpdate1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnUpdate1.setForeground(new java.awt.Color(63, 40, 101));
+        btnUpdate1.setText("UPDATE");
+        btnUpdate1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnUpdate1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateActionPerformed(evt);
+                btnUpdate1ActionPerformed(evt);
             }
         });
-        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 300, 100, 30));
+        add(btnUpdate1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 300, 100, 30));
 
-        btnDelete.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnDelete.setForeground(new java.awt.Color(63, 40, 101));
-        btnDelete.setText("DELETE");
-        btnDelete.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+        btnDelete1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        btnDelete1.setForeground(new java.awt.Color(63, 40, 101));
+        btnDelete1.setText("DELETE");
+        btnDelete1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnDelete1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteActionPerformed(evt);
+                btnDelete1ActionPerformed(evt);
             }
         });
-        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 300, 90, 30));
+        add(btnDelete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 300, 90, 30));
 
-        txtname.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 370, 140, 30));
+        txtName1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
+        add(txtName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 370, 140, 30));
 
-        txtusername.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 410, 140, 30));
+        txtUsername1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
+        add(txtUsername1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 410, 140, 30));
 
-        txtpass.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        add(txtpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 450, 140, 30));
+        txtPassword1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
+        add(txtPassword1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 450, 140, 30));
 
-        lblusername.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblusername.setForeground(new java.awt.Color(63, 40, 101));
-        lblusername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblusername.setText("USERNAME");
-        add(lblusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, 120, 30));
+        lbUsername.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        lbUsername.setForeground(new java.awt.Color(63, 40, 101));
+        lbUsername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lbUsername.setText("USERNAME");
+        add(lbUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, 120, 30));
 
-        lblname.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblname.setForeground(new java.awt.Color(63, 40, 101));
-        lblname.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblname.setText("NAME");
-        add(lblname, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, 90, 30));
+        lbName.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        lbName.setForeground(new java.awt.Color(63, 40, 101));
+        lbName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lbName.setText("NAME");
+        add(lbName, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, 90, 30));
 
-        lblpassword.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblpassword.setForeground(new java.awt.Color(63, 40, 101));
-        lblpassword.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblpassword.setText("PASSWORD");
-        add(lblpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 450, 110, 30));
+        lbPassword.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        lbPassword.setForeground(new java.awt.Color(63, 40, 101));
+        lbPassword.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lbPassword.setText("PASSWORD");
+        add(lbPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 450, 110, 30));
 
-        btnsave.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnsave.setForeground(new java.awt.Color(63, 40, 101));
-        btnsave.setText("ADD FUNDING AGENCY");
-        btnsave.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnsave.addActionListener(new java.awt.event.ActionListener() {
+        btnSave1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        btnSave1.setForeground(new java.awt.Color(63, 40, 101));
+        btnSave1.setText("ADD FUNDING AGENCY");
+        btnSave1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnSave1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnsaveActionPerformed(evt);
+                btnSave1ActionPerformed(evt);
             }
         });
-        add(btnsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 500, 190, 30));
+        add(btnSave1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 500, 190, 30));
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img2/ezgif.com-gif-maker (18).gif"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1050, 790));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btnBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack1ActionPerformed
         // TODO add your handling code here:
-        ipcuserProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) ipcuserProcessContainer.getLayout();
-        layout.previous(ipcuserProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
+        ipcUserProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
+        layout.previous(ipcUserProcessContainer);
+    }//GEN-LAST:event_btnBack1ActionPerformed
 
-    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+    private void btnView1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnView1ActionPerformed
         // TODO add your handling code here:
         
-        int selectRow = tblfundagency.getSelectedRow();
+        int selectRow = tbFundAgency.getSelectedRow();
 
         if (selectRow >= 0) {
-            String name = (String) tblfundagency.getValueAt(selectRow, 0);
-            String username = (String) tblfundagency.getValueAt(selectRow, 1);
-            String password = (String) tblfundagency.getValueAt(selectRow, 2);
+            String name = (String) tbFundAgency.getValueAt(selectRow, 0);
+            String username = (String) tbFundAgency.getValueAt(selectRow, 1);
+            String password = (String) tbFundAgency.getValueAt(selectRow, 2);
 
-            txtname.setText(name + "");
-            txtusername.setText(username + "");
-            txtpass.setText(password + "");
-            btnsave.setEnabled(false);
+            txtName1.setText(name + "");
+            txtUsername1.setText(username + "");
+            txtPassword1.setText(password + "");
+            btnSave1.setEnabled(false);
         }
    else {
-            JOptionPane.showMessageDialog(null, "Please select a row to view the FundAgency details");
+            JOptionPane.showMessageDialog(null, "To view the Fund Agency details, Please select a row ");
         }
-    }//GEN-LAST:event_btnViewActionPerformed
+    }//GEN-LAST:event_btnView1ActionPerformed
 
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+    private void btnUpdate1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdate1ActionPerformed
         // TODO add your handling code here:
-        int selectRow = tblfundagency.getSelectedRow();
+        int selectRow = tbFundAgency.getSelectedRow();
         if (selectRow >= 0) {
-        String name = (String) tblfundagency.getValueAt(selectRow, 0);
-        String username = (String) tblfundagency.getValueAt(selectRow, 1);
-        String password = (String) tblfundagency.getValueAt(selectRow, 2);
-        ipcaccount = ipcsystem.getUserAccountDirectory().authenticateUser(username, password);
-        ipcsystem.getUserAccountDirectory().updateUserAccount(ipcaccount, txtname.getText(), txtusername.getText(), txtpass.getText());
-        populateFundRaisingTable();
+        String name = (String) tbFundAgency.getValueAt(selectRow, 0);
+        String username = (String) tbFundAgency.getValueAt(selectRow, 1);
+        String password = (String) tbFundAgency.getValueAt(selectRow, 2);
+        ipcAccount = ipcSystem.getUserAccountDirectory().authenticateUser(username, password);
+        ipcSystem.getUserAccountDirectory().updateUserAccount(ipcAccount, txtName1.getText(), txtUsername1.getText(), txtPassword1.getText());
+        ipcPopulateFundRaisingTable();
 
-        txtname.setText("");
-        txtusername.setText("");
-        txtpass.setText("");
-        btnsave.setEnabled(true);
+        txtName1.setText("");
+        txtUsername1.setText("");
+        txtPassword1.setText("");
+        btnSave1.setEnabled(true);
         }
    else {
-            JOptionPane.showMessageDialog(null, "Please select a row to update the FundAgency details");
+            JOptionPane.showMessageDialog(null, "to update the Fund Agency details, Please select a row");
         }
-    }//GEN-LAST:event_btnUpdateActionPerformed
+    }//GEN-LAST:event_btnUpdate1ActionPerformed
 
-    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+    private void btnDelete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelete1ActionPerformed
         // TODO add your handling code here:
 
-        int selectedRow = tblfundagency.getSelectedRow();
+        int selectedRow = tbFundAgency.getSelectedRow();
         if (selectedRow >= 0) {
             int selectionButton = JOptionPane.YES_NO_OPTION;
             int selectionResult = JOptionPane.showConfirmDialog(null, "Confirm delete?", "Warning", selectionButton);
             if (selectionResult == JOptionPane.YES_OPTION) {
-                String username = (String) tblfundagency.getValueAt(selectedRow, 1);
-                String pwd = (String) tblfundagency.getValueAt(selectedRow, 2);
-                UserAccount user = ipcsystem.getUserAccountDirectory().authenticateUser(username, pwd);
+                String username = (String) tbFundAgency.getValueAt(selectedRow, 1);
+                String pwd = (String) tbFundAgency.getValueAt(selectedRow, 2);
+                UserAccount user = ipcSystem.getUserAccountDirectory().authenticateUser(username, pwd);
 
-                ipcsystem.getUserAccountDirectory().deleteUserAccount(user);
-                ipcsystem.getFundRaisingDirectory().deleteFundRaiser(user.getIpcuserName());
-                populateFundRaisingTable();
+                ipcSystem.getUserAccountDirectory().deleteUserAccount(user);
+                ipcSystem.getFundRaisingDirectory().deleteFundRaiser(user.getIpcuserName());
+                ipcPopulateFundRaisingTable();
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Please select a row to delete the FundAgency details");
+            JOptionPane.showMessageDialog(null, "to delete the Fund Agency details, Please select a row");
         }
-    }//GEN-LAST:event_btnDeleteActionPerformed
+    }//GEN-LAST:event_btnDelete1ActionPerformed
 
-    private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
+    private void btnSave1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSave1ActionPerformed
         // TODO add your handling code here:
-        if (ipcsystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtusername.getText())) {
-            UserAccount userAccount = ipcsystem.getUserAccountDirectory().createUserAccount(txtname.getText(), txtusername.getText(), txtpass.getText(), null, new FundRaisingRole());
-            FundRaising fundRaising = ipcsystem.getFundRaisingDirectory().createUserAccount(txtusername.getText());
-            populateFundRaisingTable();
-            txtname.setText("");
-            txtusername.setText("");
-            txtpass.setText("");
+        if (ipcSystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtUsername1.getText())) {
+            UserAccount userAccount = ipcSystem.getUserAccountDirectory().createUserAccount(txtName1.getText(), txtUsername1.getText(), txtPassword1.getText(), null, new FundRaisingRole());
+            FundRaising fundRaising = ipcSystem.getFundRaisingDirectory().createUserAccount(txtUsername1.getText());
+            ipcPopulateFundRaisingTable();
+            txtName1.setText("");
+            txtUsername1.setText("");
+            txtPassword1.setText("");
         } else {
-            JOptionPane.showMessageDialog(null, "Username is not unique");
+            JOptionPane.showMessageDialog(null, "Please enter Unique User Name");
         }
 
-    }//GEN-LAST:event_btnsaveActionPerformed
+    }//GEN-LAST:event_btnSave1ActionPerformed
 
-    public void populateFundRaisingTable(){
-         DefaultTableModel tablemodel = (DefaultTableModel) tblfundagency.getModel();
+    public void ipcPopulateFundRaisingTable(){
+         DefaultTableModel tablemodel = (DefaultTableModel) tbFundAgency.getModel();
 
         tablemodel.setRowCount(0);
-        for (UserAccount user : ipcsystem.getUserAccountDirectory().getUserAccountList()) {
+        for (UserAccount user : ipcSystem.getUserAccountDirectory().getUserAccountList()) {
 
-            if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.FundRaisingRole")) {
+            if (user.getRole().getClass().getName().equals("Model.Role.FundRaisingRole")) {
                 Object[] row = new Object[3];
                 row[0] = user.getIpcname();
                 row[1] = user.getIpcuserName();
@@ -278,47 +278,47 @@ public class ManageFundAgency extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnDelete;
-    private javax.swing.JButton btnUpdate;
-    private javax.swing.JButton btnView;
-    private javax.swing.JButton btnsave;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnBack1;
+    private javax.swing.JButton btnDelete1;
+    private javax.swing.JButton btnSave1;
+    private javax.swing.JButton btnUpdate1;
+    private javax.swing.JButton btnView1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblname;
-    private javax.swing.JLabel lblpassword;
-    private javax.swing.JLabel lblusername;
-    private javax.swing.JTable tblfundagency;
-    private javax.swing.JTextField txtname;
-    private javax.swing.JPasswordField txtpass;
-    private javax.swing.JTextField txtusername;
+    private javax.swing.JLabel lbName;
+    private javax.swing.JLabel lbPassword;
+    private javax.swing.JLabel lbUsername;
+    private javax.swing.JLabel lbl1;
+    private javax.swing.JTable tbFundAgency;
+    private javax.swing.JTextField txtName1;
+    private javax.swing.JPasswordField txtPassword1;
+    private javax.swing.JTextField txtUsername1;
     // End of variables declaration//GEN-END:variables
 
 private boolean validateInputFields() {
 
         Pattern p = Pattern.compile("^[A-Za-z0-9 ]+$");
-        Matcher m = p.matcher(txtname.getText());
+        Matcher m = p.matcher(txtName1.getText());
         
         Pattern p7 = Pattern.compile("^[A-Za-z0-9]+$");
-        Matcher m7 = p7.matcher(txtusername.getText());
+        Matcher m7 = p7.matcher(txtUsername1.getText());
         
         Pattern p1 = Pattern.compile("^[A-Za-z0-9]+$");
-        Matcher m1 = p1.matcher(txtpass.getText());
+        Matcher m1 = p1.matcher(txtPassword1.getText());
         
         
         if (!m.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Error in provided name,Please Try agian!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided Name has Error");
             return false;
         } else if (!m7.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Error in provided username ,Please Try agian!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided User Name has Error");
             return false;
         }
         else if (!m1.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Error in provided password ,Please Try agian!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided Password has Error");
             return false;
         }
         else {

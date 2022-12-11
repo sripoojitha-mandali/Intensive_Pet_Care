@@ -3,16 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UserInterface.HospitalAdmin;
+
+import javax.swing.table.DefaultTableModel;
 import Model.Ecosystem;
-import Model.Role.SponsorRole;
-import Model.Sponsor.Sponsor;
-import Model.UserAccount.UserAccount;
 import java.awt.CardLayout;
+import Model.Role.SponsorRole;
 import java.util.regex.Matcher;
+import Model.Sponsor.Sponsor;
 import java.util.regex.Pattern;
+import Model.UserAccount.UserAccount;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author saran
@@ -23,19 +24,33 @@ public class ManageSponsor extends javax.swing.JPanel {
      * Creates new form ManageSponsor
      */
     
-    JPanel ipcuserProcessContainer;
-    Ecosystem ipcsystem;
-    private UserAccount ipcaccount;
+    JPanel ipcUserProcessContainer;
+    Ecosystem ipcSystem;
+    private UserAccount ipcAccount;
 
-    public ManageSponsor(JPanel ipcuserProcessContainer, UserAccount ipcaccount, Ecosystem ipcsystem) {
+    public ManageSponsor(JPanel ipcUserProcessContainer, UserAccount ipcAccount, Ecosystem ipcSystem) {
         initComponents();
-        this.ipcuserProcessContainer = ipcuserProcessContainer;
-        this.ipcsystem = ipcsystem;
-        this.ipcaccount = ipcaccount;
-        ipcpopulateSponsorTable();
+        this.ipcUserProcessContainer = ipcUserProcessContainer;
+        this.ipcSystem = ipcSystem;
+        this.ipcAccount = ipcAccount;
+        ipcPopulateSponsorTable();
     }
 
+ public void ipcPopulateSponsorTable() {
+        DefaultTableModel tablemodel = (DefaultTableModel) tb1.getModel();
 
+        tablemodel.setRowCount(0);
+        for (UserAccount user : ipcSystem.getUserAccountDirectory().getUserAccountList()) {
+
+            if (user.getRole().getClass().getName().equals("Model.Role.SponsorRole")) {
+                Object[] row = new Object[3];
+                row[0] = user.getIpcname();
+                row[1] = user.getIpcuserName();
+                row[2] = user.getIpcpassword();
+                tablemodel.addRow(row);
+            }
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -47,27 +62,27 @@ public class ManageSponsor extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblSponsor = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        txtUsername = new javax.swing.JTextField();
-        txtPassword = new javax.swing.JTextField();
-        txtName = new javax.swing.JTextField();
-        btnUpdate = new javax.swing.JButton();
-        btnDelete = new javax.swing.JButton();
-        btnView = new javax.swing.JButton();
-        btnSave = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        tb1 = new javax.swing.JTable();
+        lb3 = new javax.swing.JLabel();
+        lb4 = new javax.swing.JLabel();
+        lb5 = new javax.swing.JLabel();
+        txt2 = new javax.swing.JTextField();
+        txt3 = new javax.swing.JTextField();
+        txt1 = new javax.swing.JTextField();
+        btn2 = new javax.swing.JButton();
+        btn3 = new javax.swing.JButton();
+        btn1 = new javax.swing.JButton();
+        btn4 = new javax.swing.JButton();
+        lb2 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        lblManageInfo1 = new javax.swing.JLabel();
+        lb1 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
         jPanel1.setForeground(new java.awt.Color(255, 204, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tblSponsor.setModel(new javax.swing.table.DefaultTableModel(
+        tb1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -78,87 +93,87 @@ public class ManageSponsor extends javax.swing.JPanel {
                 "Name", "Username", "Password"
             }
         ));
-        jScrollPane1.setViewportView(tblSponsor);
+        jScrollPane1.setViewportView(tb1);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, -1, 96));
 
-        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 0, 51));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel1.setText("NAME");
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 100, 30));
+        lb3.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        lb3.setForeground(new java.awt.Color(153, 0, 51));
+        lb3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lb3.setText("NAME");
+        lb3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jPanel1.add(lb3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 100, 30));
 
-        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 0, 51));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel2.setText("USERNAME");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, 120, 30));
+        lb4.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        lb4.setForeground(new java.awt.Color(153, 0, 51));
+        lb4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lb4.setText("USERNAME");
+        jPanel1.add(lb4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, 120, 30));
 
-        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(153, 0, 51));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel3.setText("PASSWORD");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 470, 120, 30));
+        lb5.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        lb5.setForeground(new java.awt.Color(153, 0, 51));
+        lb5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lb5.setText("PASSWORD");
+        jPanel1.add(lb5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 470, 120, 30));
 
-        txtUsername.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 410, 150, 30));
+        txt2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
+        jPanel1.add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 410, 150, 30));
 
-        txtPassword.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 470, 150, 30));
+        txt3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
+        jPanel1.add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 470, 150, 30));
 
-        txtName.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        jPanel1.add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, 150, 30));
+        txt1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
+        jPanel1.add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, 150, 30));
 
-        btnUpdate.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnUpdate.setForeground(new java.awt.Color(153, 0, 51));
-        btnUpdate.setText("UPDATE");
-        btnUpdate.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+        btn2.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        btn2.setForeground(new java.awt.Color(153, 0, 51));
+        btn2.setText("UPDATE");
+        btn2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateActionPerformed(evt);
+                btn2ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, 110, 30));
+        jPanel1.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, 110, 30));
 
-        btnDelete.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnDelete.setForeground(new java.awt.Color(153, 0, 51));
-        btnDelete.setText("DELETE");
-        btnDelete.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+        btn3.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        btn3.setForeground(new java.awt.Color(153, 0, 51));
+        btn3.setText("DELETE");
+        btn3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteActionPerformed(evt);
+                btn3ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, 110, 30));
+        jPanel1.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, 110, 30));
 
-        btnView.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnView.setForeground(new java.awt.Color(153, 0, 51));
-        btnView.setText("VIEW");
-        btnView.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnView.addActionListener(new java.awt.event.ActionListener() {
+        btn1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        btn1.setForeground(new java.awt.Color(153, 0, 51));
+        btn1.setText("VIEW");
+        btn1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewActionPerformed(evt);
+                btn1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 100, 30));
+        jPanel1.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 100, 30));
 
-        btnSave.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnSave.setForeground(new java.awt.Color(63, 40, 101));
-        btnSave.setText("SAVE SPONSOR");
-        btnSave.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnSave.addActionListener(new java.awt.event.ActionListener() {
+        btn4.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        btn4.setForeground(new java.awt.Color(63, 40, 101));
+        btn4.setText("SAVE SPONSOR");
+        btn4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSaveActionPerformed(evt);
+                btn4ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 530, 120, 40));
+        jPanel1.add(btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 530, 120, 40));
 
-        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(153, 0, 51));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("MANAGE SPONSOR");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 450, 50));
+        lb2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        lb2.setForeground(new java.awt.Color(153, 0, 51));
+        lb2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb2.setText("MANAGE SPONSOR");
+        jPanel1.add(lb2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 450, 50));
 
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,9 +184,9 @@ public class ManageSponsor extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(102, 0, 51));
 
-        lblManageInfo1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        lblManageInfo1.setForeground(new java.awt.Color(255, 255, 255));
-        lblManageInfo1.setText("HOSPITAL ADMIN WORK AREA");
+        lb1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        lb1.setForeground(new java.awt.Color(255, 255, 255));
+        lb1.setText("HOSPITAL ADMIN WORK AREA");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -179,14 +194,14 @@ public class ManageSponsor extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(299, 299, 299)
-                .addComponent(lblManageInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lb1, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(375, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 6, Short.MAX_VALUE)
-                .addComponent(lblManageInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lb1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1070, -1));
@@ -209,127 +224,112 @@ public class ManageSponsor extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
         // TODO add your handling code here:
-        int ipcselectRow = tblSponsor.getSelectedRow();
+        int ipcselectRow = tb1.getSelectedRow();
         if (ipcselectRow >= 0) {
-            String ipcname = (String) tblSponsor.getValueAt(ipcselectRow, 0);
-            String ipcusername = (String) tblSponsor.getValueAt(ipcselectRow, 1);
-            String ipcpassword = (String) tblSponsor.getValueAt(ipcselectRow, 2);
-            ipcaccount = ipcsystem.getUserAccountDirectory().authenticateUser(ipcusername, ipcpassword);
-            ipcsystem.getUserAccountDirectory().updateUserAccount(ipcaccount, txtName.getText(), txtUsername.getText(), txtPassword.getText());
-            ipcpopulateSponsorTable();
+            String ipcname = (String) tb1.getValueAt(ipcselectRow, 0);
+            String ipcusername = (String) tb1.getValueAt(ipcselectRow, 1);
+            String ipcpassword = (String) tb1.getValueAt(ipcselectRow, 2);
+            ipcAccount = ipcSystem.getUserAccountDirectory().authenticateUser(ipcusername, ipcpassword);
+            ipcSystem.getUserAccountDirectory().updateUserAccount(ipcAccount, txt1.getText(), txt2.getText(), txt3.getText());
+            ipcPopulateSponsorTable();
 
-            txtName.setText("");
-            txtUsername.setText("");
-            txtPassword.setText("");
-            btnSave.setEnabled(true);
+            txt1.setText("");
+            txt2.setText("");
+            txt3.setText("");
+            btn4.setEnabled(true);
         }
         else {
-            JOptionPane.showMessageDialog(null, "Please select a row to update the Sponsor details");
+            JOptionPane.showMessageDialog(null, "Please select a row in order to update the details of Sponsor ");
         }
-    }//GEN-LAST:event_btnUpdateActionPerformed
+    }//GEN-LAST:event_btn2ActionPerformed
 
-    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
         // TODO add your handling code here:
-        int ipcselectedRow = tblSponsor.getSelectedRow();
+        int ipcselectedRow = tb1.getSelectedRow();
         if (ipcselectedRow >= 0) {
             int ipcselectionButton = JOptionPane.YES_NO_OPTION;
             int ipcselectionResult = JOptionPane.showConfirmDialog(null, "Confirm delete?", "Warning", ipcselectionButton);
             if (ipcselectionResult == JOptionPane.YES_OPTION) {
-                String ipcusername = (String) tblSponsor.getValueAt(ipcselectedRow, 1);
-                String ipcpwd = (String) tblSponsor.getValueAt(ipcselectedRow, 2);
-                UserAccount ipcuser = ipcsystem.getUserAccountDirectory().authenticateUser(ipcusername, ipcpwd);
+                String ipcusername = (String) tb1.getValueAt(ipcselectedRow, 1);
+                String ipcpwd = (String) tb1.getValueAt(ipcselectedRow, 2);
+                UserAccount ipcuser = ipcSystem.getUserAccountDirectory().authenticateUser(ipcusername, ipcpwd);
 
-                ipcsystem.getUserAccountDirectory().deleteUserAccount(ipcuser);
-                ipcsystem.getLabAssistantDirectory().deleteLabAssistant(ipcuser.getIpcuserName());
-                ipcpopulateSponsorTable();
+                ipcSystem.getUserAccountDirectory().deleteUserAccount(ipcuser);
+                ipcSystem.getLabAssistantDirectory().deleteLabAssistant(ipcuser.getIpcuserName());
+                ipcPopulateSponsorTable();
             }
         } else
         {
-            JOptionPane.showMessageDialog(null, "Please select a row to delete the Sponsor details");
+            JOptionPane.showMessageDialog(null, "Please select a row in order to delete the details of Sponsor");
         }
-    }//GEN-LAST:event_btnDeleteActionPerformed
+    }//GEN-LAST:event_btn3ActionPerformed
 
-    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
         // TODO add your handling code here:
-        int ipcselectRow = tblSponsor.getSelectedRow();
+        int ipcselectRow = tb1.getSelectedRow();
 
         if (ipcselectRow >= 0) {
-            String ipcname = (String) tblSponsor.getValueAt(ipcselectRow, 0);
-            String ipcusername = (String) tblSponsor.getValueAt(ipcselectRow, 1);
-            String ipcpassword = (String) tblSponsor.getValueAt(ipcselectRow, 2);
+            String ipcname = (String) tb1.getValueAt(ipcselectRow, 0);
+            String ipcusername = (String) tb1.getValueAt(ipcselectRow, 1);
+            String ipcpassword = (String) tb1.getValueAt(ipcselectRow, 2);
 
-            txtName.setText(ipcname + "");
-            txtUsername.setText(ipcusername + "");
-            txtPassword.setText(ipcpassword + "");
-            btnSave.setEnabled(false);
+            txt1.setText(ipcname + "");
+            txt2.setText(ipcusername + "");
+            txt3.setText(ipcpassword + "");
+            btn4.setEnabled(false);
         }
         else {
-            JOptionPane.showMessageDialog(null, "Please select a row to view the Sponsor details");
+            JOptionPane.showMessageDialog(null, "Please select a row in order to view the details of Sponsor");
         }
-    }//GEN-LAST:event_btnViewActionPerformed
+    }//GEN-LAST:event_btn1ActionPerformed
 
-    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
         // TODO add your handling code here:
-        UserAccount ipcuserAccount = ipcsystem.getUserAccountDirectory().createUserAccount(txtName.getText(), txtUsername.getText(), txtPassword.getText(), null, new SponsorRole());
-        Sponsor ipcsponsor = ipcsystem.getSponsorDirectory().createUserAccount(txtUsername.getText());
-        ipcpopulateSponsorTable();
+        UserAccount ipcuserAccount = ipcSystem.getUserAccountDirectory().createUserAccount(txt1.getText(), txt2.getText(), txt3.getText(), null, new SponsorRole());
+        Sponsor ipcsponsor = ipcSystem.getSponsorDirectory().createUserAccount(txt2.getText());
+        ipcPopulateSponsorTable();
 
-        txtName.setText("");
-        txtPassword.setText("");
-        txtUsername.setText("");
-        JOptionPane.showMessageDialog(null, "The Sponsor details added successfully");
-    }//GEN-LAST:event_btnSaveActionPerformed
+        txt1.setText("");
+        txt3.setText("");
+        txt2.setText("");
+        JOptionPane.showMessageDialog(null, "Details of sponsor has been added successfully");
+    }//GEN-LAST:event_btn4ActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-        ipcuserProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) ipcuserProcessContainer.getLayout();
-        layout.previous(ipcuserProcessContainer);
+        ipcUserProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
+        layout.previous(ipcUserProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
-    public void ipcpopulateSponsorTable() {
-        DefaultTableModel tablemodel = (DefaultTableModel) tblSponsor.getModel();
-
-        tablemodel.setRowCount(0);
-        for (UserAccount user : ipcsystem.getUserAccountDirectory().getUserAccountList()) {
-
-            if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.SponsorRole")) {
-                Object[] row = new Object[3];
-                row[0] = user.getIpcname();
-                row[1] = user.getIpcuserName();
-                row[2] = user.getIpcpassword();
-                tablemodel.addRow(row);
-            }
-        }
-    }
 
     
         private boolean validateInputFields() {
 
         Pattern p = Pattern.compile("^[A-Za-z0-9 ]+$");
-        Matcher m = p.matcher(txtName.getText());
+        Matcher m = p.matcher(txt1.getText());
         
         Pattern p7 = Pattern.compile("^[A-Za-z0-9]+$");
-        Matcher m7 = p7.matcher(txtUsername.getText());
+        Matcher m7 = p7.matcher(txt2.getText());
         
         Pattern p1 = Pattern.compile("^[A-Za-z0-9]+$");
-        Matcher m1 = p1.matcher(txtPassword.getText());
+        Matcher m1 = p1.matcher(txt3.getText());
         
         
         if (!m.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Error in provided name,Please Try agian!");
+            JOptionPane.showMessageDialog(this, "Please try again by entering valid name");
             return false;
         } else if (!m7.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Error in provided username ,Please Try agian!");
+            JOptionPane.showMessageDialog(this, "Please try again by entering valid username");
             return false;
         }
         else if (!m1.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Error in provided password ,Please Try agian!");
+            JOptionPane.showMessageDialog(this, "Please try again by entering valid password");
             return false;
         }
         else {
@@ -337,22 +337,22 @@ public class ManageSponsor extends javax.swing.JPanel {
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn1;
+    private javax.swing.JButton btn2;
+    private javax.swing.JButton btn3;
+    private javax.swing.JButton btn4;
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnDelete;
-    private javax.swing.JButton btnSave;
-    private javax.swing.JButton btnUpdate;
-    private javax.swing.JButton btnView;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblManageInfo1;
-    private javax.swing.JTable tblSponsor;
-    private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtPassword;
-    private javax.swing.JTextField txtUsername;
+    private javax.swing.JLabel lb1;
+    private javax.swing.JLabel lb2;
+    private javax.swing.JLabel lb3;
+    private javax.swing.JLabel lb4;
+    private javax.swing.JLabel lb5;
+    private javax.swing.JTable tb1;
+    private javax.swing.JTextField txt1;
+    private javax.swing.JTextField txt2;
+    private javax.swing.JTextField txt3;
     // End of variables declaration//GEN-END:variables
 }

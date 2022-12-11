@@ -3,13 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UserInterface.Sponsor;
-import Model.Ecosystem;
 import Model.FundRaising.FundRaising;
 import Model.Sponsor.Sponsor;
 import Model.UserAccount.UserAccount;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
+import Model.Ecosystem;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.JPanel;
+import javax.swing.JOptionPane;
 /**
  *
  * @author varshakuruva
@@ -19,23 +19,23 @@ public class SponsorWorkArea extends javax.swing.JPanel {
     /**
      * Creates new form NewJPanel
      */
-    JPanel userProcessContainer;
-    Ecosystem system;
-    private UserAccount account;
-    public SponsorWorkArea(JPanel userProcessContainer, UserAccount account, Ecosystem system) {
+    JPanel ipcUserProcessContainer;
+    Ecosystem ipcSystem;
+    private UserAccount ipcAccount;
+    public SponsorWorkArea(JPanel ipcUserProcessContainer, UserAccount ipcAccount, Ecosystem ipcSystem) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.system = system;
-        this.account = account;
-        populateTable();
+        this.ipcUserProcessContainer = ipcUserProcessContainer;
+        this.ipcSystem = ipcSystem;
+        this.ipcAccount = ipcAccount;
+        ipcPopulateTable();
     }
 
     
-    public void populateTable() {
-        DefaultTableModel tablemodel = (DefaultTableModel) tblSponsorPetOwnerInfo.getModel();
+    public void ipcPopulateTable() {
+        DefaultTableModel tablemodel = (DefaultTableModel) tbSponsorPetOwnerInfo.getModel();
 
         tablemodel.setRowCount(0);
-        for(Sponsor sponsor : system.getSponsorDirectory().getSponsorDirectory()) {
+        for(Sponsor sponsor : ipcSystem.getSponsorDirectory().getSponsorDirectory()) {
             Object[] row= new Object[4];
             row[0] = sponsor;
             row[1] = sponsor.getIpcpetOwner();
@@ -54,16 +54,16 @@ public class SponsorWorkArea extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblSponsorPetOwnerInfo = new javax.swing.JTable();
-        btnApproveFunds = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        lblManageInfo1 = new javax.swing.JLabel();
+        tbSponsorPetOwnerInfo = new javax.swing.JTable();
+        btnApprove1 = new javax.swing.JButton();
+        lbl1 = new javax.swing.JLabel();
+        jPanelSponsor = new javax.swing.JPanel();
+        lbManageInfo = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 204, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tblSponsorPetOwnerInfo.setModel(new javax.swing.table.DefaultTableModel(
+        tbSponsorPetOwnerInfo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -74,73 +74,73 @@ public class SponsorWorkArea extends javax.swing.JPanel {
                 "Sponsor", "Pet owner", "Pet type", "Hospital name"
             }
         ));
-        jScrollPane1.setViewportView(tblSponsorPetOwnerInfo);
+        jScrollPane1.setViewportView(tbSponsorPetOwnerInfo);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 650, 200));
 
-        btnApproveFunds.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnApproveFunds.setForeground(new java.awt.Color(102, 0, 0));
-        btnApproveFunds.setText("APPROVE SPONSOR");
-        btnApproveFunds.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnApproveFunds.addActionListener(new java.awt.event.ActionListener() {
+        btnApprove1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        btnApprove1.setForeground(new java.awt.Color(102, 0, 0));
+        btnApprove1.setText("APPROVE SPONSOR");
+        btnApprove1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnApprove1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnApproveFundsActionPerformed(evt);
+                btnApprove1ActionPerformed(evt);
             }
         });
-        add(btnApproveFunds, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 320, 169, 34));
+        add(btnApprove1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 320, 169, 34));
 
-        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(102, 0, 0));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("SPONSOR APPROVAL");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 150, 399, 42));
+        lbl1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        lbl1.setForeground(new java.awt.Color(102, 0, 0));
+        lbl1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl1.setText("SPONSOR APPROVAL");
+        add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 150, 399, 42));
 
-        jPanel2.setBackground(new java.awt.Color(102, 0, 0));
+        jPanelSponsor.setBackground(new java.awt.Color(102, 0, 0));
 
-        lblManageInfo1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        lblManageInfo1.setForeground(new java.awt.Color(255, 255, 255));
-        lblManageInfo1.setText("SPONSOR WORK AREA");
+        lbManageInfo.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        lbManageInfo.setForeground(new java.awt.Color(255, 255, 255));
+        lbManageInfo.setText("SPONSOR WORK AREA");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelSponsorLayout = new javax.swing.GroupLayout(jPanelSponsor);
+        jPanelSponsor.setLayout(jPanelSponsorLayout);
+        jPanelSponsorLayout.setHorizontalGroup(
+            jPanelSponsorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSponsorLayout.createSequentialGroup()
                 .addContainerGap(381, Short.MAX_VALUE)
-                .addComponent(lblManageInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbManageInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(253, 253, 253))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        jPanelSponsorLayout.setVerticalGroup(
+            jPanelSponsorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSponsorLayout.createSequentialGroup()
                 .addGap(0, 6, Short.MAX_VALUE)
-                .addComponent(lblManageInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lbManageInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, -1));
+        add(jPanelSponsor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnApproveFundsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApproveFundsActionPerformed
+    private void btnApprove1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApprove1ActionPerformed
         // TODO add your handling code here:
 
-        int selectedRow = tblSponsorPetOwnerInfo.getSelectedRow();
-        Sponsor sponsorRowSelected = (Sponsor) tblSponsorPetOwnerInfo.getValueAt(selectedRow, 0);
-        for(FundRaising fundRaising: system.getFundRaisingDirectory().getFundRaisingDirectory()) {
+        int selectedRow = tbSponsorPetOwnerInfo.getSelectedRow();
+        Sponsor sponsorRowSelected = (Sponsor) tbSponsorPetOwnerInfo.getValueAt(selectedRow, 0);
+        for(FundRaising fundRaising: ipcSystem.getFundRaisingDirectory().getFundRaisingDirectory()) {
             if(sponsorRowSelected.getIpcpetOwner().equals(fundRaising.getIpcpetOwner())) {
-                system.getFundRaisingDirectory().updateFundRaisingSponsorStatus(fundRaising, "Approved");
+                ipcSystem.getFundRaisingDirectory().updateFundRaisingSponsorStatus(fundRaising, "Approved");
             }
         }
 
-        JOptionPane.showMessageDialog(this,"Funds has been approved successfully");
-    }//GEN-LAST:event_btnApproveFundsActionPerformed
+        JOptionPane.showMessageDialog(this,"Successful Approval of Funds!");
+    }//GEN-LAST:event_btnApprove1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnApproveFunds;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JButton btnApprove1;
+    private javax.swing.JPanel jPanelSponsor;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblManageInfo1;
-    private javax.swing.JTable tblSponsorPetOwnerInfo;
+    private javax.swing.JLabel lbManageInfo;
+    private javax.swing.JLabel lbl1;
+    private javax.swing.JTable tbSponsorPetOwnerInfo;
     // End of variables declaration//GEN-END:variables
 }
