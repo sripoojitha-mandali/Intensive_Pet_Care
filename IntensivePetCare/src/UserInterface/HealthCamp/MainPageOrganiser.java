@@ -4,11 +4,12 @@
  * and open the template in the editor.
  */
 package UserInterface.HealthCamp;
-import Model.Ecosystem;
+import javax.swing.JPanel;
+import java.awt.CardLayout;
 import Model.PetVolunteer.PetVolunteerDirectory;
 import Model.UserAccount.UserAccount;
-import java.awt.CardLayout;
-import javax.swing.JPanel;
+import Model.Ecosystem;
+
 /**
  *
  * @author poojitha
@@ -18,16 +19,18 @@ public class MainPageOrganiser extends javax.swing.JPanel {
     /**
      * Creates new form MainPageOrganiser
      */
-    JPanel userProcessContainer;
-    Ecosystem system;
-    private UserAccount account;
     private PetVolunteerDirectory petVolunteerDirectory;
+    private UserAccount ipcAccount;
+    JPanel ipcUserProcessContainer;
+    Ecosystem ipcSystem;
+    
+    
 
-    public MainPageOrganiser(JPanel userProcessContainer, UserAccount account, Ecosystem system) {
+    public MainPageOrganiser(JPanel ipcUserProcessContainer, UserAccount ipcAccount, Ecosystem ipcSystem) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.system = system;
-        this.account = account;
+        this.ipcUserProcessContainer = ipcUserProcessContainer;
+        this.ipcSystem = ipcSystem;
+        this.ipcAccount = ipcAccount;
         this.petVolunteerDirectory = petVolunteerDirectory;
     }
 
@@ -42,16 +45,16 @@ public class MainPageOrganiser extends javax.swing.JPanel {
 
         jSeparator1 = new javax.swing.JSeparator();
         sidepane = new javax.swing.JPanel();
-        manageorginfo = new javax.swing.JPanel();
+        btnManageOrg = new javax.swing.JPanel();
         lblmanageorginfo = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        managepetvol = new javax.swing.JPanel();
+        btnManagePet = new javax.swing.JPanel();
         lblManagePetVolunteer = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lbbanner2 = new javax.swing.JLabel();
+        lbbanner = new javax.swing.JLabel();
+        lbpic = new javax.swing.JLabel();
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -60,8 +63,8 @@ public class MainPageOrganiser extends javax.swing.JPanel {
         sidepane.setBackground(new java.awt.Color(102, 0, 51));
         sidepane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        manageorginfo.setBackground(new java.awt.Color(255, 204, 204));
-        manageorginfo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btnManageOrg.setBackground(new java.awt.Color(255, 204, 204));
+        btnManageOrg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblmanageorginfo.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
         lblmanageorginfo.setForeground(new java.awt.Color(153, 0, 51));
@@ -71,13 +74,13 @@ public class MainPageOrganiser extends javax.swing.JPanel {
                 lblmanageorginfoMousePressed(evt);
             }
         });
-        manageorginfo.add(lblmanageorginfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 180, 22));
-        manageorginfo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 40));
+        btnManageOrg.add(lblmanageorginfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 180, 22));
+        btnManageOrg.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 40));
 
-        sidepane.add(manageorginfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 220, 40));
+        sidepane.add(btnManageOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 220, 40));
 
-        managepetvol.setBackground(new java.awt.Color(255, 204, 204));
-        managepetvol.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btnManagePet.setBackground(new java.awt.Color(255, 204, 204));
+        btnManagePet.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblManagePetVolunteer.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
         lblManagePetVolunteer.setForeground(new java.awt.Color(153, 0, 51));
@@ -87,38 +90,38 @@ public class MainPageOrganiser extends javax.swing.JPanel {
                 lblManagePetVolunteerMousePressed(evt);
             }
         });
-        managepetvol.add(lblManagePetVolunteer, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 170, 24));
-        managepetvol.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
+        btnManagePet.add(lblManagePetVolunteer, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 170, 24));
+        btnManagePet.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
-        sidepane.add(managepetvol, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 220, 40));
+        sidepane.add(btnManagePet, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 220, 40));
 
         jSeparator2.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator2.setForeground(new java.awt.Color(63, 40, 101));
         sidepane.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 0));
 
-        jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel4.setText("of Health Camp....");
-        jLabel4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jLabel4.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        sidepane.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 190, 30));
+        lbbanner2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        lbbanner2.setForeground(new java.awt.Color(255, 255, 255));
+        lbbanner2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lbbanner2.setText("of Health Camp....");
+        lbbanner2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        lbbanner2.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        lbbanner2.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        sidepane.add(lbbanner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 190, 30));
 
-        jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel5.setText("Welcome to the owner ");
-        jLabel5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jLabel5.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        sidepane.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 210, 30));
+        lbbanner.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        lbbanner.setForeground(new java.awt.Color(255, 255, 255));
+        lbbanner.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lbbanner.setText("Welcome to the owner ");
+        lbbanner.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        lbbanner.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        lbbanner.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        sidepane.add(lbbanner, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 210, 30));
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img2/v2.jpg"))); // NOI18N
-        jLabel3.setMaximumSize(new java.awt.Dimension(800, 450));
-        jLabel3.setMinimumSize(new java.awt.Dimension(800, 450));
-        jLabel3.setPreferredSize(new java.awt.Dimension(800, 450));
+        lbpic.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lbpic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img2/v2.jpg"))); // NOI18N
+        lbpic.setMaximumSize(new java.awt.Dimension(800, 450));
+        lbpic.setMinimumSize(new java.awt.Dimension(800, 450));
+        lbpic.setPreferredSize(new java.awt.Dimension(800, 450));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -127,7 +130,7 @@ public class MainPageOrganiser extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(sidepane, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 866, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbpic, javax.swing.GroupLayout.PREFERRED_SIZE, 866, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -135,40 +138,40 @@ public class MainPageOrganiser extends javax.swing.JPanel {
             .addComponent(sidepane, javax.swing.GroupLayout.DEFAULT_SIZE, 681, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbpic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblmanageorginfoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblmanageorginfoMousePressed
         // TODO add your handling code here:
-        ManageOrgInfo manageOrgInfoJPanel = new ManageOrgInfo(userProcessContainer, account, system);
-        userProcessContainer.add("ManageOrgInfo", manageOrgInfoJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        ManageOrgInfo manageOrgInfoJPanel = new ManageOrgInfo(ipcUserProcessContainer, ipcAccount, ipcSystem);
+        ipcUserProcessContainer.add("ManageOrgInfo", manageOrgInfoJPanel);
+        CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
+        layout.next(ipcUserProcessContainer);
     }//GEN-LAST:event_lblmanageorginfoMousePressed
 
     private void lblManagePetVolunteerMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblManagePetVolunteerMousePressed
         // TODO add your handling code here:
-        ManagePetVolunteer managePetVolunteerJPanel = new ManagePetVolunteer(userProcessContainer, account, system);
-        userProcessContainer.add("ManageOrgInfo", managePetVolunteerJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        ManagePetVolunteer managePetVolunteerJPanel = new ManagePetVolunteer(ipcUserProcessContainer, ipcAccount, ipcSystem);
+        ipcUserProcessContainer.add("ManageOrgInfo", managePetVolunteerJPanel);
+        CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
+        layout.next(ipcUserProcessContainer);
     }//GEN-LAST:event_lblManagePetVolunteerMousePressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel btnManageOrg;
+    private javax.swing.JPanel btnManagePet;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JLabel lbbanner;
+    private javax.swing.JLabel lbbanner2;
     private javax.swing.JLabel lblManagePetVolunteer;
     private javax.swing.JLabel lblmanageorginfo;
-    private javax.swing.JPanel manageorginfo;
-    private javax.swing.JPanel managepetvol;
+    private javax.swing.JLabel lbpic;
     private javax.swing.JPanel sidepane;
     // End of variables declaration//GEN-END:variables
 }
