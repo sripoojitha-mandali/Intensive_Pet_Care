@@ -3,15 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UserInterface.PetVolunteer;
-import Model.Ecosystem;
 import Model.HealthCamp.HealthCamp;
+import Model.Ecosystem;
 import Model.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import java.awt.CardLayout;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import java.awt.CardLayout;
+
 /**
  *
  * @author varshakuruva
@@ -22,18 +23,18 @@ public class PetVolunteer extends javax.swing.JPanel {
      * Creates new form PetVolunteer
      */
     
-    JPanel userProcessContainer;
-    Ecosystem system;
-    private UserAccount account;
+    JPanel ipcUserProcessContainer;
+    Ecosystem ipcSystem;
+    private UserAccount ipcAccount;
     private PetVolunteer petVolunteer;
     
-    public PetVolunteer(JPanel userProcessContainer, UserAccount account, Ecosystem system) {
+    public PetVolunteer(JPanel ipcUserProcessContainer, UserAccount ipcAccount, Ecosystem ipcSystem) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.system = system;
-        this.account = account;
-        txtpetowner.setText(account.getIpcuserName());
-        populateHealthCamptable();
+        this.ipcUserProcessContainer = ipcUserProcessContainer;
+        this.ipcSystem = ipcSystem;
+        this.ipcAccount = ipcAccount;
+        txtpetowner.setText(ipcAccount.getIpcuserName());
+        ipcPopulateHealthCamptable();
     }
 
     /**
@@ -171,9 +172,9 @@ public class PetVolunteer extends javax.swing.JPanel {
 
     private void btnSavePetVolunteerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavePetVolunteerActionPerformed
         // TODO add your handling code here:
-        for (Model.PetVolunteer.PetVolunteer petVolunteer : system.getPetVolunteerDirectory().getPetVolunteerDirectory()) {
-            if (petVolunteer.getIpcuserName().equals(account.getIpcuserName())) {
-                system.getPetVolunteerDirectory().updatePetVolunteerInfo(petVolunteer, txtpetowner.getText(), txtpettype.getText(), txtHealthCamp.getText());
+        for (Model.PetVolunteer.PetVolunteer petVolunteer : ipcSystem.getPetVolunteerDirectory().getPetVolunteerDirectory()) {
+            if (petVolunteer.getIpcuserName().equals(ipcAccount.getIpcuserName())) {
+                ipcSystem.getPetVolunteerDirectory().updatePetVolunteerInfo(petVolunteer, txtpetowner.getText(), txtpettype.getText(), txtHealthCamp.getText());
             }
         }
         JOptionPane.showMessageDialog(this, "Volunteer has been added successfully");
@@ -197,13 +198,13 @@ public class PetVolunteer extends javax.swing.JPanel {
     private javax.swing.JTextField txtpettype;
     // End of variables declaration//GEN-END:variables
 
-private void populateHealthCamptable() {
+private void ipcPopulateHealthCamptable() {
 
         DefaultTableModel tablemodel = (DefaultTableModel) tblHealthCamps.getModel();
 
         tablemodel.setRowCount(0);
         
-        for(HealthCamp healthCamp: system.getHealthCampDirectory().getHealthCampDirectory()) {
+        for(HealthCamp healthCamp: ipcSystem.getHealthCampDirectory().getHealthCampDirectory()) {
         
             Object[] row = new Object[1];
             row[0] = healthCamp.getIpchealthCampName();
