@@ -4,16 +4,16 @@
  */
 package UserInterface.SystemAdminWorkArea;
 
-import Model.Ecosystem;
-import java.awt.CardLayout;
-import javax.swing.JPanel;
-import Model.Role.SponsorRole;
 import Model.Sponsor.Sponsor;
 import Model.UserAccount.UserAccount;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import Model.Ecosystem;
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+import Model.Role.SponsorRole;
 /**
  *
  * @author varshakuruva
@@ -24,15 +24,15 @@ public class ManageSponsor extends javax.swing.JPanel {
      * Creates new form ManageSponsor
      */
     
-    JPanel userProcessContainer;
-    Ecosystem system;
+    JPanel ipcUserProcessContainer;
+    Ecosystem ipcSystem;
     private UserAccount user;
 
-    public ManageSponsor(JPanel userProcessContainer, Ecosystem system) {
+    public ManageSponsor(JPanel ipcUserProcessContainer, Ecosystem ipcSystem) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.system = system;
-        populateSponsorTable();
+        this.ipcUserProcessContainer = ipcUserProcessContainer;
+        this.ipcSystem = ipcSystem;
+        ipcPopulateSponsorTable();
     }
 
     /**
@@ -171,9 +171,9 @@ public class ManageSponsor extends javax.swing.JPanel {
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        ipcUserProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
+        layout.previous(ipcUserProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
@@ -194,7 +194,7 @@ public class ManageSponsor extends javax.swing.JPanel {
         
         else  
         {
-            JOptionPane.showMessageDialog(null, "Please select a row to view the Sponsor details");
+            JOptionPane.showMessageDialog(null, "to view the Sponsor details, Please select a row");
         }  
     }//GEN-LAST:event_btnViewActionPerformed
 
@@ -207,24 +207,24 @@ public class ManageSponsor extends javax.swing.JPanel {
             if (selectionResult == JOptionPane.YES_OPTION) {
                 String username = (String) tblSponsors.getValueAt(selectedRow, 1);
                 String pwd = (String) tblSponsors.getValueAt(selectedRow, 2);
-                UserAccount user = system.getUserAccountDirectory().authenticateUser(username, pwd);
+                UserAccount user = ipcSystem.getUserAccountDirectory().authenticateUser(username, pwd);
 
-                system.getUserAccountDirectory().deleteUserAccount(user);
-                system.getSponsorDirectory().deleteSponsor(user.getIpcuserName());
-                populateSponsorTable();
+                ipcSystem.getUserAccountDirectory().deleteUserAccount(user);
+                ipcSystem.getSponsorDirectory().deleteSponsor(user.getIpcuserName());
+                ipcPopulateSponsorTable();
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Please select a row to delete the Sponsor details");
+            JOptionPane.showMessageDialog(null, "to delete the Sponsor details, Please select a row");
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
         // TODO add your handling code here:
-        if (system.getUserAccountDirectory().checkIfUsernameIsUnique(txtusername.getText())) {
-        UserAccount userAccount = system.getUserAccountDirectory().createUserAccount(txtname.getText(), txtusername.getText(), txtpass.getText(), null, new SponsorRole());
-        Sponsor sponsor = system.getSponsorDirectory().createUserAccount(txtusername.getText());
+        if (ipcSystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtusername.getText())) {
+        UserAccount userAccount = ipcSystem.getUserAccountDirectory().createUserAccount(txtname.getText(), txtusername.getText(), txtpass.getText(), null, new SponsorRole());
+        Sponsor sponsor = ipcSystem.getSponsorDirectory().createUserAccount(txtusername.getText());
         JOptionPane.showMessageDialog(null, "Sponsor details added successfully");
-        populateSponsorTable();
+        ipcPopulateSponsorTable();
         txtname.setText("");
         txtpass.setText("");
         txtusername.setText("");
@@ -239,9 +239,9 @@ public class ManageSponsor extends javax.swing.JPanel {
         String name = (String) tblSponsors.getValueAt(selectRow, 0);
         String username = (String) tblSponsors.getValueAt(selectRow, 1);
         String password = (String) tblSponsors.getValueAt(selectRow, 2);
-        user = system.getUserAccountDirectory().authenticateUser(username, password);
-        system.getUserAccountDirectory().updateUserAccount(user, txtname.getText(), txtusername.getText(), txtpass.getText());
-        populateSponsorTable();
+        user = ipcSystem.getUserAccountDirectory().authenticateUser(username, password);
+        ipcSystem.getUserAccountDirectory().updateUserAccount(user, txtname.getText(), txtusername.getText(), txtpass.getText());
+        ipcPopulateSponsorTable();
 
         txtname.setText("");
         txtusername.setText("");
@@ -249,15 +249,15 @@ public class ManageSponsor extends javax.swing.JPanel {
         }
         else  
         {
-            JOptionPane.showMessageDialog(null, "Please select a row to update the the Sponsor details");
+            JOptionPane.showMessageDialog(null, "to update the Sponsor details, Please select a row");
         }  
     }//GEN-LAST:event_btnUpdateActionPerformed
-      private void populateSponsorTable() {
+      private void ipcPopulateSponsorTable() {
 
         DefaultTableModel tablemodel = (DefaultTableModel) tblSponsors.getModel();
         tablemodel.setRowCount(0);
 
-        for (UserAccount user : system.getUserAccountDirectory().getUserAccountList()) {
+        for (UserAccount user : ipcSystem.getUserAccountDirectory().getUserAccountList()) {
 
             if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.SponsorRole")) {
                 Object[] row = new Object[3];
@@ -301,16 +301,16 @@ private boolean validateInputFields() {
         
         if (!m.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Error in provided name,Please Try agian!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided Name has Error");
             return false;
         } else if (!m7.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Error in provided username ,Please Try agian!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided User Name has Error");
             return false;
         }
         else if (!m1.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Error in provided password ,Please Try agian!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided Password has Error");
             return false;
         }
         else {
