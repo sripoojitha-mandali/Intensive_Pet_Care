@@ -4,15 +4,15 @@
  * and open the template in the editor.
  */
 package UserInterface.SystemAdminWorkArea;
-import Model.Driver.Driver;
-import Model.Ecosystem;
-import Model.Role.DriverRole;
 import Model.Role.HealthCampRole;
+import Model.Role.DriverRole;
+import Model.Ecosystem;
+import Model.Driver.Driver;
 import Model.UserAccount.UserAccount;
-import java.awt.CardLayout;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.JPanel;
+import javax.swing.JOptionPane;
+import java.awt.CardLayout;
 /**
  *
  * @author varshakuruva
@@ -20,18 +20,18 @@ import javax.swing.table.DefaultTableModel;
 public class Managedriver extends javax.swing.JPanel {
 
     
-    JPanel userProcessContainer;
-    Ecosystem system;
-    private UserAccount account;
+    JPanel ipcUserProcessContainer;
+    Ecosystem ipcSystem;
+    private UserAccount ipcAccount;
     
     
-    public Managedriver(JPanel userProcessContainer, Ecosystem system) {
+    public Managedriver(JPanel ipcUserProcessContainer, Ecosystem ipcSystem) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.system = system;
-        this.account = account;
+        this.ipcUserProcessContainer = ipcUserProcessContainer;
+        this.ipcSystem = ipcSystem;
+        this.ipcAccount = ipcAccount;
         
-        populateDriverTable();
+        ipcPopulateDriverTable();
     }
 
     /**
@@ -182,7 +182,7 @@ public class Managedriver extends javax.swing.JPanel {
         }
         else  
         {
-            JOptionPane.showMessageDialog(null, "Please select a row to view the Driver details");
+            JOptionPane.showMessageDialog(null, "to view the Driver details, Please select a row");
         }  
     }//GEN-LAST:event_btnViewActionPerformed
 
@@ -195,43 +195,43 @@ public class Managedriver extends javax.swing.JPanel {
             if (selectionResult == JOptionPane.YES_OPTION) {
                 String username = (String) tblManageDriver.getValueAt(selectedRow, 1);
                 String pwd = (String) tblManageDriver.getValueAt(selectedRow, 2);
-                UserAccount user = system.getUserAccountDirectory().authenticateUser(username, pwd);
+                UserAccount user = ipcSystem.getUserAccountDirectory().authenticateUser(username, pwd);
 
-                system.getUserAccountDirectory().deleteUserAccount(user);
-                system.getDriverDirectory().deleteDriver(user.getIpcuserName());
-                populateDriverTable();
+                ipcSystem.getUserAccountDirectory().deleteUserAccount(user);
+                ipcSystem.getDriverDirectory().deleteDriver(user.getIpcuserName());
+                ipcPopulateDriverTable();
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Please select a row to delete the Driver details");
+            JOptionPane.showMessageDialog(null, "to delete the Driver details, Please select a row");
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddActionPerformed
         // TODO add your handling code here:
-        if (system.getUserAccountDirectory().checkIfUsernameIsUnique(txtusername.getText())) {
-            UserAccount userAccount = system.getUserAccountDirectory().createUserAccount(txtname.getText(), txtusername.getText(), txtpass.getText(), null, new DriverRole());
-            Driver driver = system.getDriverDirectory().createUserAccount(txtusername.getText());
+        if (ipcSystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtusername.getText())) {
+            UserAccount userAccount = ipcSystem.getUserAccountDirectory().createUserAccount(txtname.getText(), txtusername.getText(), txtpass.getText(), null, new DriverRole());
+            Driver driver = ipcSystem.getDriverDirectory().createUserAccount(txtusername.getText());
             System.out.println("health camp username while adding : "+ txtusername.getText());
-            populateDriverTable();
+            ipcPopulateDriverTable();
             txtname.setText("");
             txtusername.setText("");
             txtpass.setText("");
         } else {
-            JOptionPane.showMessageDialog(null, "Username is not unique");
+            JOptionPane.showMessageDialog(null, "Please enter Unique User Name");
         }
     }//GEN-LAST:event_btnaddActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        ipcUserProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
+        layout.previous(ipcUserProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
-public void populateDriverTable() {
+public void ipcPopulateDriverTable() {
         DefaultTableModel tablemodel = (DefaultTableModel) tblManageDriver.getModel();
 
         tablemodel.setRowCount(0);
-        for (UserAccount user : system.getUserAccountDirectory().getUserAccountList()) {
+        for (UserAccount user : ipcSystem.getUserAccountDirectory().getUserAccountList()) {
 
             if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.DriverRole")) {
                 Object[] row = new Object[3];
