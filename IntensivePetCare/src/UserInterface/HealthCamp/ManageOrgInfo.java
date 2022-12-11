@@ -74,54 +74,54 @@ public class ManageOrgInfo extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(214, 209, 222));
+        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblorgname.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblorgname.setForeground(new java.awt.Color(63, 40, 101));
+        lblorgname.setForeground(new java.awt.Color(153, 0, 0));
         lblorgname.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblorgname.setText("NAME");
-        jPanel1.add(lblorgname, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 130, 31));
+        jPanel1.add(lblorgname, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 220, 130, 31));
 
         txtorgname.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        jPanel1.add(txtorgname, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, 190, 30));
+        jPanel1.add(txtorgname, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 220, 190, 30));
 
         lblorgowner.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblorgowner.setForeground(new java.awt.Color(63, 40, 101));
+        lblorgowner.setForeground(new java.awt.Color(153, 0, 51));
         lblorgowner.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblorgowner.setText("OWNER");
-        jPanel1.add(lblorgowner, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 90, 24));
+        lblorgowner.setText("OWNER NAME");
+        jPanel1.add(lblorgowner, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, 130, 24));
 
         txtorgowner.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        jPanel1.add(txtorgowner, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 150, 190, 30));
+        jPanel1.add(txtorgowner, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 160, 190, 30));
 
         lblorgadd.setBackground(new java.awt.Color(255, 255, 255));
         lblorgadd.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblorgadd.setForeground(new java.awt.Color(63, 40, 101));
+        lblorgadd.setForeground(new java.awt.Color(153, 0, 0));
         lblorgadd.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblorgadd.setText("ADDRESS");
-        jPanel1.add(lblorgadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 130, 30));
+        lblorgadd.setText("LOCATION");
+        jPanel1.add(lblorgadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 130, 30));
 
         txtorgadd.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        jPanel1.add(txtorgadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 280, 190, 30));
+        jPanel1.add(txtorgadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 290, 190, 30));
 
         lblphonenumber.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblphonenumber.setForeground(new java.awt.Color(63, 40, 101));
+        lblphonenumber.setForeground(new java.awt.Color(153, 0, 0));
         lblphonenumber.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblphonenumber.setText("PHONE NUMBER");
-        jPanel1.add(lblphonenumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, 120, 22));
+        jPanel1.add(lblphonenumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 360, 120, 22));
 
         txtphonenumber.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        jPanel1.add(txtphonenumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 350, 190, 30));
+        jPanel1.add(txtphonenumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 360, 190, 30));
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(63, 40, 101));
+        jLabel2.setForeground(new java.awt.Color(153, 0, 51));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("ORGANISATION INFORMATION ");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 350, 50));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 360, 50));
 
         btnsave.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnsave.setForeground(new java.awt.Color(63, 40, 101));
+        btnsave.setForeground(new java.awt.Color(204, 0, 51));
         btnsave.setText("SAVE");
         btnsave.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnsave.addActionListener(new java.awt.event.ActionListener() {
@@ -129,10 +129,10 @@ public class ManageOrgInfo extends javax.swing.JPanel {
                 btnsaveActionPerformed(evt);
             }
         });
-        jPanel1.add(btnsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, 120, 40));
+        jPanel1.add(btnsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 420, 120, 40));
 
         btnupdate.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnupdate.setForeground(new java.awt.Color(63, 40, 101));
+        btnupdate.setForeground(new java.awt.Color(204, 0, 0));
         btnupdate.setText("UPDATE");
         btnupdate.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnupdate.addActionListener(new java.awt.event.ActionListener() {
@@ -140,46 +140,39 @@ public class ManageOrgInfo extends javax.swing.JPanel {
                 btnupdateActionPerformed(evt);
             }
         });
-        jPanel1.add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 450, 120, 40));
+        jPanel1.add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 420, 120, 40));
 
-        btnBack.setBackground(new java.awt.Color(255, 255, 255));
         btnBack.setBorder(null);
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 30, 40));
+        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 40, 40));
 
-        jPanel2.setBackground(new java.awt.Color(63, 40, 101));
+        jPanel2.setBackground(new java.awt.Color(102, 0, 51));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("MANAGE HEALTH CAMP");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 350, 60));
+        jLabel4.setText("HEALTH CAMP MANAGEMENT");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 420, 60));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 80));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 902, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 902, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 902, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 621, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 621, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 621, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

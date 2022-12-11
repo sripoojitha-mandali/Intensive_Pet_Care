@@ -25,14 +25,14 @@ public class ManageFundAgency extends javax.swing.JPanel {
      * Creates new form ManageFundAgency
      */
     
-    JPanel userProcessContainer;
-    Ecosystem system;
-    private UserAccount account;
-    public ManageFundAgency(JPanel userProcessContainer, Ecosystem system) {
+    JPanel ipcuserProcessContainer;
+    Ecosystem ipcsystem;
+    private UserAccount ipcaccount;
+    public ManageFundAgency(JPanel ipcuserProcessContainer, Ecosystem system) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.system = system;
-        this.account = account;
+        this.ipcuserProcessContainer = ipcuserProcessContainer;
+        this.ipcsystem = ipcsystem;
+        this.ipcaccount = ipcaccount;
         populateFundRaisingTable();
     }
 
@@ -73,10 +73,10 @@ public class ManageFundAgency extends javax.swing.JPanel {
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 40, 36));
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(63, 40, 101));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("MANAGE FUND AGENCY");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 310, 50));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 310, 50));
 
         tblfundagency.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -99,7 +99,7 @@ public class ManageFundAgency extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblfundagency);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 470, 92));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 600, 200));
 
         btnView.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         btnView.setForeground(new java.awt.Color(63, 40, 101));
@@ -110,7 +110,7 @@ public class ManageFundAgency extends javax.swing.JPanel {
                 btnViewActionPerformed(evt);
             }
         });
-        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, 80, 30));
+        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, 80, 30));
 
         btnUpdate.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnUpdate.setForeground(new java.awt.Color(63, 40, 101));
@@ -121,7 +121,7 @@ public class ManageFundAgency extends javax.swing.JPanel {
                 btnUpdateActionPerformed(evt);
             }
         });
-        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 100, 30));
+        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 300, 100, 30));
 
         btnDelete.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         btnDelete.setForeground(new java.awt.Color(63, 40, 101));
@@ -132,34 +132,34 @@ public class ManageFundAgency extends javax.swing.JPanel {
                 btnDeleteActionPerformed(evt);
             }
         });
-        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, 90, 30));
+        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 300, 90, 30));
 
         txtname.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, 140, 30));
+        add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 370, 140, 30));
 
         txtusername.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 140, 30));
+        add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 410, 140, 30));
 
         txtpass.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        add(txtpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 460, 140, 30));
+        add(txtpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 450, 140, 30));
 
         lblusername.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         lblusername.setForeground(new java.awt.Color(63, 40, 101));
         lblusername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblusername.setText("USERNAME");
-        add(lblusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 120, 30));
+        add(lblusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, 120, 30));
 
         lblname.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         lblname.setForeground(new java.awt.Color(63, 40, 101));
         lblname.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblname.setText("NAME");
-        add(lblname, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, 90, 30));
+        add(lblname, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, 90, 30));
 
         lblpassword.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         lblpassword.setForeground(new java.awt.Color(63, 40, 101));
         lblpassword.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblpassword.setText("PASSWORD");
-        add(lblpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 460, 110, 30));
+        add(lblpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 450, 110, 30));
 
         btnsave.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         btnsave.setForeground(new java.awt.Color(63, 40, 101));
@@ -170,18 +170,18 @@ public class ManageFundAgency extends javax.swing.JPanel {
                 btnsaveActionPerformed(evt);
             }
         });
-        add(btnsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 520, 190, 30));
+        add(btnsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 500, 190, 30));
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/money.jpeg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img2/ezgif.com-gif-maker (18).gif"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1050, 790));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        ipcuserProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) ipcuserProcessContainer.getLayout();
+        layout.previous(ipcuserProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
@@ -211,8 +211,8 @@ public class ManageFundAgency extends javax.swing.JPanel {
         String name = (String) tblfundagency.getValueAt(selectRow, 0);
         String username = (String) tblfundagency.getValueAt(selectRow, 1);
         String password = (String) tblfundagency.getValueAt(selectRow, 2);
-        account = system.getUserAccountDirectory().authenticateUser(username, password);
-        system.getUserAccountDirectory().updateUserAccount(account, txtname.getText(), txtusername.getText(), txtpass.getText());
+        ipcaccount = ipcsystem.getUserAccountDirectory().authenticateUser(username, password);
+        ipcsystem.getUserAccountDirectory().updateUserAccount(ipcaccount, txtname.getText(), txtusername.getText(), txtpass.getText());
         populateFundRaisingTable();
 
         txtname.setText("");
@@ -235,10 +235,10 @@ public class ManageFundAgency extends javax.swing.JPanel {
             if (selectionResult == JOptionPane.YES_OPTION) {
                 String username = (String) tblfundagency.getValueAt(selectedRow, 1);
                 String pwd = (String) tblfundagency.getValueAt(selectedRow, 2);
-                UserAccount user = system.getUserAccountDirectory().authenticateUser(username, pwd);
+                UserAccount user = ipcsystem.getUserAccountDirectory().authenticateUser(username, pwd);
 
-                system.getUserAccountDirectory().deleteUserAccount(user);
-                system.getFundRaisingDirectory().deleteFundRaiser(user.getIpcuserName());
+                ipcsystem.getUserAccountDirectory().deleteUserAccount(user);
+                ipcsystem.getFundRaisingDirectory().deleteFundRaiser(user.getIpcuserName());
                 populateFundRaisingTable();
             }
         } else {
@@ -248,9 +248,9 @@ public class ManageFundAgency extends javax.swing.JPanel {
 
     private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
         // TODO add your handling code here:
-        if (system.getUserAccountDirectory().checkIfUsernameIsUnique(txtusername.getText())) {
-            UserAccount userAccount = system.getUserAccountDirectory().createUserAccount(txtname.getText(), txtusername.getText(), txtpass.getText(), null, new FundRaisingRole());
-            FundRaising fundRaising = system.getFundRaisingDirectory().createUserAccount(txtusername.getText());
+        if (ipcsystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtusername.getText())) {
+            UserAccount userAccount = ipcsystem.getUserAccountDirectory().createUserAccount(txtname.getText(), txtusername.getText(), txtpass.getText(), null, new FundRaisingRole());
+            FundRaising fundRaising = ipcsystem.getFundRaisingDirectory().createUserAccount(txtusername.getText());
             populateFundRaisingTable();
             txtname.setText("");
             txtusername.setText("");
@@ -265,7 +265,7 @@ public class ManageFundAgency extends javax.swing.JPanel {
          DefaultTableModel tablemodel = (DefaultTableModel) tblfundagency.getModel();
 
         tablemodel.setRowCount(0);
-        for (UserAccount user : system.getUserAccountDirectory().getUserAccountList()) {
+        for (UserAccount user : ipcsystem.getUserAccountDirectory().getUserAccountList()) {
 
             if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.FundRaisingRole")) {
                 Object[] row = new Object[3];
