@@ -6,6 +6,8 @@
 package UserInterface.SystemAdminWorkArea;
 import Model.Role.HealthCampRole;
 import Model.Role.DriverRole;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import Model.Ecosystem;
 import Model.Driver.Driver;
 import Model.UserAccount.UserAccount;
@@ -240,6 +242,37 @@ public void ipcPopulateDriverTable() {
                 row[2] = user.getIpcpassword();
                 tablemodel.addRow(row);
             }
+        }
+    }
+
+private boolean ipcValidateInputFields() {
+
+        Pattern p2 = Pattern.compile("^[A-Za-z0-9 ]+$");
+        Matcher m2 = p2.matcher(txtName.getText());
+        
+        Pattern p3 = Pattern.compile("^[A-Za-z0-9]+$");
+        Matcher m3 = p3.matcher(txtUserName.getText());
+        
+        Pattern p1 = Pattern.compile("^[A-Za-z0-9]+$");
+        Matcher m1 = p1.matcher(txtPassword.getText());
+        
+        
+        if (!m2.matches()) {
+
+            JOptionPane.showMessageDialog(this, "Please provide correct input for Name!!");
+            return false;
+        } else if (!m3.matches()) {
+
+            JOptionPane.showMessageDialog(this, "Please provide correct input for User Name!!");
+            return false;
+        }
+        else if (!m1.matches()) {
+
+            JOptionPane.showMessageDialog(this, "Please provide a strong Password!!");
+            return false;
+        }
+        else {
+            return true;
         }
     }
 
