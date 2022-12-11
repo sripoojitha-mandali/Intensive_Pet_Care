@@ -3,15 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UserInterface.PetVolunteer;
-import Model.Ecosystem;
 import Model.HealthCamp.HealthCamp;
+import Model.Ecosystem;
 import Model.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import java.awt.CardLayout;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import java.awt.CardLayout;
+
 /**
  *
  * @author varshakuruva
@@ -22,18 +23,18 @@ public class PetVolunteer extends javax.swing.JPanel {
      * Creates new form PetVolunteer
      */
     
-    JPanel userProcessContainer;
-    Ecosystem system;
-    private UserAccount account;
+    JPanel ipcUserProcessContainer;
+    Ecosystem ipcSystem;
+    private UserAccount ipcAccount;
     private PetVolunteer petVolunteer;
     
-    public PetVolunteer(JPanel userProcessContainer, UserAccount account, Ecosystem system) {
+    public PetVolunteer(JPanel ipcUserProcessContainer, UserAccount ipcAccount, Ecosystem ipcSystem) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.system = system;
-        this.account = account;
-        txtpetowner.setText(account.getIpcuserName());
-        populateHealthCamptable();
+        this.ipcUserProcessContainer = ipcUserProcessContainer;
+        this.ipcSystem = ipcSystem;
+        this.ipcAccount = ipcAccount;
+        txtPetOwner1.setText(ipcAccount.getIpcuserName());
+        ipcPopulateHealthCamptable();
     }
 
     /**
@@ -45,76 +46,76 @@ public class PetVolunteer extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        txtpetowner = new javax.swing.JTextField();
-        txtpettype = new javax.swing.JTextField();
-        txtHealthCamp = new javax.swing.JTextField();
-        lblpetowner = new javax.swing.JLabel();
-        lblpettype = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        btnSavePetVolunteer = new javax.swing.JButton();
+        lbl1 = new javax.swing.JLabel();
+        txtPetOwner1 = new javax.swing.JTextField();
+        txtPetType1 = new javax.swing.JTextField();
+        txtHealthCamp1 = new javax.swing.JTextField();
+        lbPetOwner = new javax.swing.JLabel();
+        lbPetType = new javax.swing.JLabel();
+        lbHealthCamp = new javax.swing.JLabel();
+        btnSavePetV = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblHealthCamps = new javax.swing.JTable();
-        jLabel3 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        lblManageInfo1 = new javax.swing.JLabel();
+        tbHealthCamp = new javax.swing.JTable();
+        lbl3 = new javax.swing.JLabel();
+        jPanelPetV = new javax.swing.JPanel();
+        lbManageInfo = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 204, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 0, 51));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText(" PET VOLUNTEER ");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 380, 50));
+        lbl1.setBackground(new java.awt.Color(255, 255, 255));
+        lbl1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        lbl1.setForeground(new java.awt.Color(153, 0, 51));
+        lbl1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl1.setText(" PET VOLUNTEER ");
+        add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 380, 50));
 
-        txtpetowner.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        txtpetowner.addActionListener(new java.awt.event.ActionListener() {
+        txtPetOwner1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
+        txtPetOwner1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtpetownerActionPerformed(evt);
+                txtPetOwner1ActionPerformed(evt);
             }
         });
-        add(txtpetowner, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 218, 130, 30));
+        add(txtPetOwner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 218, 130, 30));
 
-        txtpettype.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        add(txtpettype, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 288, 130, 30));
+        txtPetType1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
+        add(txtPetType1, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 288, 130, 30));
 
-        txtHealthCamp.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        add(txtHealthCamp, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 358, 130, 30));
+        txtHealthCamp1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
+        add(txtHealthCamp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 358, 130, 30));
 
-        lblpetowner.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblpetowner.setForeground(new java.awt.Color(153, 0, 51));
-        lblpetowner.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblpetowner.setText("PET OWNER");
-        add(lblpetowner, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 100, 40));
+        lbPetOwner.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        lbPetOwner.setForeground(new java.awt.Color(153, 0, 51));
+        lbPetOwner.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lbPetOwner.setText("PET OWNER");
+        add(lbPetOwner, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 100, 40));
 
-        lblpettype.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblpettype.setForeground(new java.awt.Color(153, 0, 51));
-        lblpettype.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblpettype.setText("PET TYPE");
-        add(lblpettype, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 80, 40));
+        lbPetType.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        lbPetType.setForeground(new java.awt.Color(153, 0, 51));
+        lbPetType.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lbPetType.setText("PET TYPE");
+        add(lbPetType, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 80, 40));
 
-        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 0, 51));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("HEALTH CAMP");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 140, 30));
+        lbHealthCamp.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        lbHealthCamp.setForeground(new java.awt.Color(153, 0, 51));
+        lbHealthCamp.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lbHealthCamp.setText("HEALTH CAMP");
+        add(lbHealthCamp, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 140, 30));
 
-        btnSavePetVolunteer.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnSavePetVolunteer.setForeground(new java.awt.Color(153, 0, 51));
-        btnSavePetVolunteer.setText("SAVE");
-        btnSavePetVolunteer.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnSavePetVolunteer.addActionListener(new java.awt.event.ActionListener() {
+        btnSavePetV.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        btnSavePetV.setForeground(new java.awt.Color(153, 0, 51));
+        btnSavePetV.setText("SAVE");
+        btnSavePetV.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnSavePetV.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSavePetVolunteerActionPerformed(evt);
+                btnSavePetVActionPerformed(evt);
             }
         });
-        add(btnSavePetVolunteer, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 420, 90, 40));
+        add(btnSavePetV, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 420, 90, 40));
 
-        tblHealthCamps.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        tblHealthCamps.setModel(new javax.swing.table.DefaultTableModel(
+        tbHealthCamp.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        tbHealthCamp.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
                 {null},
@@ -125,85 +126,85 @@ public class PetVolunteer extends javax.swing.JPanel {
                 "Health Camp Name"
             }
         ));
-        jScrollPane1.setViewportView(tblHealthCamps);
+        jScrollPane1.setViewportView(tbHealthCamp);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 355, 269));
 
-        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(153, 0, 51));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Choose the health camp");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, 300, 40));
+        lbl3.setBackground(new java.awt.Color(255, 255, 255));
+        lbl3.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        lbl3.setForeground(new java.awt.Color(153, 0, 51));
+        lbl3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl3.setText("Choose the health camp");
+        add(lbl3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, 300, 40));
 
-        jPanel2.setBackground(new java.awt.Color(102, 0, 51));
+        jPanelPetV.setBackground(new java.awt.Color(102, 0, 51));
 
-        lblManageInfo1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        lblManageInfo1.setForeground(new java.awt.Color(255, 255, 255));
-        lblManageInfo1.setText("PET VOLUNTEER MANAGEMENT");
+        lbManageInfo.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        lbManageInfo.setForeground(new java.awt.Color(255, 255, 255));
+        lbManageInfo.setText("PET VOLUNTEER MANAGEMENT");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelPetVLayout = new javax.swing.GroupLayout(jPanelPetV);
+        jPanelPetV.setLayout(jPanelPetVLayout);
+        jPanelPetVLayout.setHorizontalGroup(
+            jPanelPetVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelPetVLayout.createSequentialGroup()
                 .addGap(262, 262, 262)
-                .addComponent(lblManageInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbManageInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(382, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        jPanelPetVLayout.setVerticalGroup(
+            jPanelPetVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPetVLayout.createSequentialGroup()
                 .addGap(0, 6, Short.MAX_VALUE)
-                .addComponent(lblManageInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lbManageInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1040, -1));
+        add(jPanelPetV, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1040, -1));
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(63, 40, 101));
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, 20));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtpetownerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpetownerActionPerformed
+    private void txtPetOwner1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPetOwner1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtpetownerActionPerformed
+    }//GEN-LAST:event_txtPetOwner1ActionPerformed
 
-    private void btnSavePetVolunteerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavePetVolunteerActionPerformed
+    private void btnSavePetVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavePetVActionPerformed
         // TODO add your handling code here:
-        for (Model.PetVolunteer.PetVolunteer petVolunteer : system.getPetVolunteerDirectory().getPetVolunteerDirectory()) {
-            if (petVolunteer.getIpcuserName().equals(account.getIpcuserName())) {
-                system.getPetVolunteerDirectory().updatePetVolunteerInfo(petVolunteer, txtpetowner.getText(), txtpettype.getText(), txtHealthCamp.getText());
+        for (Model.PetVolunteer.PetVolunteer petVolunteer : ipcSystem.getPetVolunteerDirectory().getPetVolunteerDirectory()) {
+            if (petVolunteer.getIpcuserName().equals(ipcAccount.getIpcuserName())) {
+                ipcSystem.getPetVolunteerDirectory().updatePetVolunteerInfo(petVolunteer, txtPetOwner1.getText(), txtPetType1.getText(), txtHealthCamp1.getText());
             }
         }
         JOptionPane.showMessageDialog(this, "Volunteer has been added successfully");
-    }//GEN-LAST:event_btnSavePetVolunteerActionPerformed
+    }//GEN-LAST:event_btnSavePetVActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSavePetVolunteer;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton btnSavePetV;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanelPetV;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblManageInfo1;
-    private javax.swing.JLabel lblpetowner;
-    private javax.swing.JLabel lblpettype;
-    private javax.swing.JTable tblHealthCamps;
-    private javax.swing.JTextField txtHealthCamp;
-    private javax.swing.JTextField txtpetowner;
-    private javax.swing.JTextField txtpettype;
+    private javax.swing.JLabel lbHealthCamp;
+    private javax.swing.JLabel lbManageInfo;
+    private javax.swing.JLabel lbPetOwner;
+    private javax.swing.JLabel lbPetType;
+    private javax.swing.JLabel lbl1;
+    private javax.swing.JLabel lbl3;
+    private javax.swing.JTable tbHealthCamp;
+    private javax.swing.JTextField txtHealthCamp1;
+    private javax.swing.JTextField txtPetOwner1;
+    private javax.swing.JTextField txtPetType1;
     // End of variables declaration//GEN-END:variables
 
-private void populateHealthCamptable() {
+private void ipcPopulateHealthCamptable() {
 
-        DefaultTableModel tablemodel = (DefaultTableModel) tblHealthCamps.getModel();
+        DefaultTableModel tablemodel = (DefaultTableModel) tbHealthCamp.getModel();
 
         tablemodel.setRowCount(0);
         
-        for(HealthCamp healthCamp: system.getHealthCampDirectory().getHealthCampDirectory()) {
+        for(HealthCamp healthCamp: ipcSystem.getHealthCampDirectory().getHealthCampDirectory()) {
         
             Object[] row = new Object[1];
             row[0] = healthCamp.getIpchealthCampName();
@@ -215,17 +216,17 @@ private void populateHealthCamptable() {
 private boolean validateInputFields() {
 
         Pattern p = Pattern.compile("^[A-Za-z0-9 ]+$");
-        Matcher m = p.matcher(txtpetowner.getText());
+        Matcher m = p.matcher(txtPetOwner1.getText());
         Pattern p7 = Pattern.compile("^[A-Za-z0-9]+$");
-        Matcher m7 = p7.matcher(txtpettype.getText());
+        Matcher m7 = p7.matcher(txtPetType1.getText());
         Pattern p1 = Pattern.compile("^[A-Za-z0-9]+$");
-        Matcher m1 = p1.matcher(txtHealthCamp.getText());
+        Matcher m1 = p1.matcher(txtHealthCamp1.getText());
         
         if (!m.matches()) 
         
        {
 
-            JOptionPane.showMessageDialog(this, "Please enter correct input format for owner");
+            JOptionPane.showMessageDialog(this, "Incorrect input format for Owner! Please enter again.");
             return false;
         } 
         
@@ -233,13 +234,13 @@ private boolean validateInputFields() {
         
         {
 
-            JOptionPane.showMessageDialog(this, "Please enter correct input format for hospitalname ");
+            JOptionPane.showMessageDialog(this, "Incorrect input format for Hospital Name! Please enter again.");
             return false;
         }
         else if (!m1.matches()) 
         {
 
-            JOptionPane.showMessageDialog(this, "Please enter correct input format for address ");
+            JOptionPane.showMessageDialog(this, "Incorrect input format for Address! Please enter again.");
             return false;
         }
         else 
