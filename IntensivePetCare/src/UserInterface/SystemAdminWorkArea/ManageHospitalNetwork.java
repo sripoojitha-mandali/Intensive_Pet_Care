@@ -4,20 +4,20 @@
  */
 package UserInterface.SystemAdminWorkArea;
 
-import Model.Ecosystem;
+import Model.UserAccount.UserAccount;
 import Model.Hospital.Hospital;
 import Model.Role.HospitalAdminRole;
-import Model.UserAccount.UserAccount;
-import java.awt.CardLayout;
+import Model.Ecosystem;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.regex.Matcher;
+import java.awt.CardLayout;
 import java.util.regex.Pattern;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.Timer;
+import java.util.regex.Matcher;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.Timer;
+import javax.swing.JPanel;
+import javax.swing.JOptionPane;
 /**
  *
  * @author varshakuruva
@@ -28,16 +28,16 @@ public class ManageHospitalNetwork extends javax.swing.JPanel {
      * Creates new form ManageHospitalNetwork
      */
     
-    JPanel userProcessContainer;
-    Ecosystem system;
+    JPanel ipcUserProcessContainer;
+    Ecosystem ipcSystem;
     private UserAccount user;
     
-    public ManageHospitalNetwork(JPanel userProcessContainer, Ecosystem system) {
+    public ManageHospitalNetwork(JPanel ipcUserProcessContainer, Ecosystem ipcSystem) {
         initComponents();
         
-        this.userProcessContainer = userProcessContainer;
-        this.system = system;
-        populateHospitalTable();
+        this.ipcUserProcessContainer = ipcUserProcessContainer;
+        this.ipcSystem = ipcSystem;
+        ipcPopulateHospitalTable();
     }
 
     /**
@@ -194,9 +194,9 @@ public class ManageHospitalNetwork extends javax.swing.JPanel {
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        ipcUserProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
+        layout.previous(ipcUserProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnViewHospitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewHospitalActionPerformed
@@ -228,11 +228,11 @@ public class ManageHospitalNetwork extends javax.swing.JPanel {
             if (selectionResult == JOptionPane.YES_OPTION) {
                 String username = (String) tblHospital.getValueAt(selectedRow, 1);
                 String pwd = (String) tblHospital.getValueAt(selectedRow, 2);
-                UserAccount user = system.getUserAccountDirectory().authenticateUser(username, pwd);
+                UserAccount user = ipcSystem.getUserAccountDirectory().authenticateUser(username, pwd);
 
-                system.getUserAccountDirectory().deleteUserAccount(user);
-                system.getHospitalDirectory().deleteHospital(user.getIpcuserName());
-                populateHospitalTable();
+                ipcSystem.getUserAccountDirectory().deleteUserAccount(user);
+                ipcSystem.getHospitalDirectory().deleteHospital(user.getIpcuserName());
+                ipcPopulateHospitalTable();
             }
         } else {
             JOptionPane.showMessageDialog(null, "Please select a row to delete the Hospital network details");
@@ -241,10 +241,10 @@ public class ManageHospitalNetwork extends javax.swing.JPanel {
 
     private void btnAddHospitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddHospitalActionPerformed
         // TODO add your handling code here:
-        if (system.getUserAccountDirectory().checkIfUsernameIsUnique(txtUsername.getText())) {
-            UserAccount userAccount = system.getUserAccountDirectory().createUserAccount(txtName.getText(), txtUsername.getText(), txtPassword.getText(), null, new HospitalAdminRole());
-            Hospital hospital = system.getHospitalDirectory().createUserAccount(txtUsername.getText(), txtName.getText());
-            populateHospitalTable();
+        if (ipcSystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtUsername.getText())) {
+            UserAccount userAccount = ipcSystem.getUserAccountDirectory().createUserAccount(txtName.getText(), txtUsername.getText(), txtPassword.getText(), null, new HospitalAdminRole());
+            Hospital hospital = ipcSystem.getHospitalDirectory().createUserAccount(txtUsername.getText(), txtName.getText());
+            ipcPopulateHospitalTable();
             txtName.setText("");
             txtUsername.setText("");
             txtPassword.setText("");
@@ -261,9 +261,9 @@ public class ManageHospitalNetwork extends javax.swing.JPanel {
         String name = (String) tblHospital.getValueAt(selectedRow, 0);
         String username = (String) tblHospital.getValueAt(selectedRow, 1);
         String password = (String) tblHospital.getValueAt(selectedRow, 2);
-        user = system.getUserAccountDirectory().authenticateUser(username, password);
-        system.getUserAccountDirectory().updateUserAccount(user, txtName.getText(), txtUsername.getText(), txtPassword.getText());
-        populateHospitalTable();
+        user = ipcSystem.getUserAccountDirectory().authenticateUser(username, password);
+        ipcSystem.getUserAccountDirectory().updateUserAccount(user, txtName.getText(), txtUsername.getText(), txtPassword.getText());
+        ipcPopulateHospitalTable();
 
         txtName.setText("");
         txtUsername.setText("");
@@ -274,11 +274,11 @@ public class ManageHospitalNetwork extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnUpdateHospital1ActionPerformed
 
-    private void populateHospitalTable() {
+    private void ipcPopulateHospitalTable() {
         DefaultTableModel tablemodel = (DefaultTableModel) tblHospital.getModel();
 
         tablemodel.setRowCount(0);
-        for (UserAccount user : system.getUserAccountDirectory().getUserAccountList()) {
+        for (UserAccount user : ipcSystem.getUserAccountDirectory().getUserAccountList()) {
 
             if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.HospitalAdminRole")) {
                 Object[] row = new Object[3];
