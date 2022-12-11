@@ -43,7 +43,7 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="de" green="d1" red="d6" type="rgb"/>
+          <Color blue="cc" green="cc" red="ff" type="rgb"/>
         </Property>
       </Properties>
       <AuxValues>
@@ -60,7 +60,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="190" y="80" width="570" height="113"/>
+              <AbsoluteConstraints x="30" y="100" width="570" height="113"/>
             </Constraint>
           </Constraints>
 
@@ -89,7 +89,7 @@
               <Font name="Trebuchet MS" size="16" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="65" green="28" red="3f" type="rgb"/>
+              <Color blue="33" green="0" red="cc" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="PET OWNER"/>
@@ -125,7 +125,7 @@
               <Font name="Trebuchet MS" size="16" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="65" green="28" red="3f" type="rgb"/>
+              <Color blue="33" green="0" red="cc" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="PET TYPE"/>
@@ -158,14 +158,14 @@
               <Font name="Trebuchet MS" size="16" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="65" green="28" red="3f" type="rgb"/>
+              <Color blue="0" green="0" red="cc" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
-            <Property name="text" type="java.lang.String" value="ORG NAME"/>
+            <Property name="text" type="java.lang.String" value="ORGANISATION NAME"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="160" y="340" width="140" height="20"/>
+              <AbsoluteConstraints x="110" y="340" width="190" height="20"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -211,7 +211,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="320" y="380" width="140" height="20"/>
+              <AbsoluteConstraints x="750" y="270" width="140" height="20"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -221,14 +221,14 @@
               <Font name="Trebuchet MS" size="16" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="65" green="28" red="3f" type="rgb"/>
+              <Color blue="33" green="0" red="cc" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="HEALTH STATUS"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="150" y="380" width="150" height="20"/>
+              <AbsoluteConstraints x="560" y="270" width="150" height="20"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -238,9 +238,9 @@
               <Font name="Trebuchet MS" size="16" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="65" green="28" red="3f" type="rgb"/>
+              <Color blue="33" green="0" red="cc" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Register For Hospital "/>
+            <Property name="text" type="java.lang.String" value="SIGN UP FOR HOSPITAL"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
                 <BevelBorder/>
@@ -252,7 +252,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="240" y="550" width="180" height="30"/>
+              <AbsoluteConstraints x="460" y="450" width="180" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -262,14 +262,14 @@
               <Font name="Trebuchet MS" size="16" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="65" green="28" red="3f" type="rgb"/>
+              <Color blue="33" green="0" red="cc" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="HOSPITAL NAME"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="150" y="420" width="150" height="20"/>
+              <AbsoluteConstraints x="560" y="310" width="150" height="20"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -285,7 +285,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="330" y="420" width="130" height="20"/>
+              <AbsoluteConstraints x="750" y="310" width="140" height="20"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -295,14 +295,14 @@
               <Font name="Trebuchet MS" size="16" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="65" green="28" red="3f" type="rgb"/>
+              <Color blue="33" green="0" red="cc" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="DRIVER"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="170" y="460" width="130" height="20"/>
+              <AbsoluteConstraints x="580" y="350" width="130" height="20"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -321,7 +321,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="330" y="460" width="130" height="20"/>
+              <AbsoluteConstraints x="750" y="350" width="150" height="20"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -331,7 +331,7 @@
               <Font name="Trebuchet MS" size="16" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="65" green="28" red="3f" type="rgb"/>
+              <Color blue="33" green="0" red="cc" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="VIEW"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -345,7 +345,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="650" y="210" width="90" height="30"/>
+              <AbsoluteConstraints x="500" y="230" width="90" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -355,14 +355,14 @@
               <Font name="Trebuchet MS" size="16" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="65" green="28" red="3f" type="rgb"/>
+              <Color blue="0" green="0" red="cc" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="PET USERNAME"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="170" y="500" width="130" height="20"/>
+              <AbsoluteConstraints x="180" y="390" width="130" height="20"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -378,7 +378,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="330" y="500" width="130" height="20"/>
+              <AbsoluteConstraints x="330" y="390" width="130" height="20"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -388,7 +388,7 @@
               <Font name="Trebuchet MS" size="24" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="65" green="28" red="3f" type="rgb"/>
+              <Color blue="0" green="0" red="99" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="MANAGE PET VOLUNTEER"/>
@@ -420,7 +420,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="580" y="260" width="160" height="110"/>
+              <AbsoluteConstraints x="630" y="100" width="160" height="110"/>
             </Constraint>
           </Constraints>
 
@@ -446,7 +446,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="580" y="390" width="160" height="120"/>
+              <AbsoluteConstraints x="800" y="100" width="150" height="110"/>
             </Constraint>
           </Constraints>
 
@@ -469,7 +469,7 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="160" y="50" width="930" height="600"/>
+              <AbsoluteConstraints x="30" y="-40" width="930" height="600"/>
             </Constraint>
           </Constraints>
         </Component>

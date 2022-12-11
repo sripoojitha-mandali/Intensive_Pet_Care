@@ -16,10 +16,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="backgroundPanel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
+          <Component id="backgroundPanel" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -35,7 +32,7 @@
     <Container class="javax.swing.JPanel" name="backgroundPanel">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
         </Property>
       </Properties>
 
@@ -45,15 +42,18 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="sidepane" min="-2" pref="258" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" pref="870" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="14" max="32767" attributes="0"/>
+                  <Component id="jLabel1" pref="1011" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="sidepane" pref="787" max="32767" attributes="0"/>
-              <Component id="jLabel1" pref="787" max="32767" attributes="0"/>
+              <Component id="sidepane" max="32767" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <Component id="jLabel1" min="-2" pref="828" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="22" max="32767" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -61,7 +61,7 @@
         <Container class="javax.swing.JPanel" name="sidepane">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="65" green="28" red="3f" type="rgb"/>
+              <Color blue="33" green="0" red="66" type="rgb"/>
             </Property>
           </Properties>
 
@@ -72,7 +72,7 @@
             <Container class="javax.swing.JPanel" name="ManageLabAssitant">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="cd" green="b1" red="bb" type="rgb"/>
+                  <Color blue="cc" green="cc" red="ff" type="rgb"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -105,13 +105,13 @@
                 <Component class="javax.swing.JLabel" name="lblManageLabAssistant">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="cd" green="b1" red="bb" type="rgb"/>
+                      <Color blue="cc" green="cc" red="ff" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Trebuchet MS" size="14" style="1"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="56" green="22" red="36" type="rgb"/>
+                      <Color blue="33" green="0" red="99" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Manage LabAssistant"/>
                   </Properties>
@@ -124,7 +124,7 @@
             <Container class="javax.swing.JPanel" name="ManageHospitalInfo">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="cd" green="b1" red="bb" type="rgb"/>
+                  <Color blue="cc" green="cc" red="ff" type="rgb"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -163,7 +163,7 @@
                       <Font name="Trebuchet MS" size="14" style="1"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="56" green="22" red="36" type="rgb"/>
+                      <Color blue="33" green="0" red="99" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Manage Hospital Info"/>
                   </Properties>
@@ -176,7 +176,7 @@
             <Container class="javax.swing.JPanel" name="ManagePet">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="cd" green="b1" red="bb" type="rgb"/>
+                  <Color blue="cc" green="cc" red="ff" type="rgb"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -215,7 +215,7 @@
                       <Font name="Trebuchet MS" size="14" style="1"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="56" green="22" red="36" type="rgb"/>
+                      <Color blue="0" green="0" red="99" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Manage Pet Info"/>
                   </Properties>
@@ -228,7 +228,7 @@
             <Container class="javax.swing.JPanel" name="ManageVet">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="cd" green="b1" red="bb" type="rgb"/>
+                  <Color blue="cc" green="cc" red="ff" type="rgb"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="0" type="rgb"/>
@@ -264,13 +264,13 @@
                 <Component class="javax.swing.JLabel" name="lblManageVet">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="cd" green="b1" red="bb" type="rgb"/>
+                      <Color blue="cc" green="cc" red="ff" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Trebuchet MS" size="14" style="1"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="56" green="22" red="36" type="rgb"/>
+                      <Color blue="33" green="0" red="99" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Manage Vet"/>
                   </Properties>
@@ -283,7 +283,7 @@
             <Container class="javax.swing.JPanel" name="ManageSponsor">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="cd" green="b1" red="bb" type="rgb"/>
+                  <Color blue="cc" green="cc" red="ff" type="rgb"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -316,13 +316,13 @@
                 <Component class="javax.swing.JLabel" name="lblAddSponsor">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="cd" green="b1" red="bb" type="rgb"/>
+                      <Color blue="33" green="0" red="99" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Trebuchet MS" size="14" style="1"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="56" green="22" red="36" type="rgb"/>
+                      <Color blue="33" green="0" red="99" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Manage Sponsor"/>
                   </Properties>
@@ -340,7 +340,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="You are logged in as a hospital.."/>
+                <Property name="text" type="java.lang.String" value="Logged as a hospital.."/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -352,9 +352,13 @@
         </Container>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Images/schronisko_01.gif"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cf" green="cf" red="cf" type="rgb"/>
             </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/img2/m1.gif"/>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
       </SubComponents>

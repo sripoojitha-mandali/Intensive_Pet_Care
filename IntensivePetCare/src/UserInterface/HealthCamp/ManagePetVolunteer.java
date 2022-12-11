@@ -99,7 +99,7 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
         tblDrivers = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(214, 209, 222));
+        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblPetVolunteerHealthCamp.setModel(new javax.swing.table.DefaultTableModel(
@@ -115,10 +115,10 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblPetVolunteerHealthCamp);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 570, 113));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 570, 113));
 
         lblpetowner.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblpetowner.setForeground(new java.awt.Color(63, 40, 101));
+        lblpetowner.setForeground(new java.awt.Color(204, 0, 51));
         lblpetowner.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblpetowner.setText("PET OWNER");
         jPanel1.add(lblpetowner, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 120, 20));
@@ -132,7 +132,7 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
         jPanel1.add(txtpetowner, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, 130, 20));
 
         lblpettype.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblpettype.setForeground(new java.awt.Color(63, 40, 101));
+        lblpettype.setForeground(new java.awt.Color(204, 0, 51));
         lblpettype.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblpettype.setText("PET TYPE");
         jPanel1.add(lblpettype, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 150, 20));
@@ -141,10 +141,10 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
         jPanel1.add(txtpettype, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 130, 20));
 
         lblorgname.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblorgname.setForeground(new java.awt.Color(63, 40, 101));
+        lblorgname.setForeground(new java.awt.Color(204, 0, 0));
         lblorgname.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblorgname.setText("ORG NAME");
-        jPanel1.add(lblorgname, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 340, 140, 20));
+        lblorgname.setText("ORGANISATION NAME");
+        jPanel1.add(lblorgname, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, 190, 20));
 
         txtorgname.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
         jPanel1.add(txtorgname, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 340, 130, 20));
@@ -162,40 +162,39 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
                 jComboBoxHealthMousePressed(evt);
             }
         });
-        jPanel1.add(jComboBoxHealth, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 380, 140, 20));
+        jPanel1.add(jComboBoxHealth, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 270, 140, 20));
 
         lblhealthstatus.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblhealthstatus.setForeground(new java.awt.Color(63, 40, 101));
+        lblhealthstatus.setForeground(new java.awt.Color(204, 0, 51));
         lblhealthstatus.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblhealthstatus.setText("HEALTH STATUS");
-        jPanel1.add(lblhealthstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 150, 20));
+        jPanel1.add(lblhealthstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 270, 150, 20));
 
-        btnRegisterForHospital.setBackground(new java.awt.Color(255, 255, 255));
         btnRegisterForHospital.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnRegisterForHospital.setForeground(new java.awt.Color(63, 40, 101));
-        btnRegisterForHospital.setText("Register For Hospital ");
+        btnRegisterForHospital.setForeground(new java.awt.Color(204, 0, 51));
+        btnRegisterForHospital.setText("SIGN UP FOR HOSPITAL");
         btnRegisterForHospital.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnRegisterForHospital.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegisterForHospitalActionPerformed(evt);
             }
         });
-        jPanel1.add(btnRegisterForHospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 550, 180, 30));
+        jPanel1.add(btnRegisterForHospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 450, 180, 30));
 
         lblhospitalname.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblhospitalname.setForeground(new java.awt.Color(63, 40, 101));
+        lblhospitalname.setForeground(new java.awt.Color(204, 0, 51));
         lblhospitalname.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblhospitalname.setText("HOSPITAL NAME");
-        jPanel1.add(lblhospitalname, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 420, 150, 20));
+        jPanel1.add(lblhospitalname, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 310, 150, 20));
 
         txthospitalname.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        jPanel1.add(txthospitalname, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 420, 130, 20));
+        jPanel1.add(txthospitalname, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 310, 140, 20));
 
         lbldriver.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lbldriver.setForeground(new java.awt.Color(63, 40, 101));
+        lbldriver.setForeground(new java.awt.Color(204, 0, 51));
         lbldriver.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lbldriver.setText("DRIVER");
-        jPanel1.add(lbldriver, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 460, 130, 20));
+        jPanel1.add(lbldriver, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 350, 130, 20));
 
         txtdriver.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
         txtdriver.addActionListener(new java.awt.event.ActionListener() {
@@ -203,10 +202,10 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
                 txtdriverActionPerformed(evt);
             }
         });
-        jPanel1.add(txtdriver, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 460, 130, 20));
+        jPanel1.add(txtdriver, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 350, 150, 20));
 
         btnView.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnView.setForeground(new java.awt.Color(63, 40, 101));
+        btnView.setForeground(new java.awt.Color(204, 0, 51));
         btnView.setText("VIEW");
         btnView.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnView.addActionListener(new java.awt.event.ActionListener() {
@@ -214,24 +213,23 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
                 btnViewActionPerformed(evt);
             }
         });
-        jPanel1.add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 210, 90, 30));
+        jPanel1.add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, 90, 30));
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(63, 40, 101));
+        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("PET USERNAME");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 500, 130, 20));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 390, 130, 20));
 
         txtPetUsername.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        jPanel1.add(txtPetUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 500, 130, 20));
+        jPanel1.add(txtPetUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 390, 130, 20));
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(63, 40, 101));
+        jLabel2.setForeground(new java.awt.Color(153, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("MANAGE PET VOLUNTEER");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, 430, 50));
 
-        btnBack.setBackground(new java.awt.Color(255, 255, 255));
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-back-arrow-64 (2) (1).png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,7 +251,7 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
         ));
         jScrollPane2.setViewportView(tblHospitals);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 260, 160, 110));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, 160, 110));
 
         tblDrivers.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -268,8 +266,8 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
         ));
         jScrollPane3.setViewportView(tblDrivers);
 
-        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 390, 160, 120));
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 930, 600));
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 100, 150, 110));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, -40, 930, 600));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

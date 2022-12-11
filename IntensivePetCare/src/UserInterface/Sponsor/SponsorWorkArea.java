@@ -60,7 +60,7 @@ public class SponsorWorkArea extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         lblManageInfo1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(214, 209, 222));
+        setBackground(new java.awt.Color(255, 204, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblSponsorPetOwnerInfo.setModel(new javax.swing.table.DefaultTableModel(
@@ -76,10 +76,10 @@ public class SponsorWorkArea extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblSponsorPetOwnerInfo);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, -1, 119));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 650, 200));
 
         btnApproveFunds.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnApproveFunds.setForeground(new java.awt.Color(63, 40, 101));
+        btnApproveFunds.setForeground(new java.awt.Color(102, 0, 0));
         btnApproveFunds.setText("APPROVE SPONSOR");
         btnApproveFunds.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnApproveFunds.addActionListener(new java.awt.event.ActionListener() {
@@ -87,15 +87,15 @@ public class SponsorWorkArea extends javax.swing.JPanel {
                 btnApproveFundsActionPerformed(evt);
             }
         });
-        add(btnApproveFunds, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 340, 169, 34));
+        add(btnApproveFunds, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 320, 169, 34));
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(63, 40, 101));
+        jLabel1.setForeground(new java.awt.Color(102, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("SPONSOR APPROVAL");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 399, 42));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 150, 399, 42));
 
-        jPanel2.setBackground(new java.awt.Color(63, 40, 101));
+        jPanel2.setBackground(new java.awt.Color(102, 0, 0));
 
         lblManageInfo1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         lblManageInfo1.setForeground(new java.awt.Color(255, 255, 255));
