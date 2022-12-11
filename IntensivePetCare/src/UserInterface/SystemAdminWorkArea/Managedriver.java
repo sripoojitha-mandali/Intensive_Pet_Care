@@ -233,7 +233,7 @@ public void ipcPopulateDriverTable() {
         tablemodel.setRowCount(0);
         for (UserAccount user : ipcSystem.getUserAccountDirectory().getUserAccountList()) {
 
-            if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.DriverRole")) {
+            if (user.getRole().getClass().getName().equals("Model.Role.DriverRole")) {
                 Object[] row = new Object[3];
                 row[0] = user;
                 row[1] = user.getIpcuserName();
