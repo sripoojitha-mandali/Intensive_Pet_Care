@@ -25,7 +25,7 @@ public class VetWorkarea extends javax.swing.JPanel {
     JPanel ipcUserProcessContainer;
     Ecosystem ipcSystem;
     
-    public VetWorkarea(JPanel ipcuserProcessContainer, Ecosystem ipcsystem) {
+    public VetWorkarea(JPanel ipcuserProcessContainer, Ecosystem ipcSystem) {
         initComponents();
         
         this.ipcUserProcessContainer = ipcUserProcessContainer;
