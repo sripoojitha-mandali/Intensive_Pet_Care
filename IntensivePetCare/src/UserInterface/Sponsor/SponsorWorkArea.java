@@ -37,10 +37,11 @@ public class SponsorWorkArea extends javax.swing.JPanel {
         tablemodel.setRowCount(0);
         for(Sponsor sponsor : system.getSponsorDirectory().getSponsorDirectory()) {
             Object[] row= new Object[4];
-            row[0] = sponsor;
-            row[1] = sponsor.getIpcpetOwner();
             row[2] = sponsor.getIpcpetType();
             row[3] = sponsor.getIpchospitalName();
+            row[0] = sponsor;
+            row[1] = sponsor.getIpcpetOwner();
+            
             tablemodel.addRow(row);
         }
     }
@@ -119,6 +120,21 @@ public class SponsorWorkArea extends javax.swing.JPanel {
 
         add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, -1));
     }// </editor-fold>//GEN-END:initComponents
+    
+     public void populatefundAgencyTable() {
+        DefaultTableModel tablemodel = (DefaultTableModel) tblSponsorPetOwnerInfo.getModel();
+
+        tablemodel.setRowCount(0);
+        for(Sponsor sponsor : system.getSponsorDirectory().getSponsorDirectory()) {
+            Object[] row= new Object[4];
+            row[2] = sponsor.getIpcfuser();
+            row[3] = sponsor.getIpchospitalName();
+            row[0] = sponsor;
+            row[1] = sponsor.getIpcpetType();
+            
+            tablemodel.addRow(row);
+        }
+    }
 
     private void btnApproveFundsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApproveFundsActionPerformed
         // TODO add your handling code here:
