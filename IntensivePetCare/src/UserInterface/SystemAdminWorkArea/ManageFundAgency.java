@@ -6,15 +6,15 @@ package UserInterface.SystemAdminWorkArea;
 
 
 import Model.Ecosystem;
-import Model.FundRaising.FundRaising;
-import Model.Role.FundRaisingRole;
 import Model.UserAccount.UserAccount;
-import java.awt.CardLayout;
-import java.util.regex.Matcher;
+import Model.Role.FundRaisingRole;
+import Model.FundRaising.FundRaising;
 import java.util.regex.Pattern;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
+import java.util.regex.Matcher;
+import java.awt.CardLayout;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.JPanel;
+import javax.swing.JOptionPane;
 /**
  *
  * @author varshakuruva
@@ -25,15 +25,15 @@ public class ManageFundAgency extends javax.swing.JPanel {
      * Creates new form ManageFundAgency
      */
     
-    JPanel ipcuserProcessContainer;
-    Ecosystem ipcsystem;
-    private UserAccount ipcaccount;
-    public ManageFundAgency(JPanel ipcuserProcessContainer, Ecosystem system) {
+    JPanel ipcUserProcessContainer;
+    Ecosystem ipcSystem;
+    private UserAccount ipcAccount;
+    public ManageFundAgency(JPanel ipcUserProcessContainer, Ecosystem ipcSystem) {
         initComponents();
-        this.ipcuserProcessContainer = ipcuserProcessContainer;
-        this.ipcsystem = ipcsystem;
-        this.ipcaccount = ipcaccount;
-        populateFundRaisingTable();
+        this.ipcUserProcessContainer = ipcUserProcessContainer;
+        this.ipcSystem = ipcSystem;
+//        this.ipcAccount = ipcAccount;
+        ipcPopulateFundRaisingTable();
     }
 
     /**
@@ -179,9 +179,9 @@ public class ManageFundAgency extends javax.swing.JPanel {
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-        ipcuserProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) ipcuserProcessContainer.getLayout();
-        layout.previous(ipcuserProcessContainer);
+        ipcUserProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
+        layout.previous(ipcUserProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
@@ -211,9 +211,9 @@ public class ManageFundAgency extends javax.swing.JPanel {
         String name = (String) tblfundagency.getValueAt(selectRow, 0);
         String username = (String) tblfundagency.getValueAt(selectRow, 1);
         String password = (String) tblfundagency.getValueAt(selectRow, 2);
-        ipcaccount = ipcsystem.getUserAccountDirectory().authenticateUser(username, password);
-        ipcsystem.getUserAccountDirectory().updateUserAccount(ipcaccount, txtname.getText(), txtusername.getText(), txtpass.getText());
-        populateFundRaisingTable();
+        ipcAccount = ipcSystem.getUserAccountDirectory().authenticateUser(username, password);
+        ipcSystem.getUserAccountDirectory().updateUserAccount(ipcAccount, txtname.getText(), txtusername.getText(), txtpass.getText());
+        ipcPopulateFundRaisingTable();
 
         txtname.setText("");
         txtusername.setText("");
@@ -235,11 +235,11 @@ public class ManageFundAgency extends javax.swing.JPanel {
             if (selectionResult == JOptionPane.YES_OPTION) {
                 String username = (String) tblfundagency.getValueAt(selectedRow, 1);
                 String pwd = (String) tblfundagency.getValueAt(selectedRow, 2);
-                UserAccount user = ipcsystem.getUserAccountDirectory().authenticateUser(username, pwd);
+                UserAccount user = ipcSystem.getUserAccountDirectory().authenticateUser(username, pwd);
 
-                ipcsystem.getUserAccountDirectory().deleteUserAccount(user);
-                ipcsystem.getFundRaisingDirectory().deleteFundRaiser(user.getIpcuserName());
-                populateFundRaisingTable();
+                ipcSystem.getUserAccountDirectory().deleteUserAccount(user);
+                ipcSystem.getFundRaisingDirectory().deleteFundRaiser(user.getIpcuserName());
+                ipcPopulateFundRaisingTable();
             }
         } else {
             JOptionPane.showMessageDialog(null, "Please select a row to delete the FundAgency details");
@@ -248,10 +248,10 @@ public class ManageFundAgency extends javax.swing.JPanel {
 
     private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
         // TODO add your handling code here:
-        if (ipcsystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtusername.getText())) {
-            UserAccount userAccount = ipcsystem.getUserAccountDirectory().createUserAccount(txtname.getText(), txtusername.getText(), txtpass.getText(), null, new FundRaisingRole());
-            FundRaising fundRaising = ipcsystem.getFundRaisingDirectory().createUserAccount(txtusername.getText());
-            populateFundRaisingTable();
+        if (ipcSystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtusername.getText())) {
+            UserAccount userAccount = ipcSystem.getUserAccountDirectory().createUserAccount(txtname.getText(), txtusername.getText(), txtpass.getText(), null, new FundRaisingRole());
+            FundRaising fundRaising = ipcSystem.getFundRaisingDirectory().createUserAccount(txtusername.getText());
+            ipcPopulateFundRaisingTable();
             txtname.setText("");
             txtusername.setText("");
             txtpass.setText("");
@@ -261,11 +261,11 @@ public class ManageFundAgency extends javax.swing.JPanel {
 
     }//GEN-LAST:event_btnsaveActionPerformed
 
-    public void populateFundRaisingTable(){
+    public void ipcPopulateFundRaisingTable(){
          DefaultTableModel tablemodel = (DefaultTableModel) tblfundagency.getModel();
 
         tablemodel.setRowCount(0);
-        for (UserAccount user : ipcsystem.getUserAccountDirectory().getUserAccountList()) {
+        for (UserAccount user : ipcSystem.getUserAccountDirectory().getUserAccountList()) {
 
             if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.FundRaisingRole")) {
                 Object[] row = new Object[3];
