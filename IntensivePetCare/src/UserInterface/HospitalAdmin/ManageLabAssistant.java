@@ -9,11 +9,11 @@ package UserInterface.HospitalAdmin;
  * @author saran
  */
 
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.Hospital.Hospital;
-import IntensivePetCare.LabAssistant.LabAssistant;
-import IntensivePetCare.Role.LabAssistantRole;
-import IntensivePetCare.UserAccount.UserAccount;
+import Model.Ecosystem;
+import Model.Hospital.Hospital;
+import Model.LabAssistant.LabAssistant;
+import Model.Role.LabAssistantRole;
+import Model.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -3,9 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UserInterface.PetVolunteer;
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.HealthCamp.HealthCamp;
-import IntensivePetCare.UserAccount.UserAccount;
+import Model.Ecosystem;
+import Model.HealthCamp.HealthCamp;
+import Model.UserAccount.UserAccount;
 import javax.swing.JPanel;
 import java.awt.CardLayout;
 import java.util.regex.Matcher;
@@ -171,7 +171,7 @@ public class PetVolunteer extends javax.swing.JPanel {
 
     private void btnSavePetVolunteerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavePetVolunteerActionPerformed
         // TODO add your handling code here:
-        for (IntensivePetCare.PetVolunteer.PetVolunteer petVolunteer : system.getPetVolunteerDirectory().getPetVolunteerDirectory()) {
+        for (Model.PetVolunteer.PetVolunteer petVolunteer : system.getPetVolunteerDirectory().getPetVolunteerDirectory()) {
             if (petVolunteer.getIpcuserName().equals(account.getIpcuserName())) {
                 system.getPetVolunteerDirectory().updatePetVolunteerInfo(petVolunteer, txtpetowner.getText(), txtpettype.getText(), txtHealthCamp.getText());
             }

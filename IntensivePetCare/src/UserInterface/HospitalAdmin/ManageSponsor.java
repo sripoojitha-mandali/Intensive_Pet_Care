@@ -3,10 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UserInterface.HospitalAdmin;
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.Role.SponsorRole;
-import IntensivePetCare.Sponsor.Sponsor;
-import IntensivePetCare.UserAccount.UserAccount;
+import Model.Ecosystem;
+import Model.Role.SponsorRole;
+import Model.Sponsor.Sponsor;
+import Model.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

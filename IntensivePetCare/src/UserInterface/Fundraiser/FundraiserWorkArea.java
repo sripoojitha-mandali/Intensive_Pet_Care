@@ -4,14 +4,14 @@
  * and open the template in the editor.
  */
 package UserInterface.Fundraiser;
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.FundRaising.FundRaising;
+import Model.Ecosystem;
+import Model.FundRaising.FundRaising;
 
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
-import IntensivePetCare.Sponsor.Sponsor;
-import IntensivePetCare.UserAccount.UserAccount;
+import Model.Sponsor.Sponsor;
+import Model.UserAccount.UserAccount;
 /**
  *
  * @author poojitha

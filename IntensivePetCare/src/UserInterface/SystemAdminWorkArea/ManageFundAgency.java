@@ -5,10 +5,10 @@
 package UserInterface.SystemAdminWorkArea;
 
 
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.FundRaising.FundRaising;
-import IntensivePetCare.Role.FundRaisingRole;
-import IntensivePetCare.UserAccount.UserAccount;
+import Model.Ecosystem;
+import Model.FundRaising.FundRaising;
+import Model.Role.FundRaisingRole;
+import Model.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

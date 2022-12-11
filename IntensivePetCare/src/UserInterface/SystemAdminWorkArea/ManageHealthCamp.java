@@ -4,12 +4,12 @@
  */
 package UserInterface.SystemAdminWorkArea;
 
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.HealthCamp.HealthCamp;
-import IntensivePetCare.Hospital.Hospital;
-import IntensivePetCare.Role.HealthCampRole;
-import IntensivePetCare.Role.HospitalAdminRole;
-import IntensivePetCare.UserAccount.UserAccount;
+import Model.Ecosystem;
+import Model.HealthCamp.HealthCamp;
+import Model.Hospital.Hospital;
+import Model.Role.HealthCampRole;
+import Model.Role.HospitalAdminRole;
+import Model.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
