@@ -397,6 +397,7 @@ private void populateHospitalTable() {
             Object[] row = new Object[1];
             row[0] = driver;
             tablemodel.addRow(row);
+            System.out.println("populated successfully ");
         }
     }
 
