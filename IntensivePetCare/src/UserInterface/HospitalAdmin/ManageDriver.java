@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package UserInterface.HospitalAdmin;
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.UserAccount.UserAccount;
+import Model.Ecosystem;
+import Model.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

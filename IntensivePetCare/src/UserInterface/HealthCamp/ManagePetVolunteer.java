@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 package UserInterface.HealthCamp;
-import IntensivePetCare.Driver.Driver;
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.HealthCamp.HealthCamp;
-import IntensivePetCare.Hospital.Hospital;
-import IntensivePetCare.PetVolunteer.PetVolunteer;
-import IntensivePetCare.UserAccount.UserAccount;
+import Model.Driver.Driver;
+import Model.Ecosystem;
+import Model.HealthCamp.HealthCamp;
+import Model.Hospital.Hospital;
+import Model.PetVolunteer.PetVolunteer;
+import Model.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

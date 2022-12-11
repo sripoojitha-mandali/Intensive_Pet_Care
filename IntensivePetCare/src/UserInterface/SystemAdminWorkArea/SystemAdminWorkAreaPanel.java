@@ -4,7 +4,7 @@
  */
 package UserInterface.SystemAdminWorkArea;
 
-import IntensivePetCare.Ecosystem;
+import Model.Ecosystem;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 /**

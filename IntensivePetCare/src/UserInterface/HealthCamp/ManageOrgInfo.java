@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 package UserInterface.HealthCamp;
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.HealthCamp.HealthCamp;
-import IntensivePetCare.Hospital.Hospital;
-import IntensivePetCare.UserAccount.UserAccount;
+import Model.Ecosystem;
+import Model.HealthCamp.HealthCamp;
+import Model.Hospital.Hospital;
+import Model.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

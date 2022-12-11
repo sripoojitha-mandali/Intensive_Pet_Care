@@ -5,9 +5,9 @@
  */
 
 package UserInterface;
-import IntensivePetCare.DB4oUtil.DB4OUtil;
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.UserAccount.UserAccount;
+import Model.DB4oUtil.DB4OUtil;
+import Model.Ecosystem;
+import Model.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 /**

@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 package UserInterface.SystemAdminWorkArea;
-import IntensivePetCare.Driver.Driver;
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.Role.DriverRole;
-import IntensivePetCare.Role.HealthCampRole;
-import IntensivePetCare.UserAccount.UserAccount;
+import Model.Driver.Driver;
+import Model.Ecosystem;
+import Model.Role.DriverRole;
+import Model.Role.HealthCampRole;
+import Model.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
