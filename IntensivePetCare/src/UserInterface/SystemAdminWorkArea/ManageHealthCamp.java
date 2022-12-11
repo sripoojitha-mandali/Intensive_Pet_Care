@@ -212,7 +212,7 @@ public class ManageHealthCamp extends javax.swing.JPanel {
 
     private void btnUpdate1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdate1ActionPerformed
         // TODO add your handling code here:
-
+        if(ipcValidateInputFields()){
         int selectRow = tbHealthCamp.getSelectedRow();
         if (selectRow >= 0) {
         String name = (String) tbHealthCamp.getValueAt(selectRow, 0);
@@ -230,6 +230,7 @@ public class ManageHealthCamp extends javax.swing.JPanel {
         }
         else {
             JOptionPane.showMessageDialog(null, "to update the Health Camp details, Please select a row");
+        }
         }
     }//GEN-LAST:event_btnUpdate1ActionPerformed
 
