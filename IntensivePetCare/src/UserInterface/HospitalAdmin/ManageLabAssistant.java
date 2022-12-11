@@ -364,8 +364,9 @@ private boolean ipcvalidateInputFields() {
         tablemodel.setRowCount(0);
         
          for (UserAccount user : ipcSystem.getUserAccountDirectory().getUserAccountList()) {
-
-            if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.LabAssistantRole")) {
+            System.out.println("hello");
+            if (user.getRole().getClass().getName().equals("Model.Role.LabAssistantRole")) {
+                System.out.println("getrole");
                 Object[] row = new Object[3];
                 row[0] = user.getIpcname();
                 row[1] = user.getIpcuserName();

@@ -308,13 +308,14 @@ public void ipcPopulateVetTable() {
 
         tablemodel.setRowCount(0);
         for (UserAccount user : ipcSystem.getUserAccountDirectory().getUserAccountList()) {
-
-            if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.vetRole")) {
+         
+            if (user.getRole().getClass().getName().equals("Model.Role.vetRole")) {
                 Object[] row = new Object[3];
                 row[0] = user.getIpcname();
                 row[1] = user.getIpcuserName();
                 row[2] = user.getIpcpassword();
                 tablemodel.addRow(row);
+                
             }
         }
     }
