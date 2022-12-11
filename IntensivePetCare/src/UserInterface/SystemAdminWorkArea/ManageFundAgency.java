@@ -206,6 +206,7 @@ public class ManageFundAgency extends javax.swing.JPanel {
 
     private void btnUpdate1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdate1ActionPerformed
         // TODO add your handling code here:
+        if(ipcValidateInputFields()){
         int selectRow = tbFundAgency.getSelectedRow();
         if (selectRow >= 0) {
         String name = (String) tbFundAgency.getValueAt(selectRow, 0);
@@ -222,6 +223,7 @@ public class ManageFundAgency extends javax.swing.JPanel {
         }
    else {
             JOptionPane.showMessageDialog(null, "to update the Fund Agency details, Please select a row");
+        }
         }
     }//GEN-LAST:event_btnUpdate1ActionPerformed
 
