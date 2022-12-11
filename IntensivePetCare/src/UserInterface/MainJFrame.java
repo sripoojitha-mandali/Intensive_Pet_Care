@@ -6,10 +6,12 @@
 
 package UserInterface;
 import Model.DB4oUtil.DB4OUtil;
-import Model.Ecosystem;
-import Model.UserAccount.UserAccount;
 import java.awt.CardLayout;
+import Model.UserAccount.UserAccount;
 import javax.swing.JPanel;
+import Model.Ecosystem;
+
+
 /**
  *
  * @author saran
@@ -17,12 +19,12 @@ import javax.swing.JPanel;
 public class MainJFrame extends javax.swing.JFrame {
 
     /** Creates new form MainJFrame */
-    private Ecosystem ipcsystem;
+    private Ecosystem ipcSystem;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
 
     public MainJFrame() {
         initComponents();
-        ipcsystem = dB4OUtil.retrieveSystem();
+        ipcSystem = dB4OUtil.retrieveSystem();
         this.setSize(1680, 1050);
     }
 
@@ -37,13 +39,13 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jSplitPane1 = new javax.swing.JSplitPane();
         ControlPanel = new javax.swing.JPanel();
-        txtusername = new javax.swing.JTextField();
-        btnlogin = new javax.swing.JButton();
+        txt1 = new javax.swing.JTextField();
+        btn1 = new javax.swing.JButton();
         btnlogout = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        txtpassword = new javax.swing.JPasswordField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lb3 = new javax.swing.JLabel();
+        txt2 = new javax.swing.JPasswordField();
+        lb2 = new javax.swing.JLabel();
+        lb1 = new javax.swing.JLabel();
         container = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
 
@@ -54,23 +56,23 @@ public class MainJFrame extends javax.swing.JFrame {
         ControlPanel.setMinimumSize(new java.awt.Dimension(200, 213));
         ControlPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtusername.addActionListener(new java.awt.event.ActionListener() {
+        txt1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtusernameActionPerformed(evt);
+                txt1ActionPerformed(evt);
             }
         });
-        ControlPanel.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 130, 30));
+        ControlPanel.add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 130, 30));
 
-        btnlogin.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        btnlogin.setForeground(new java.awt.Color(63, 40, 101));
-        btnlogin.setText("LOGIN");
-        btnlogin.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 153, 153)));
-        btnlogin.addActionListener(new java.awt.event.ActionListener() {
+        btn1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        btn1.setForeground(new java.awt.Color(63, 40, 101));
+        btn1.setText("LOGIN");
+        btn1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 153, 153)));
+        btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnloginActionPerformed(evt);
+                btn1ActionPerformed(evt);
             }
         });
-        ControlPanel.add(btnlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 80, 30));
+        ControlPanel.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 80, 30));
 
         btnlogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logout.png"))); // NOI18N
         btnlogout.setBorder(null);
@@ -81,17 +83,17 @@ public class MainJFrame extends javax.swing.JFrame {
         });
         ControlPanel.add(btnlogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-lock-landscape-30.png"))); // NOI18N
-        ControlPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 30, 30));
-        ControlPanel.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 130, 30));
+        lb3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-lock-landscape-30.png"))); // NOI18N
+        ControlPanel.add(lb3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 30, 30));
+        ControlPanel.add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 130, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-name-30.png"))); // NOI18N
-        ControlPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, 30));
+        lb2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-name-30.png"))); // NOI18N
+        ControlPanel.add(lb2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, 30));
 
-        jLabel3.setFont(new java.awt.Font("Forte", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Login Credentials");
-        ControlPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 150, 40));
+        lb1.setFont(new java.awt.Font("Forte", 1, 18)); // NOI18N
+        lb1.setForeground(new java.awt.Color(255, 255, 255));
+        lb1.setText("Login Credentials");
+        ControlPanel.add(lb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 150, 40));
 
         jSplitPane1.setLeftComponent(ControlPanel);
 
@@ -115,36 +117,36 @@ public class MainJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusernameActionPerformed
+    private void txt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtusernameActionPerformed
+    }//GEN-LAST:event_txt1ActionPerformed
 
-    private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnloginActionPerformed
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
         // TODO add your handling code here:
-        UserAccount ipcuseraccount = ipcsystem.getUserAccountDirectory().authenticateUser(txtusername.getText(), txtpassword.getText());
+        UserAccount ipcuseraccount = ipcSystem.getUserAccountDirectory().authenticateUser(txt1.getText(), txt2.getText());
 
         CardLayout ipccrdLyt = (CardLayout) container.getLayout();
-        container.add("Login", ipcuseraccount.getRole().createWorkArea(container, ipcuseraccount, ipcsystem));
+        container.add("Login", ipcuseraccount.getRole().createWorkArea(container, ipcuseraccount, ipcSystem));
         ipccrdLyt.next(container);
         btnlogout.setEnabled(true);
-    }//GEN-LAST:event_btnloginActionPerformed
+    }//GEN-LAST:event_btn1ActionPerformed
 
     private void btnlogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlogoutActionPerformed
         // TODO add your handling code here:
         btnlogout.setEnabled(false);
-        txtusername.setEnabled(true);
-        txtpassword.setEnabled(true);
-        btnlogin.setEnabled(true);
+        txt1.setEnabled(true);
+        txt2.setEnabled(true);
+        btn1.setEnabled(true);
 
-        txtusername.setText("");
-        txtpassword.setText("");
+        txt1.setText("");
+        txt2.setText("");
 
         container.removeAll();
         JPanel blankJP = new JPanel();
         container.add("blank", blankJP);
         CardLayout ipccrdLyt = (CardLayout) container.getLayout();
         ipccrdLyt.next(container);
-        dB4OUtil.storeSystem(ipcsystem);
+        dB4OUtil.storeSystem(ipcSystem);
         container.setVisible(true);
     }//GEN-LAST:event_btnlogoutActionPerformed
 
@@ -181,7 +183,7 @@ public class MainJFrame extends javax.swing.JFrame {
         try {
             for (int row = 0; row <= 100; row++) {
                 Thread.sleep(10);
-                start.loadingNumber.setText(Integer.toString(row) + "%");
+                start.lb1.setText(Integer.toString(row) + "%");
                 start.loadingprogressBar.setValue(row);
                 if (row == 100) {
                     java.awt.EventQueue.invokeLater(new Runnable() {
@@ -200,16 +202,16 @@ public class MainJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ControlPanel;
-    private javax.swing.JButton btnlogin;
+    private javax.swing.JButton btn1;
     private javax.swing.JButton btnlogout;
     private javax.swing.JPanel container;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JPasswordField txtpassword;
-    private javax.swing.JTextField txtusername;
+    private javax.swing.JLabel lb1;
+    private javax.swing.JLabel lb2;
+    private javax.swing.JLabel lb3;
+    private javax.swing.JTextField txt1;
+    private javax.swing.JPasswordField txt2;
     // End of variables declaration//GEN-END:variables
 
 }
