@@ -257,7 +257,7 @@ public class ManageHospitalNetwork extends javax.swing.JPanel {
 
     private void btnUpdateHospital1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateHospital1ActionPerformed
         // TODO add your handling code here:
-        
+        if(ipcValidateInputFields()){
         int selectedRow = tbHospital.getSelectedRow();
         if (selectedRow >= 0) {
         String name = (String) tbHospital.getValueAt(selectedRow, 0);
@@ -274,6 +274,7 @@ public class ManageHospitalNetwork extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "to update the Hospital network details, Please select a row");
         }
+       }
     }//GEN-LAST:event_btnUpdateHospital1ActionPerformed
 
     private void ipcPopulateHospitalTable() {
