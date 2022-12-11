@@ -259,7 +259,7 @@ public class ManageSponsor extends javax.swing.JPanel {
 
         for (UserAccount user : ipcSystem.getUserAccountDirectory().getUserAccountList()) {
 
-            if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.SponsorRole")) {
+            if (user.getRole().getClass().getName().equals("Model.Role.SponsorRole")) {
                 Object[] row = new Object[3];
                 row[0] = user.getIpcname();
                 row[1] = user.getIpcuserName();

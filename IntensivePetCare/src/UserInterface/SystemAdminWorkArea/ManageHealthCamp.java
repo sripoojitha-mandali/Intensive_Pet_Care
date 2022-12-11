@@ -278,7 +278,7 @@ public class ManageHealthCamp extends javax.swing.JPanel {
         tablemodel.setRowCount(0);
         for (UserAccount user : ipcSystem.getUserAccountDirectory().getUserAccountList()) {
 
-            if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.HealthCampRole")) {
+            if (user.getRole().getClass().getName().equals("Model.Role.HealthCampRole")) {
                 Object[] row = new Object[3];
                 row[0] = user.getIpcname();
                 row[1] = user.getIpcuserName();

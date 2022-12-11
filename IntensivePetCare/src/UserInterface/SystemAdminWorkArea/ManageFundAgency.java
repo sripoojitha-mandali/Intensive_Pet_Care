@@ -267,7 +267,7 @@ public class ManageFundAgency extends javax.swing.JPanel {
         tablemodel.setRowCount(0);
         for (UserAccount user : ipcSystem.getUserAccountDirectory().getUserAccountList()) {
 
-            if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.FundRaisingRole")) {
+            if (user.getRole().getClass().getName().equals("Model.Role.FundRaisingRole")) {
                 Object[] row = new Object[3];
                 row[0] = user.getIpcname();
                 row[1] = user.getIpcuserName();
