@@ -8,21 +8,18 @@ package UserInterface.Driver;
 import Model.Driver.Driver;
 import Model.UserAccount.UserAccount;
 import Model.Ecosystem;
-
-import javax.mail.Session;
-import javax.mail.Transport;
-import java.util.Properties;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
-
-import javax.mail.MessagingException;
-import javax.mail.Message;
-
-import javax.mail.PasswordAuthentication;
-import javax.mail.internet.MimeMessage;
 import javax.swing.JOptionPane;
+import java.util.Properties;
+import javax.mail.Session;
+import javax.mail.Authenticator;
+import javax.mail.internet.MimeMessage;
+import javax.mail.Message;
 import javax.mail.internet.InternetAddress;
-
+import javax.mail.MessagingException;
+import javax.mail.Transport;
+import javax.mail.PasswordAuthentication;
 
 /**
  *
@@ -165,42 +162,41 @@ public class DriverWorkArea extends javax.swing.JPanel {
         
     }      
     
-     public void sendMailToPetOwner(String toMail, String msg, String username){
-        System.out.println("Now start sending Email!");
-        final String usname = "saranya73.n@gmail.com";
-        final String passwrd = "Ipc@123";
+     public void sendMailToPetOwner(String toMail, String mes, String userName){
+        System.out.println("You can now start sending Email!");
+        final String ipcUsername = "varshakuruva6@gmail.com";
+        final String ipcPassword = "bmbvtemgfdcjoaqy";
         
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.port", "587");
-        //props.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory");
         props.put("mail.smtp.auth","true");
         props.put("mail.smtp.starttls.enable", "true");
-        //props.put("mail.smtp.port","465");
         
-        Session session=Session.getDefaultInstance(props,
-             new javax.mail.Authenticator() {
+        Session session = Session.getInstance(props, new Authenticator() {
+             @Override
              protected PasswordAuthentication getPasswordAuthentication(){
-                 return new PasswordAuthentication(usname,passwrd);
+                 return new PasswordAuthentication(ipcUsername,ipcPassword);
                 }
              });
         
         try{
          Message message=new MimeMessage(session);
-         message.setFrom(new InternetAddress("poojitha.mandali@gmail.com"));
+         message.setFrom(new InternetAddress(ipcUsername));
          message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toMail));
          message.setSubject("Status Update ");
-         message.setContent("<font color=black> Your pet is at the location dropped safely ! <b>" +
-                 "<font color=black> Have a great day ! <b>","text/html");
+         message.setContent("<font color=black> Pet is at the Destination provided and reached safely! <b>" +
+                 "<font color=black> Have a great day!<b>","text/html");
 
          Transport.send(message);
-         JOptionPane.showMessageDialog(null, "Destination reached - pet at location!");
+         JOptionPane.showMessageDialog(null, "Pet is at the Destination provided!");
      }
         catch(MessagingException e){
         e.printStackTrace();
 
         }
     }
+
 
     public void ipcPopulateTable() {
         DefaultTableModel tablemodel = (DefaultTableModel) tblDM.getModel();
@@ -221,7 +217,7 @@ public class DriverWorkArea extends javax.swing.JPanel {
 
     private void bntSendEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntSendEmailActionPerformed
         // TODO add your handling code here:
-        sendMailToPetOwner("poojitha.mandali@gmail.com","","");
+         sendMailToPetOwner("poojitha.mandali@gmail.com","","");
     }//GEN-LAST:event_bntSendEmailActionPerformed
 
 
