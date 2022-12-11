@@ -134,10 +134,12 @@ public class FundraiserWorkArea extends javax.swing.JPanel {
         for(Sponsor sponsor: system.getSponsorDirectory().getSponsorDirectory()) {
             system.getSponsorDirectory().updateSponsorPetOwnerInfo(sponsor, fundRaiserSelected.getIpcpetOwner(), fundRaiserSelected.getIpcpetType(), fundRaiserSelected.getIpchealthCamp(), fundRaiserSelected.getIpchospitalName());
             System.out.println("Sponsor has been added successfully");
+            
         }
         JOptionPane.showMessageDialog(this, "Request has been sent to the sponsor");
-    }//GEN-LAST:event_btnAddSponsorActionPerformed
-
+    }//GEN-LAST:event_btnAddS[ponsorActionPerformed
+     
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddSponsor;
@@ -147,4 +149,12 @@ public class FundraiserWorkArea extends javax.swing.JPanel {
     private javax.swing.JLabel lblManageInfo;
     private javax.swing.JTable tblfundraiser;
     // End of variables declaration//GEN-END:variables
+    
+     function populateTable(){
+        int selectedRow = tblfundraiser.getSelectedRow();
+        FundRaising fundRaiserSelected = (FundRaising) tblfundraiser.getValueAt(selectedRow, 0);
+        for(Sponsor sponsor: system.getSponsorDirectory().getSponsorDirectory()) {
+            system.getSponsorDirectory().updateSponsorPetOwnerInfo(sponsor, fundRaiserSelected.getIpcpetOwner(), fundRaiserSelected.getIpcpetType(), fundRaiserSelected.getIpchealthCamp(), fundRaiserSelected.getIpchospitalName());
+            System.out.println("Sponsor has been added successfully");
+     }
 }
