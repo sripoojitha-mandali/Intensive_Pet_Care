@@ -3,10 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UserInterface.Sponsor;
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.FundRaising.FundRaising;
-import IntensivePetCare.Sponsor.Sponsor;
-import IntensivePetCare.UserAccount.UserAccount;
+import Model.Ecosystem;
+import Model.FundRaising.FundRaising;
+import Model.Sponsor.Sponsor;
+import Model.UserAccount.UserAccount;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;

@@ -5,9 +5,9 @@
  */
 package UserInterface.Driver;
 
-import IntensivePetCare.Driver.Driver;
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.UserAccount.UserAccount;
+import Model.Driver.Driver;
+import Model.Ecosystem;
+import Model.UserAccount.UserAccount;
 import java.util.Properties;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;

@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package UserInterface.HospitalAdmin;
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.UserAccount.UserAccount;
+import Model.Ecosystem;
+import Model.UserAccount.UserAccount;
 import UserInterface.HospitalAdmin.ManageLabAssistant;
 import UserInterface.SystemAdminWorkArea.ManagePetVolunteer;
 import java.awt.CardLayout;

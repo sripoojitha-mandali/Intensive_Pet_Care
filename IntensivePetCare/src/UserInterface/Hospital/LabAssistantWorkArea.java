@@ -3,10 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UserInterface.Hospital;
-import IntensivePetCare.Ecosystem;
-import IntensivePetCare.LabAssistant.LabAssistant;
-import IntensivePetCare.PetVolunteer.PetVolunteer;
-import IntensivePetCare.UserAccount.UserAccount;
+import Model.Ecosystem;
+import Model.LabAssistant.LabAssistant;
+import Model.PetVolunteer.PetVolunteer;
+import Model.UserAccount.UserAccount;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
