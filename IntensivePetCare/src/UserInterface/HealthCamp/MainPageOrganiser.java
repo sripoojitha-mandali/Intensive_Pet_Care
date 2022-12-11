@@ -27,7 +27,7 @@ public class MainPageOrganiser extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.system = system;
-        this.account = account;
+        //this.account = account;
         this.petVolunteerDirectory = petVolunteerDirectory;
     }
 
