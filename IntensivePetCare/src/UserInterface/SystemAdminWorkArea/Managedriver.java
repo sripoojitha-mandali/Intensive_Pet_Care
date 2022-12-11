@@ -29,7 +29,7 @@ public class Managedriver extends javax.swing.JPanel {
         initComponents();
         this.ipcUserProcessContainer = ipcUserProcessContainer;
         this.ipcSystem = ipcSystem;
-        this.ipcAccount = ipcAccount;
+//        this.ipcAccount = ipcAccount;
         
         ipcPopulateDriverTable();
     }
