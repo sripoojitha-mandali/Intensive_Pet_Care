@@ -231,5 +231,20 @@ public class DriverWorkArea extends javax.swing.JPanel {
 
         }
     }
+    
+    public void populateTable() {
+        DefaultTableModel tablemodel = (DefaultTableModel) tblDriver.getModel();
+        tablemodel.setRowCount(0);
+        for(Driver driver: system.getDriverDirectory().getDriverDirectory()) {
+            if(account.getIpcuserName().equals(driver.getIpcuserName())) {
+                Object[] row = new Object[5];
+                row[0] = driver.getIpcpetOwner();
+                row[1] = driver.getIpcpetType();
+                row[2] = driver.getIpchealthCamp();
+                row[3] = driver.getIpchospitalName();
+                row[4] = driver.getIpcdropOffStatus() == null ? "N/A" : driver.getIpcdropOffStatus();
+                tablemodel.addRow(row);
+            }
+        }
 }
 
