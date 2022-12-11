@@ -4,14 +4,16 @@
  * and open the template in the editor.
  */
 package UserInterface.HospitalAdmin;
-import Model.Ecosystem;
-import Model.UserAccount.UserAccount;
-import java.awt.CardLayout;
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import Model.Ecosystem;
+import java.util.regex.Pattern;
+import Model.UserAccount.UserAccount;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import java.awt.CardLayout;
+
+
 /**
  *
  * @author saran
@@ -21,18 +23,48 @@ public class ManageDriver extends javax.swing.JPanel {
     /**
      * Creates new form ManageDriver
      */
-    JPanel ipcuserProcessContainer;
-    Ecosystem ipcsystem;
-    private UserAccount ipcaccount;
+    JPanel ipcUserProcessContainer;
+    Ecosystem ipcSystem;
+    private UserAccount ipcAccount;
 
-    public ManageDriver(JPanel ipcuserProcessContainer, Ecosystem ipcsystem) {
+    public ManageDriver(JPanel ipcUserProcessContainer, Ecosystem ipcSystem) {
         initComponents();
-        this.ipcuserProcessContainer = ipcuserProcessContainer;
-        this.ipcsystem = ipcsystem;
-        this.ipcaccount = ipcaccount;
-        populateManageDriverTable();
+        this.ipcUserProcessContainer = ipcUserProcessContainer;
+        this.ipcSystem = ipcSystem;
+        this.ipcAccount = ipcAccount;
+        ipcPopulateManageDriverTable();
     }
 
+     private boolean validateInputFields() {
+
+        Pattern p = Pattern.compile("^[A-Za-z0-9 ]+$");
+        Matcher m = p.matcher(txt1.getText());
+        
+        Pattern p7 = Pattern.compile("^[A-Za-z0-9]+$");
+        Matcher m7 = p7.matcher(txt2.getText());
+        
+        Pattern p1 = Pattern.compile("^[A-Za-z0-9]+$");
+        Matcher m1 = p1.matcher(txt3.getText());
+        
+        
+        if (!m.matches()) {
+
+            JOptionPane.showMessageDialog(this, "Please try again by entering valid name");
+            return false;
+        } else if (!m7.matches()) {
+
+            JOptionPane.showMessageDialog(this, "Please try again by entering valid username");
+            return false;
+        }
+        else if (!m1.matches()) {
+
+            JOptionPane.showMessageDialog(this, "Please try again by entering valid password");
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -44,25 +76,25 @@ public class ManageDriver extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblManagerDriver = new javax.swing.JTable();
-        btnView = new javax.swing.JButton();
-        btnUpdate = new javax.swing.JButton();
-        btnDelete = new javax.swing.JButton();
-        lblname = new javax.swing.JLabel();
-        txtname = new javax.swing.JTextField();
-        lblusername = new javax.swing.JLabel();
-        txtusername = new javax.swing.JTextField();
-        lblpassword = new javax.swing.JLabel();
-        btnadd = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        btnBack = new javax.swing.JButton();
-        txtpass = new javax.swing.JPasswordField();
-        jLabel2 = new javax.swing.JLabel();
+        tb1 = new javax.swing.JTable();
+        btn1 = new javax.swing.JButton();
+        btn2 = new javax.swing.JButton();
+        btn3 = new javax.swing.JButton();
+        lb2 = new javax.swing.JLabel();
+        txt1 = new javax.swing.JTextField();
+        lb3 = new javax.swing.JLabel();
+        txt2 = new javax.swing.JTextField();
+        lb4 = new javax.swing.JLabel();
+        btn4 = new javax.swing.JButton();
+        lb1 = new javax.swing.JLabel();
+        btn5 = new javax.swing.JButton();
+        txt3 = new javax.swing.JPasswordField();
+        lb5 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(255, 219, 65));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tblManagerDriver.setModel(new javax.swing.table.DefaultTableModel(
+        tb1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -81,96 +113,96 @@ public class ManageDriver extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblManagerDriver);
+        jScrollPane1.setViewportView(tb1);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 520, 91));
 
-        btnView.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnView.setForeground(new java.awt.Color(153, 0, 51));
-        btnView.setText("VIEW");
-        btnView.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        btnView.addActionListener(new java.awt.event.ActionListener() {
+        btn1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btn1.setForeground(new java.awt.Color(153, 0, 51));
+        btn1.setText("VIEW");
+        btn1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
+        btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewActionPerformed(evt);
+                btn1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 60, 30));
+        jPanel1.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 60, 30));
 
-        btnUpdate.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnUpdate.setForeground(new java.awt.Color(153, 0, 51));
-        btnUpdate.setText("UPDATE");
-        btnUpdate.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+        btn2.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btn2.setForeground(new java.awt.Color(153, 0, 51));
+        btn2.setText("UPDATE");
+        btn2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
+        btn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateActionPerformed(evt);
+                btn2ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 150, 110, 30));
+        jPanel1.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 150, 110, 30));
 
-        btnDelete.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnDelete.setForeground(new java.awt.Color(153, 0, 0));
-        btnDelete.setText("DELETE");
-        btnDelete.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+        btn3.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btn3.setForeground(new java.awt.Color(153, 0, 0));
+        btn3.setText("DELETE");
+        btn3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
+        btn3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteActionPerformed(evt);
+                btn3ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 150, 80, 30));
+        jPanel1.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 150, 80, 30));
 
-        lblname.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblname.setForeground(new java.awt.Color(153, 0, 51));
-        lblname.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblname.setText("NAME");
-        jPanel1.add(lblname, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 210, 60, 30));
+        lb2.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        lb2.setForeground(new java.awt.Color(153, 0, 51));
+        lb2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb2.setText("NAME");
+        jPanel1.add(lb2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 210, 60, 30));
 
-        txtname.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        jPanel1.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 210, 120, 30));
+        txt1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
+        jPanel1.add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 210, 120, 30));
 
-        lblusername.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblusername.setForeground(new java.awt.Color(153, 0, 51));
-        lblusername.setText("USERNAME");
-        jPanel1.add(lblusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 260, 80, 30));
+        lb3.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        lb3.setForeground(new java.awt.Color(153, 0, 51));
+        lb3.setText("USERNAME");
+        jPanel1.add(lb3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 260, 80, 30));
 
-        txtusername.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        jPanel1.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 260, 120, 30));
+        txt2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
+        jPanel1.add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 260, 120, 30));
 
-        lblpassword.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblpassword.setForeground(new java.awt.Color(153, 0, 51));
-        lblpassword.setText("PASSWORD");
-        jPanel1.add(lblpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 320, 90, 30));
+        lb4.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        lb4.setForeground(new java.awt.Color(153, 0, 51));
+        lb4.setText("PASSWORD");
+        jPanel1.add(lb4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 320, 90, 30));
 
-        btnadd.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnadd.setForeground(new java.awt.Color(153, 0, 51));
-        btnadd.setText("ADD DRIVER");
-        btnadd.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        btnadd.addActionListener(new java.awt.event.ActionListener() {
+        btn4.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        btn4.setForeground(new java.awt.Color(153, 0, 51));
+        btn4.setText("ADD DRIVER");
+        btn4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
+        btn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaddActionPerformed(evt);
+                btn4ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 380, 120, 40));
+        jPanel1.add(btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 380, 120, 40));
 
-        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 0, 51));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("MANAGE DRIVER");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 290, -1));
+        lb1.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
+        lb1.setForeground(new java.awt.Color(153, 0, 51));
+        lb1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb1.setText("MANAGE DRIVER");
+        jPanel1.add(lb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 290, -1));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/login.png"))); // NOI18N
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btn5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/login.png"))); // NOI18N
+        btn5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btn5ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 70, 30));
+        jPanel1.add(btn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 70, 30));
 
-        txtpass.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        jPanel1.add(txtpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 320, 120, 30));
+        txt3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
+        jPanel1.add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 320, 120, 30));
 
-        jLabel2.setBackground(new java.awt.Color(51, 153, 255));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img2/doggie2.gif"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 800, 610));
+        lb5.setBackground(new java.awt.Color(51, 153, 255));
+        lb5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img2/doggie2.gif"))); // NOI18N
+        jPanel1.add(lb5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 800, 610));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -194,82 +226,82 @@ public class ManageDriver extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
         // TODO add your handling code here:
-        int ipcselectedRow = tblManagerDriver.getSelectedRow();
+        int ipcselectedRow = tb1.getSelectedRow();
         if (ipcselectedRow >= 0) {
             int selectionButton = JOptionPane.YES_NO_OPTION;
             int selectionResult = JOptionPane.showConfirmDialog(null, "Confirm delete?", "Warning", selectionButton);
             if (selectionResult == JOptionPane.YES_OPTION) {
-                String ipcusername = (String) tblManagerDriver.getValueAt(ipcselectedRow, 1);
-                String ipcpwd = (String) tblManagerDriver.getValueAt(ipcselectedRow, 2);
-                UserAccount user = ipcsystem.getUserAccountDirectory().authenticateUser(ipcusername, ipcpwd);
+                String ipcusername = (String) tb1.getValueAt(ipcselectedRow, 1);
+                String ipcpwd = (String) tb1.getValueAt(ipcselectedRow, 2);
+                UserAccount user = ipcSystem.getUserAccountDirectory().authenticateUser(ipcusername, ipcpwd);
 
-                ipcsystem.getUserAccountDirectory().deleteUserAccount(user);
-                ipcsystem.getLabAssistantDirectory().deleteLabAssistant(user.getIpcuserName());
-                populateManageDriverTable();
+                ipcSystem.getUserAccountDirectory().deleteUserAccount(user);
+                ipcSystem.getLabAssistantDirectory().deleteLabAssistant(user.getIpcuserName());
+                ipcPopulateManageDriverTable();
             }
         } else 
         {
-            JOptionPane.showMessageDialog(null, "Please select a row to delete the Driver details");
+            JOptionPane.showMessageDialog(null, "Please select a row in order to delete the details of Driver");
         }
-    }//GEN-LAST:event_btnDeleteActionPerformed
+    }//GEN-LAST:event_btn3ActionPerformed
 
-    private void btnaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddActionPerformed
+    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnaddActionPerformed
+    }//GEN-LAST:event_btn4ActionPerformed
+  
+    private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
+        // TODO add your handling code here:
+        ipcUserProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
+        layout.previous(ipcUserProcessContainer);
+    }//GEN-LAST:event_btn5ActionPerformed
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
         // TODO add your handling code here:
-        ipcuserProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) ipcuserProcessContainer.getLayout();
-        layout.previous(ipcuserProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
-
-    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
-        // TODO add your handling code here:
-        int ipcselectRow = tblManagerDriver.getSelectedRow();
+        int ipcselectRow = tb1.getSelectedRow();
         if (ipcselectRow >= 0) {
-            String name = (String) tblManagerDriver.getValueAt(ipcselectRow, 0);
-            String username = (String) tblManagerDriver.getValueAt(ipcselectRow, 1);
-            String password = (String) tblManagerDriver.getValueAt(ipcselectRow, 2);
+            String name = (String) tb1.getValueAt(ipcselectRow, 0);
+            String username = (String) tb1.getValueAt(ipcselectRow, 1);
+            String password = (String) tb1.getValueAt(ipcselectRow, 2);
 
-            txtname.setText(name + "");
-            txtusername.setText(username + "");
-            txtpass.setText(password + "");
-            btnadd.setEnabled(false);
+            txt1.setText(name + "");
+            txt2.setText(username + "");
+            txt3.setText(password + "");
+            btn4.setEnabled(false);
         }
  else  {
-            JOptionPane.showMessageDialog(null, "Please select a row to view the Driver details");
+            JOptionPane.showMessageDialog(null, "Please select a row in order to view the details of Driver");
         }         
-    }//GEN-LAST:event_btnViewActionPerformed
+    }//GEN-LAST:event_btn1ActionPerformed
 
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
         // TODO add your handling code here:
-        int ipcselectRow = tblManagerDriver.getSelectedRow();
+        int ipcselectRow = tb1.getSelectedRow();
         if (ipcselectRow >= 0) {
-        String name = (String) tblManagerDriver.getValueAt(ipcselectRow, 0);
-        String username = (String) tblManagerDriver.getValueAt(ipcselectRow, 1);
-        String password = (String) tblManagerDriver.getValueAt(ipcselectRow, 2);
-        ipcaccount = ipcsystem.getUserAccountDirectory().authenticateUser(username, password);
-        ipcsystem.getUserAccountDirectory().updateUserAccount(ipcaccount, txtname.getText(), txtusername.getText(), txtpass.getText());
-        populateManageDriverTable();
+        String name = (String) tb1.getValueAt(ipcselectRow, 0);
+        String username = (String) tb1.getValueAt(ipcselectRow, 1);
+        String password = (String) tb1.getValueAt(ipcselectRow, 2);
+        ipcAccount = ipcSystem.getUserAccountDirectory().authenticateUser(username, password);
+        ipcSystem.getUserAccountDirectory().updateUserAccount(ipcAccount, txt1.getText(), txt2.getText(), txt3.getText());
+        ipcPopulateManageDriverTable();
 
-        txtname.setText("");
-        txtusername.setText("");
-        txtpass.setText("");
-        btnadd.setEnabled(true);
+        txt1.setText("");
+        txt2.setText("");
+        txt3.setText("");
+        btn4.setEnabled(true);
         }
         else {
-            JOptionPane.showMessageDialog(null, "Please select a row to update the Driver details");
+            JOptionPane.showMessageDialog(null, "Please select a row in order to update the details of Driver");
              }
-    }//GEN-LAST:event_btnUpdateActionPerformed
-       
-    private void populateManageDriverTable() {
-        DefaultTableModel tablemodel = (DefaultTableModel) tblManagerDriver.getModel();
+    }//GEN-LAST:event_btn2ActionPerformed
+
+private void ipcPopulateManageDriverTable() {
+        DefaultTableModel tablemodel = (DefaultTableModel) tb1.getModel();
         tablemodel.setRowCount(0);
         
-         for (UserAccount user : ipcsystem.getUserAccountDirectory().getUserAccountList()) {
+         for (UserAccount user : ipcSystem.getUserAccountDirectory().getUserAccountList()) {
 
             if (user.getRole().getClass().getName().equals("IntensivePetCare.Role.DriverRole")) {
                 Object[] row = new Object[3];
@@ -281,55 +313,28 @@ public class ManageDriver extends javax.swing.JPanel {
          }
         }
     
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnDelete;
-    private javax.swing.JButton btnUpdate;
-    private javax.swing.JButton btnView;
-    private javax.swing.JButton btnadd;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton btn1;
+    private javax.swing.JButton btn2;
+    private javax.swing.JButton btn3;
+    private javax.swing.JButton btn4;
+    private javax.swing.JButton btn5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblname;
-    private javax.swing.JLabel lblpassword;
-    private javax.swing.JLabel lblusername;
-    private javax.swing.JTable tblManagerDriver;
-    private javax.swing.JTextField txtname;
-    private javax.swing.JPasswordField txtpass;
-    private javax.swing.JTextField txtusername;
+    private javax.swing.JLabel lb1;
+    private javax.swing.JLabel lb2;
+    private javax.swing.JLabel lb3;
+    private javax.swing.JLabel lb4;
+    private javax.swing.JLabel lb5;
+    private javax.swing.JTable tb1;
+    private javax.swing.JTextField txt1;
+    private javax.swing.JTextField txt2;
+    private javax.swing.JPasswordField txt3;
     // End of variables declaration//GEN-END:variables
 
-    private boolean validateInputFields() {
-
-        Pattern p = Pattern.compile("^[A-Za-z0-9 ]+$");
-        Matcher m = p.matcher(txtname.getText());
-        
-        Pattern p7 = Pattern.compile("^[A-Za-z0-9]+$");
-        Matcher m7 = p7.matcher(txtusername.getText());
-        
-        Pattern p1 = Pattern.compile("^[A-Za-z0-9]+$");
-        Matcher m1 = p1.matcher(txtpass.getText());
-        
-        
-        if (!m.matches()) {
-
-            JOptionPane.showMessageDialog(this, "Error in provided name,Please Try agian!");
-            return false;
-        } else if (!m7.matches()) {
-
-            JOptionPane.showMessageDialog(this, "Error in provided username ,Please Try agian!");
-            return false;
-        }
-        else if (!m1.matches()) {
-
-            JOptionPane.showMessageDialog(this, "Error in provided password ,Please Try agian!");
-            return false;
-        }
-        else {
-            return true;
-        }
-    }
+    
+    
 }
 
 
