@@ -317,7 +317,7 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tbPetHC.getSelectedRow();
         if (selectedRow <0){
-            JOptionPane.showMessageDialog(this, "Please Select a row to view");
+            JOptionPane.showMessageDialog(this, "Select one row to view");
             return;
         }
         PetVolunteer petVolunterSelected = (PetVolunteer) tbPetHC.getValueAt(selectedRow, 0);

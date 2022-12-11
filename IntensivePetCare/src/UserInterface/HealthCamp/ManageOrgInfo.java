@@ -182,8 +182,9 @@ public class ManageOrgInfo extends javax.swing.JPanel {
         // TODO add your handling code here:
         if(ipcValidateInputFields()){
             for (HealthCamp healthCamp : ipcSystem.getHealthCampDirectory().getHealthCampDirectory()) {
-                System.out.println("account username : " + ipcAccount.getIpcuserName());
                 System.out.println("health camp username : " + healthCamp.getIpcuserName());
+                System.out.println("account username : " + ipcAccount.getIpcuserName());
+                
                 if (healthCamp.getIpcuserName().equals(ipcAccount.getIpcuserName())) {
 
                     ipcSystem.getHealthCampDirectory().updateHealthCampInfo(healthCamp, txtON.getText(), txtLocation.getText(), txtPhoneNo.getText(), txtOName.getText());
@@ -196,7 +197,7 @@ public class ManageOrgInfo extends javax.swing.JPanel {
             txtPhoneNo.setEnabled(false);
             txtOName.setEnabled(false);
             txtLocation.setEnabled(false);
-            JOptionPane.showMessageDialog(null, "Organization details have been saved" );
+            JOptionPane.showMessageDialog(null, "Hospital Organization details have been saved" );
           
         }
     }//GEN-LAST:event_btnSaveActionPerformed

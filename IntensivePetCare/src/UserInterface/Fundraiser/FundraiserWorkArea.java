@@ -115,9 +115,9 @@ public class FundraiserWorkArea extends javax.swing.JPanel {
         FundRaising fundRaiserSelected = (FundRaising) tbTable.getValueAt(selectedRow, 0);
         for(Sponsor sponsor: ipcSystem.getSponsorDirectory().getSponsorDirectory()) {
             ipcSystem.getSponsorDirectory().updateSponsorPetOwnerInfo(sponsor, fundRaiserSelected.getIpcpetOwner(), fundRaiserSelected.getIpcpetType(), fundRaiserSelected.getIpchealthCamp(), fundRaiserSelected.getIpchospitalName());
-            System.out.println("Sponsor has been added successfully");
+            System.out.println("Sponsor added successfully");
         }
-        JOptionPane.showMessageDialog(this, "Request has been sent to the sponsor");
+        JOptionPane.showMessageDialog(this, "The Request to the sponsor has been sent !!!");
     }//GEN-LAST:event_btnSponsorActionPerformed
 public void ipcPopulateFundRaisingTable() {
         DefaultTableModel tablemodel = (DefaultTableModel) tbTable.getModel();
