@@ -3,13 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UserInterface.Sponsor;
-import Model.Ecosystem;
 import Model.FundRaising.FundRaising;
 import Model.Sponsor.Sponsor;
 import Model.UserAccount.UserAccount;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
+import Model.Ecosystem;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.JPanel;
+import javax.swing.JOptionPane;
 /**
  *
  * @author varshakuruva
@@ -19,23 +19,23 @@ public class SponsorWorkArea extends javax.swing.JPanel {
     /**
      * Creates new form NewJPanel
      */
-    JPanel userProcessContainer;
-    Ecosystem system;
-    private UserAccount account;
-    public SponsorWorkArea(JPanel userProcessContainer, UserAccount account, Ecosystem system) {
+    JPanel ipcUserProcessContainer;
+    Ecosystem ipcSystem;
+    private UserAccount ipcAccount;
+    public SponsorWorkArea(JPanel ipcUserProcessContainer, UserAccount ipcAccount, Ecosystem ipcSystem) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.system = system;
-        this.account = account;
-        populateTable();
+        this.ipcUserProcessContainer = ipcUserProcessContainer;
+        this.ipcSystem = ipcSystem;
+        this.ipcAccount = ipcAccount;
+        ipcPopulateTable();
     }
 
     
-    public void populateTable() {
+    public void ipcPopulateTable() {
         DefaultTableModel tablemodel = (DefaultTableModel) tblSponsorPetOwnerInfo.getModel();
 
         tablemodel.setRowCount(0);
-        for(Sponsor sponsor : system.getSponsorDirectory().getSponsorDirectory()) {
+        for(Sponsor sponsor : ipcSystem.getSponsorDirectory().getSponsorDirectory()) {
             Object[] row= new Object[4];
             row[0] = sponsor;
             row[1] = sponsor.getIpcpetOwner();
@@ -125,9 +125,9 @@ public class SponsorWorkArea extends javax.swing.JPanel {
 
         int selectedRow = tblSponsorPetOwnerInfo.getSelectedRow();
         Sponsor sponsorRowSelected = (Sponsor) tblSponsorPetOwnerInfo.getValueAt(selectedRow, 0);
-        for(FundRaising fundRaising: system.getFundRaisingDirectory().getFundRaisingDirectory()) {
+        for(FundRaising fundRaising: ipcSystem.getFundRaisingDirectory().getFundRaisingDirectory()) {
             if(sponsorRowSelected.getIpcpetOwner().equals(fundRaising.getIpcpetOwner())) {
-                system.getFundRaisingDirectory().updateFundRaisingSponsorStatus(fundRaising, "Approved");
+                ipcSystem.getFundRaisingDirectory().updateFundRaisingSponsorStatus(fundRaising, "Approved");
             }
         }
 
