@@ -4,14 +4,14 @@
  * and open the template in the editor.
  */
 package UserInterface.Fundraiser;
-import Model.Ecosystem;
 import Model.FundRaising.FundRaising;
-
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import Model.Sponsor.Sponsor;
+import javax.swing.JOptionPane;
 import Model.UserAccount.UserAccount;
+import Model.Ecosystem;
+import javax.swing.JPanel;
+import Model.FundRaising.FundRaising;
 /**
  *
  * @author poojitha
@@ -21,35 +21,17 @@ public class FundraiserWorkArea extends javax.swing.JPanel {
     /**
      * Creates new form FundraiserWorkArea
      */
-    JPanel userProcessContainer;
-    Ecosystem system;
-    private UserAccount account;
-    public FundraiserWorkArea(JPanel userProcessContainer, UserAccount account, Ecosystem system) {
+    JPanel ipcUserProcessContainer;
+    Ecosystem ipcSystem;
+    private UserAccount ipcAccount;
+    public FundraiserWorkArea(JPanel ipcUserProcessContainer, UserAccount ipcAccount, Ecosystem ipcSystem) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.system = system;
-        this.account = account;
-        populateFundRaisingTable();
+        this.ipcUserProcessContainer = ipcUserProcessContainer;
+        this.ipcSystem = ipcSystem;
+        this.ipcAccount = ipcAccount;
+        ipcPopulateFundRaisingTable();
     }
 
-    
-    public void populateFundRaisingTable() {
-        DefaultTableModel tablemodel = (DefaultTableModel) tblfundraiser.getModel();
-
-        tablemodel.setRowCount(0);
-        for (UserAccount user : system.getUserAccountDirectory().getUserAccountList()) {
-            
-        }
-        for(FundRaising fundRaising: system.getFundRaisingDirectory().getFundRaisingDirectory()){
-             Object[] row = new Object[5];
-                row[0] = fundRaising;
-                row[1] = fundRaising.getIpcpetOwner();
-                row[2] = fundRaising.getIpcpetType();
-                row[3] = fundRaising.getIpchealthCamp();
-                row[4] = fundRaising.getIpcsponsorStatus() == null ? "N/A" : fundRaising.getIpcsponsorStatus();
-                tablemodel.addRow(row);
-        }
-    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -60,16 +42,16 @@ public class FundraiserWorkArea extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblfundraiser = new javax.swing.JTable();
-        btnAddSponsor = new javax.swing.JButton();
+        tbTable = new javax.swing.JTable();
+        btnSponsor = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        lblManageInfo = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lbFM = new javax.swing.JLabel();
+        lbTag = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 204, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tblfundraiser.setModel(new javax.swing.table.DefaultTableModel(
+        tbTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -80,26 +62,26 @@ public class FundraiserWorkArea extends javax.swing.JPanel {
                 "Fundraiser Name", "Pet Owner", "Pet Type", "Health Camp", "Sponsor Status"
             }
         ));
-        jScrollPane1.setViewportView(tblfundraiser);
+        jScrollPane1.setViewportView(tbTable);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 640, 240));
 
-        btnAddSponsor.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnAddSponsor.setForeground(new java.awt.Color(153, 0, 51));
-        btnAddSponsor.setText("ADD SPONSOR");
-        btnAddSponsor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnAddSponsor.addActionListener(new java.awt.event.ActionListener() {
+        btnSponsor.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        btnSponsor.setForeground(new java.awt.Color(153, 0, 51));
+        btnSponsor.setText("ADD SPONSOR");
+        btnSponsor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnSponsor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddSponsorActionPerformed(evt);
+                btnSponsorActionPerformed(evt);
             }
         });
-        add(btnAddSponsor, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 270, 130, 30));
+        add(btnSponsor, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 270, 130, 30));
 
         jPanel1.setBackground(new java.awt.Color(102, 0, 51));
 
-        lblManageInfo.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        lblManageInfo.setForeground(new java.awt.Color(255, 255, 255));
-        lblManageInfo.setText("FUNDRAISER MANAGEMENT");
+        lbFM.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        lbFM.setForeground(new java.awt.Color(255, 255, 255));
+        lbFM.setText("FUNDRAISER MANAGEMENT");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -107,44 +89,60 @@ public class FundraiserWorkArea extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(287, Short.MAX_VALUE)
-                .addComponent(lblManageInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbFM, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(267, 267, 267))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(lblManageInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbFM, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 100));
 
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 0, 51));
-        jLabel2.setText("You can add the sponsers now !!");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, 390, 40));
+        lbTag.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        lbTag.setForeground(new java.awt.Color(153, 0, 51));
+        lbTag.setText("You can add the sponsers now !!");
+        add(lbTag, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, 390, 40));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAddSponsorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddSponsorActionPerformed
+    private void btnSponsorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSponsorActionPerformed
         // TODO add your handling code here:
 
-        int selectedRow = tblfundraiser.getSelectedRow();
-        FundRaising fundRaiserSelected = (FundRaising) tblfundraiser.getValueAt(selectedRow, 0);
-        for(Sponsor sponsor: system.getSponsorDirectory().getSponsorDirectory()) {
-            system.getSponsorDirectory().updateSponsorPetOwnerInfo(sponsor, fundRaiserSelected.getIpcpetOwner(), fundRaiserSelected.getIpcpetType(), fundRaiserSelected.getIpchealthCamp(), fundRaiserSelected.getIpchospitalName());
+        int selectedRow = tbTable.getSelectedRow();
+        FundRaising fundRaiserSelected = (FundRaising) tbTable.getValueAt(selectedRow, 0);
+        for(Sponsor sponsor: ipcSystem.getSponsorDirectory().getSponsorDirectory()) {
+            ipcSystem.getSponsorDirectory().updateSponsorPetOwnerInfo(sponsor, fundRaiserSelected.getIpcpetOwner(), fundRaiserSelected.getIpcpetType(), fundRaiserSelected.getIpchealthCamp(), fundRaiserSelected.getIpchospitalName());
             System.out.println("Sponsor has been added successfully");
         }
         JOptionPane.showMessageDialog(this, "Request has been sent to the sponsor");
-    }//GEN-LAST:event_btnAddSponsorActionPerformed
+    }//GEN-LAST:event_btnSponsorActionPerformed
+public void ipcPopulateFundRaisingTable() {
+        DefaultTableModel tablemodel = (DefaultTableModel) tbTable.getModel();
 
+        tablemodel.setRowCount(0);
+        for (UserAccount user : ipcSystem.getUserAccountDirectory().getUserAccountList()) {
+            
+        }
+        for(FundRaising fundRaising: ipcSystem.getFundRaisingDirectory().getFundRaisingDirectory()){
+             Object[] row = new Object[5];
+                row[0] = fundRaising;
+                row[1] = fundRaising.getIpcpetOwner();
+                row[2] = fundRaising.getIpcpetType();
+                row[3] = fundRaising.getIpchealthCamp();
+                row[4] = fundRaising.getIpcsponsorStatus() == null ? "N/A" : fundRaising.getIpcsponsorStatus();
+                tablemodel.addRow(row);
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddSponsor;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton btnSponsor;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblManageInfo;
-    private javax.swing.JTable tblfundraiser;
+    private javax.swing.JLabel lbFM;
+    private javax.swing.JLabel lbTag;
+    private javax.swing.JTable tbTable;
     // End of variables declaration//GEN-END:variables
 }
