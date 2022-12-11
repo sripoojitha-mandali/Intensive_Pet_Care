@@ -155,7 +155,19 @@ public class MainPageOrganiser extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_lblManagePetVolunteerMousePressed
-
+     
+    public void populateTable() {
+        DefaultTableModel tablemodel = (DefaultTableModel) tblDriver.getModel();
+        tablemodel.setRowCount(0);
+        for(Driver driver: system.getDriverDirectory().getDriverDirectory()) {
+            if(account.getIpcuserName().equals(driver.getIpcuserName())) {
+                Object[] row = new Object[5];
+                row[0] = driver.getIpcpetOwner();
+                row[1] = driver.getIpcpetType();
+                row[2] = driver.getIpchealthCamp();
+                tablemodel.addRow(row);
+            }
+        }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
