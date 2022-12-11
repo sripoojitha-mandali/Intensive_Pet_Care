@@ -4,14 +4,15 @@
  */
 package UserInterface.HospitalAdmin;
 import Model.Ecosystem;
-import Model.FundRaising.FundRaising;
-import Model.PetVolunteer.PetVolunteer;
-import Model.UserAccount.UserAccount;
-import Model.Vet.Vet;
 import java.awt.CardLayout;
+import Model.FundRaising.FundRaising;
 import javax.swing.JOptionPane;
+import Model.PetVolunteer.PetVolunteer;
 import javax.swing.JPanel;
+import Model.Vet.Vet;
 import javax.swing.table.DefaultTableModel;
+import Model.UserAccount.UserAccount;
+
 
 
 /**
@@ -23,25 +24,25 @@ public class ManagePetInfo extends javax.swing.JPanel {
     /**
      * Creates new form ManagePetInfo
      */
-    JPanel ipcuserProcessContainer;
-    Ecosystem ipcsystem;
-    private UserAccount ipcaccount;
+    JPanel ipcUserProcessContainer;
+    Ecosystem ipcSystem;
+    private UserAccount ipcAccount;
     
-    public ManagePetInfo(JPanel ipcuserProcessContainer,UserAccount ipcaccount, Ecosystem ipcsystem) {
+    public ManagePetInfo(JPanel ipcUserProcessContainer,UserAccount ipcAccount, Ecosystem ipcSystem) {
         initComponents();
-        this.ipcuserProcessContainer= ipcuserProcessContainer;
-        this.ipcsystem = ipcsystem;
-        this.ipcaccount = ipcaccount;
-        ipcpopulatePetInfo();
-        ipcpopulateVetTable();
+        this.ipcUserProcessContainer= ipcUserProcessContainer;
+        this.ipcSystem = ipcSystem;
+        this.ipcAccount = ipcAccount;
+        ipcPopulatePetInfo();
+        ipcPopulateVetTable();
     }
-
-    public void ipcpopulatePetInfo() {
+    
+    public void ipcPopulatePetInfo() {
         
-        DefaultTableModel tablemodel = (DefaultTableModel) tblpetinfo.getModel();
+        DefaultTableModel tablemodel = (DefaultTableModel) tb1.getModel();
         tablemodel.setRowCount(0);
-        for (PetVolunteer petVolunteer : ipcsystem.getPetVolunteerDirectory().getPetVolunteerDirectory()) {
-            if (petVolunteer.getIpchospitalName().equals(ipcaccount.getIpcname())) {
+        for (PetVolunteer petVolunteer : ipcSystem.getPetVolunteerDirectory().getPetVolunteerDirectory()) {
+            if (petVolunteer.getIpchospitalName().equals(ipcAccount.getIpcname())) {
                 Object[] row = new Object[5];
                 row[0] = petVolunteer;
                 row[1] = petVolunteer.getIpcName();
@@ -54,7 +55,6 @@ public class ManagePetInfo extends javax.swing.JPanel {
         }
     }
     
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -66,18 +66,18 @@ public class ManagePetInfo extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        lblManageInfo1 = new javax.swing.JLabel();
+        lb1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblpetinfo = new javax.swing.JTable();
-        btnAssignPetOwnerToVet = new javax.swing.JButton();
-        btnaddfundraiser = new javax.swing.JButton();
-        lblVet = new javax.swing.JLabel();
-        txtvet = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        btnBack = new javax.swing.JButton();
+        tb1 = new javax.swing.JTable();
+        btn1 = new javax.swing.JButton();
+        btn2 = new javax.swing.JButton();
+        lb3 = new javax.swing.JLabel();
+        txt1 = new javax.swing.JTextField();
+        lb2 = new javax.swing.JLabel();
+        btn3 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tblVets = new javax.swing.JTable();
+        tb2 = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
@@ -87,9 +87,9 @@ public class ManagePetInfo extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(102, 0, 51));
 
-        lblManageInfo1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        lblManageInfo1.setForeground(new java.awt.Color(255, 255, 255));
-        lblManageInfo1.setText("HOSPITAL ADMIN WORK AREA");
+        lb1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        lb1.setForeground(new java.awt.Color(255, 255, 255));
+        lb1.setText("HOSPITAL ADMIN WORK AREA");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -97,14 +97,14 @@ public class ManagePetInfo extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(299, 299, 299)
-                .addComponent(lblManageInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lb1, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(375, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 6, Short.MAX_VALUE)
-                .addComponent(lblManageInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lb1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1070, -1));
@@ -113,7 +113,7 @@ public class ManagePetInfo extends javax.swing.JPanel {
         jPanel3.setPreferredSize(new java.awt.Dimension(1024, 575));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tblpetinfo.setModel(new javax.swing.table.DefaultTableModel(
+        tb1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -124,55 +124,55 @@ public class ManagePetInfo extends javax.swing.JPanel {
                 "pet username", "pet owner", "pet type", "Health Camp", "Lab result status"
             }
         ));
-        jScrollPane1.setViewportView(tblpetinfo);
+        jScrollPane1.setViewportView(tb1);
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, 640, 170));
 
-        btnAssignPetOwnerToVet.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnAssignPetOwnerToVet.setForeground(new java.awt.Color(153, 0, 0));
-        btnAssignPetOwnerToVet.setText("ADD VET");
-        btnAssignPetOwnerToVet.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnAssignPetOwnerToVet.addActionListener(new java.awt.event.ActionListener() {
+        btn1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        btn1.setForeground(new java.awt.Color(153, 0, 0));
+        btn1.setText("ADD VET");
+        btn1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignPetOwnerToVetActionPerformed(evt);
+                btn1ActionPerformed(evt);
             }
         });
-        jPanel3.add(btnAssignPetOwnerToVet, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 320, 150, 30));
+        jPanel3.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 320, 150, 30));
 
-        btnaddfundraiser.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        btnaddfundraiser.setForeground(new java.awt.Color(153, 0, 51));
-        btnaddfundraiser.setText("ADD FUNDRAISER");
-        btnaddfundraiser.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnaddfundraiser.addActionListener(new java.awt.event.ActionListener() {
+        btn2.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        btn2.setForeground(new java.awt.Color(153, 0, 51));
+        btn2.setText("ADD FUNDRAISER");
+        btn2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaddfundraiserActionPerformed(evt);
+                btn2ActionPerformed(evt);
             }
         });
-        jPanel3.add(btnaddfundraiser, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, 150, 30));
+        jPanel3.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, 150, 30));
 
-        lblVet.setBackground(new java.awt.Color(255, 255, 255));
-        lblVet.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        lblVet.setForeground(new java.awt.Color(153, 0, 51));
-        lblVet.setText("VET NAME");
-        jPanel3.add(lblVet, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 270, 100, 30));
+        lb3.setBackground(new java.awt.Color(255, 255, 255));
+        lb3.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        lb3.setForeground(new java.awt.Color(153, 0, 51));
+        lb3.setText("VET NAME");
+        jPanel3.add(lb3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 270, 100, 30));
 
-        txtvet.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
-        jPanel3.add(txtvet, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, 150, 30));
+        txt1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 102, 102)));
+        jPanel3.add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, 150, 30));
 
-        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 0, 51));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("ASSIGN PET TO VET");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 170, 360, 60));
+        lb2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        lb2.setForeground(new java.awt.Color(153, 0, 51));
+        lb2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb2.setText("ASSIGN PET TO VET");
+        jPanel3.add(lb2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 170, 360, 60));
 
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btn3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btn3ActionPerformed(evt);
             }
         });
-        jPanel3.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 40, 40));
+        jPanel3.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 40, 40));
 
-        tblVets.setModel(new javax.swing.table.DefaultTableModel(
+        tb2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
                 {null},
@@ -183,7 +183,7 @@ public class ManagePetInfo extends javax.swing.JPanel {
                 "Vet username"
             }
         ));
-        jScrollPane2.setViewportView(tblVets);
+        jScrollPane2.setViewportView(tb2);
 
         jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 430, 500, 100));
 
@@ -219,52 +219,53 @@ public class ManagePetInfo extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAssignPetOwnerToVetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignPetOwnerToVetActionPerformed
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
         // TODO add your handling code here:
-        int ipcselectedRow = tblpetinfo.getSelectedRow();
-        PetVolunteer ipcvetSelected = (PetVolunteer) tblpetinfo.getValueAt(ipcselectedRow, 0);
+        int ipcselectedRow = tb1.getSelectedRow();
+        PetVolunteer ipcvetSelected = (PetVolunteer) tb1.getValueAt(ipcselectedRow, 0);
         String ipcvetPetOwner = ipcvetSelected.getIpcName();
         String ipcvetPetType = ipcvetSelected.getIpcpetType();
         String ipcvetHealthCamp = ipcvetSelected.getIpchealthCamp();
         String ipcvetHospitalName = ipcvetSelected.getIpchospitalName();
-        for(Vet vet: ipcsystem.getVetDirectory().getVetDirectory()) {
-            if(vet.getIpcuserName().equals(txtvet.getText())){
-                ipcsystem.getVetDirectory().updateVetInfo(vet, ipcvetPetOwner, ipcvetPetType, ipcvetHealthCamp, ipcvetHospitalName);
+        for(Vet vet: ipcSystem.getVetDirectory().getVetDirectory()) {
+            if(vet.getIpcuserName().equals(txt1.getText())){
+                ipcSystem.getVetDirectory().updateVetInfo(vet, ipcvetPetOwner, ipcvetPetType, ipcvetHealthCamp, ipcvetHospitalName);
             }
         }
-        JOptionPane.showMessageDialog(this, "Vet added Successfuly");
-    }//GEN-LAST:event_btnAssignPetOwnerToVetActionPerformed
+        JOptionPane.showMessageDialog(this, "Vet details has been added Successfuly");
+    }//GEN-LAST:event_btn1ActionPerformed
 
-    private void btnaddfundraiserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddfundraiserActionPerformed
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
         // TODO add your handling code here:
-        int ipcselectedRow = tblpetinfo.getSelectedRow();
-        PetVolunteer ipcvetSelected = (PetVolunteer) tblpetinfo.getValueAt(ipcselectedRow, 0);
+        int ipcselectedRow = tb1.getSelectedRow();
+        PetVolunteer ipcvetSelected = (PetVolunteer) tb1.getValueAt(ipcselectedRow, 0);
         String ipcvetPetOwner = ipcvetSelected.getIpcName();
         String ipcvetPetType = ipcvetSelected.getIpcpetType();
         String ipcvetHealthCamp = ipcvetSelected.getIpchealthCamp();
         String ipcvetHospitalName = ipcvetSelected.getIpchospitalName();
-        for(FundRaising fundRaising: ipcsystem.getFundRaisingDirectory().getFundRaisingDirectory()) {
-            ipcsystem.getFundRaisingDirectory().updateFundRaisingInfo(fundRaising, ipcvetPetOwner, ipcvetPetType, ipcvetHealthCamp, ipcvetHospitalName);
+        for(FundRaising fundRaising: ipcSystem.getFundRaisingDirectory().getFundRaisingDirectory()) {
+            ipcSystem.getFundRaisingDirectory().updateFundRaisingInfo(fundRaising, ipcvetPetOwner, ipcvetPetType, ipcvetHealthCamp, ipcvetHospitalName);
             System.out.println("Fund raising agency has been added sucessfully");
         }
-        JOptionPane.showMessageDialog(this, "Request sent to the Fundraising agency successfully");
-    }//GEN-LAST:event_btnaddfundraiserActionPerformed
+        JOptionPane.showMessageDialog(this, "Request has been sent to the Fundraising successfully");
+    }//GEN-LAST:event_btn2ActionPerformed
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
         // TODO add your handling code here:
-        ipcuserProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) ipcuserProcessContainer.getLayout();
-        layout.previous(ipcuserProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
-private void ipcpopulateVetTable() {
+        ipcUserProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) ipcUserProcessContainer.getLayout();
+        layout.previous(ipcUserProcessContainer);
+    }//GEN-LAST:event_btn3ActionPerformed
+
+private void ipcPopulateVetTable() {
         
-        DefaultTableModel tablemodel = (DefaultTableModel) tblVets.getModel();
+        DefaultTableModel tablemodel = (DefaultTableModel) tb2.getModel();
         tablemodel.setRowCount(0);
         
-        for(Vet vet: ipcsystem.getVetDirectory().getVetDirectory()){
+        for(Vet vet: ipcSystem.getVetDirectory().getVetDirectory()){
             System.out.println("vet name :" + vet.getIpchospitalName());
-            System.out.println("account name :" + ipcaccount.getIpcname());
-            if(vet.getIpchospitalName().equals(ipcaccount.getIpcname())) {
+            System.out.println("account name :" + ipcAccount.getIpcname());
+            if(vet.getIpchospitalName().equals(ipcAccount.getIpcname())) {
                 Object[] row = new Object[1];
                 System.out.println("here");
                 row[0] = vet;
@@ -272,12 +273,10 @@ private void ipcpopulateVetTable() {
             }
         }
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssignPetOwnerToVet;
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnaddfundraiser;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btn1;
+    private javax.swing.JButton btn2;
+    private javax.swing.JButton btn3;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
@@ -285,10 +284,11 @@ private void ipcpopulateVetTable() {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JLabel lblManageInfo1;
-    private javax.swing.JLabel lblVet;
-    private javax.swing.JTable tblVets;
-    private javax.swing.JTable tblpetinfo;
-    private javax.swing.JTextField txtvet;
+    private javax.swing.JLabel lb1;
+    private javax.swing.JLabel lb2;
+    private javax.swing.JLabel lb3;
+    private javax.swing.JTable tb1;
+    private javax.swing.JTable tb2;
+    private javax.swing.JTextField txt1;
     // End of variables declaration//GEN-END:variables
 }
