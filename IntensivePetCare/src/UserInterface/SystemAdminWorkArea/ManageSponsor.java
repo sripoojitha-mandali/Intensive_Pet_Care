@@ -220,7 +220,7 @@ public class ManageSponsor extends javax.swing.JPanel {
 
     private void btnSave1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSave1ActionPerformed
         // TODO add your handling code here:
-        if(ipcValidateInputFields()){
+        
         if(ipcValidateInputFields()){
         if (ipcSystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtUserName.getText())) {
         UserAccount userAccount = ipcSystem.getUserAccountDirectory().createUserAccount(txtName.getText(), txtUserName.getText(), txtPassword.getText(), null, new SponsorRole());
@@ -230,14 +230,14 @@ public class ManageSponsor extends javax.swing.JPanel {
         txtName.setText("");
         txtPassword.setText("");
         txtUserName.setText("");
-        }
+        
         }
         }
     }//GEN-LAST:event_btnSave1ActionPerformed
 
     private void btnUpdate1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdate1ActionPerformed
         // TODO add your handling code here:
-        
+        if(ipcValidateInputFields()){
         int selectRow = tbSponsors.getSelectedRow();
         if (selectRow >= 0) {
         String name = (String) tbSponsors.getValueAt(selectRow, 0);
@@ -255,6 +255,7 @@ public class ManageSponsor extends javax.swing.JPanel {
         {
             JOptionPane.showMessageDialog(null, "to update the Sponsor details, Please select a row");
         }  
+        }
     }//GEN-LAST:event_btnUpdate1ActionPerformed
       private void ipcPopulateSponsorTable() {
 
