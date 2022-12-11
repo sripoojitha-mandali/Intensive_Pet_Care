@@ -297,30 +297,30 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
     private javax.swing.JTextField txtUserName1;
     // End of variables declaration//GEN-END:variables
 
-private boolean validateInputFields() {
+private boolean ipcValidateInputFields() {
 
-        Pattern p = Pattern.compile("^[A-Za-z0-9 ]+$");
-        Matcher m = p.matcher(txtName1.getText());
+        Pattern p2 = Pattern.compile("^[A-Za-z0-9 ]+$");
+        Matcher m2 = p2.matcher(txtName1.getText());
         
-        Pattern p7 = Pattern.compile("^[A-Za-z0-9]+$");
-        Matcher m7 = p7.matcher(txtUserName1.getText());
+        Pattern p3 = Pattern.compile("^[A-Za-z0-9]+$");
+        Matcher m3 = p3.matcher(txtUserName1.getText());
         
         Pattern p1 = Pattern.compile("^[A-Za-z0-9]+$");
         Matcher m1 = p1.matcher(txtPassword1.getText());
         
         
-        if (!m.matches()) {
+        if (!m2.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Please Try Again! Provided Name has Error");
+            JOptionPane.showMessageDialog(this, "Please provide correct input for Name!!");
             return false;
-        } else if (!m7.matches()) {
+        } else if (!m3.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Please Try Again! Provided User Name has Error");
+            JOptionPane.showMessageDialog(this, "Please provide correct input for User Name!!");
             return false;
         }
         else if (!m1.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Please Try Again! Provided Password has Error");
+            JOptionPane.showMessageDialog(this, "Please provide a strong Password!!");
             return false;
         }
         else {
