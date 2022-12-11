@@ -239,12 +239,13 @@ private boolean validateInputFields() {
 
         Pattern p = Pattern.compile("^[A-Za-z0-9 ]+$");
         Matcher m = p.matcher(txtorgowner.getText());
+        Pattern p2 = Pattern.compile("^[0-9]{10,10}+$");
+        Matcher m2 = p2.matcher(txtphonenumber.getText());
         Pattern p7 = Pattern.compile("^[A-Za-z0-9]+$");
         Matcher m7 = p7.matcher(txtorgname.getText());
         Pattern p1 = Pattern.compile("^[A-Za-z0-9]+$");
         Matcher m1 = p1.matcher(txtorgadd.getText());
-        Pattern p2 = Pattern.compile("^[0-9]{10,10}+$");
-        Matcher m2 = p2.matcher(txtphonenumber.getText());
+        
         if (!m.matches()) {
 
             JOptionPane.showMessageDialog(this, "Error in provided input format for owner,Please Try agian!");
