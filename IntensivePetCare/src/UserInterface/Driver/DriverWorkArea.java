@@ -179,7 +179,7 @@ public class DriverWorkArea extends javax.swing.JPanel {
 
     private void bntSendEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntSendEmailActionPerformed
         // TODO add your handling code here:
-        sendMailToPetOwner("rashmisingh337@gmail.com","","");
+        sendMailToPetOwner("poojitha.mandali@gmail.com","","");
     }//GEN-LAST:event_bntSendEmailActionPerformed
 
 
@@ -197,8 +197,8 @@ public class DriverWorkArea extends javax.swing.JPanel {
 
     public void sendMailToPetOwner(String toMail, String msg, String username){
         System.out.println("Now start sending Email!");
-        final String usname = "nronson93@gmail.com";
-        final String passwrd = "Scam2022@";
+        final String usname = "saranya73.n@gmail.com";
+        final String passwrd = "Ipc@123";
         
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
@@ -217,14 +217,14 @@ public class DriverWorkArea extends javax.swing.JPanel {
         
         try{
          Message message=new MimeMessage(session);
-         message.setFrom(new InternetAddress("rashmisingh@gmail.com"));
+         message.setFrom(new InternetAddress("poojitha.mandali@gmail.com"));
          message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toMail));
          message.setSubject("Status Update ");
-         message.setContent("<font color=black> Pet has been dropped to the destination ! <b>" +
-                 "<font color=black> It's been a real pleasure serving you ! <b>","text/html");
+         message.setContent("<font color=black> Your pet is at the location dropped safely ! <b>" +
+                 "<font color=black> Have a great day ! <b>","text/html");
 
          Transport.send(message);
-         JOptionPane.showMessageDialog(null, "Pet has been dropped to the destination!");
+         JOptionPane.showMessageDialog(null, "Destination reached - pet at location!");
      }
         catch(MessagingException e){
         e.printStackTrace();
