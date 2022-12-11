@@ -6,20 +6,23 @@
 package UserInterface.Driver;
 
 import Model.Driver.Driver;
-import Model.Ecosystem;
 import Model.UserAccount.UserAccount;
+import Model.Ecosystem;
+
+import javax.mail.Session;
+import javax.mail.Transport;
 import java.util.Properties;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
-//import javax.mail;
-import javax.mail.Message;
+
 import javax.mail.MessagingException;
+import javax.mail.Message;
+
 import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.swing.JOptionPane;
+import javax.mail.internet.InternetAddress;
+
 
 /**
  *
@@ -30,17 +33,19 @@ public class DriverWorkArea extends javax.swing.JPanel {
     /**
      * Creates new form DriverWorkArea
      */
-    JPanel userProcessContainer;
-    Ecosystem system;
-    private UserAccount account;
+    JPanel ipcUserProcessContainer;
+    Ecosystem ipcSystem;
+    private UserAccount ipcAccount;
 
-    public DriverWorkArea(JPanel userProcessContainer, UserAccount account, Ecosystem system) {
+    public DriverWorkArea(JPanel ipcUserProcessContainer, UserAccount ipcAccount, Ecosystem ipcSystem) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.system = system;
-        this.account = account;
-        populateTable();
+        this.ipcUserProcessContainer = ipcUserProcessContainer;
+        this.ipcSystem = ipcSystem;
+        this.ipcAccount = ipcAccount;
+        ipcPopulateTable();
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -151,51 +156,16 @@ public class DriverWorkArea extends javax.swing.JPanel {
 
     private void btnUpdateStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateStatusActionPerformed
         // TODO add your handling code here:
-        for(Driver driver: system.getDriverDirectory().getDriverDirectory()) {
-            if(account.getIpcuserName().equals(driver.getIpcuserName())) {
-                system.getDriverDirectory().updateDropOffStatus(driver,txtUpdateStatus.getText());
+        for(Driver driver: ipcSystem.getDriverDirectory().getDriverDirectory()) {
+            if(ipcAccount.getIpcuserName().equals(driver.getIpcuserName())) {
+                ipcSystem.getDriverDirectory().updateDropOffStatus(driver,txtUpdateStatus.getText());
             }
         }
-        populateTable();
+        ipcPopulateTable();
         
-    }                                               
-
-    public void populateTable() {
-        DefaultTableModel tablemodel = (DefaultTableModel) tblDM.getModel();
-        tablemodel.setRowCount(0);
-        for(Driver driver: system.getDriverDirectory().getDriverDirectory()) {
-            if(account.getIpcuserName().equals(driver.getIpcuserName())) {
-                Object[] row = new Object[5];
-                row[0] = driver.getIpcpetOwner();
-                row[1] = driver.getIpcpetType();
-                row[2] = driver.getIpchealthCamp();
-                row[3] = driver.getIpchospitalName();
-                row[4] = driver.getIpcdropOffStatus() == null ? "N/A" : driver.getIpcdropOffStatus();
-                tablemodel.addRow(row);
-            }
-        }
+    }      
     
-    }//GEN-LAST:event_btnUpdateStatusActionPerformed
-
-    private void bntSendEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntSendEmailActionPerformed
-        // TODO add your handling code here:
-        sendMailToPetOwner("poojitha.mandali@gmail.com","","");
-    }//GEN-LAST:event_bntSendEmailActionPerformed
-
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bntSendEmail;
-    private javax.swing.JButton btnUpdateStatus;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lbDM;
-    private javax.swing.JLabel lbUpdateStatus;
-    private javax.swing.JLabel lbWelcome;
-    private javax.swing.JTable tblDM;
-    private javax.swing.JTextField txtUpdateStatus;
-    // End of variables declaration//GEN-END:variables
-
-    public void sendMailToPetOwner(String toMail, String msg, String username){
+     public void sendMailToPetOwner(String toMail, String msg, String username){
         System.out.println("Now start sending Email!");
         final String usname = "saranya73.n@gmail.com";
         final String passwrd = "Ipc@123";
@@ -231,5 +201,42 @@ public class DriverWorkArea extends javax.swing.JPanel {
 
         }
     }
+
+    public void ipcPopulateTable() {
+        DefaultTableModel tablemodel = (DefaultTableModel) tblDM.getModel();
+        tablemodel.setRowCount(0);
+        for(Driver driver: ipcSystem.getDriverDirectory().getDriverDirectory()) {
+            if(ipcAccount.getIpcuserName().equals(driver.getIpcuserName())) {
+                Object[] row = new Object[5];
+                row[0] = driver.getIpcpetOwner();
+                row[1] = driver.getIpcpetType();
+                row[2] = driver.getIpchealthCamp();
+                row[3] = driver.getIpchospitalName();
+                row[4] = driver.getIpcdropOffStatus() == null ? "N/A" : driver.getIpcdropOffStatus();
+                tablemodel.addRow(row);
+            }
+        }
+    
+    }//GEN-LAST:event_btnUpdateStatusActionPerformed
+
+    private void bntSendEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntSendEmailActionPerformed
+        // TODO add your handling code here:
+        sendMailToPetOwner("poojitha.mandali@gmail.com","","");
+    }//GEN-LAST:event_bntSendEmailActionPerformed
+
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bntSendEmail;
+    private javax.swing.JButton btnUpdateStatus;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbDM;
+    private javax.swing.JLabel lbUpdateStatus;
+    private javax.swing.JLabel lbWelcome;
+    private javax.swing.JTable tblDM;
+    private javax.swing.JTextField txtUpdateStatus;
+    // End of variables declaration//GEN-END:variables
+
+    
 }
 
