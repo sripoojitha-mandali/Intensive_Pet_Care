@@ -5,7 +5,7 @@
  */
 
 package UserInterface;
-//import IntensivePetCare.DB4oUtil.DB4OUtil;
+import IntensivePetCare.DB4oUtil.DB4OUtil;
 import IntensivePetCare.Ecosystem;
 import IntensivePetCare.UserAccount.UserAccount;
 import java.awt.CardLayout;
@@ -18,11 +18,11 @@ public class MainJFrame extends javax.swing.JFrame {
 
     /** Creates new form MainJFrame */
     private Ecosystem ipcsystem;
-    //private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
+    private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
 
     public MainJFrame() {
         initComponents();
-        //ipcsystem = dB4OUtil.retrieveSystem();
+        ipcsystem = dB4OUtil.retrieveSystem();
         this.setSize(1680, 1050);
     }
 
@@ -43,13 +43,14 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txtpassword = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         container = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
 
-        ControlPanel.setBackground(new java.awt.Color(63, 40, 101));
+        ControlPanel.setBackground(new java.awt.Color(102, 0, 0));
         ControlPanel.setMinimumSize(new java.awt.Dimension(200, 213));
         ControlPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -58,9 +59,8 @@ public class MainJFrame extends javax.swing.JFrame {
                 txtusernameActionPerformed(evt);
             }
         });
-        ControlPanel.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 130, 30));
+        ControlPanel.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 130, 30));
 
-        btnlogin.setBackground(new java.awt.Color(255, 255, 255));
         btnlogin.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btnlogin.setForeground(new java.awt.Color(63, 40, 101));
         btnlogin.setText("LOGIN");
@@ -70,7 +70,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 btnloginActionPerformed(evt);
             }
         });
-        ControlPanel.add(btnlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 80, 30));
+        ControlPanel.add(btnlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 80, 30));
 
         btnlogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logout.png"))); // NOI18N
         btnlogout.setBorder(null);
@@ -82,20 +82,31 @@ public class MainJFrame extends javax.swing.JFrame {
         ControlPanel.add(btnlogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-lock-landscape-30.png"))); // NOI18N
-        ControlPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 30, 30));
-        ControlPanel.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 130, 30));
+        ControlPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 30, 30));
+        ControlPanel.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 130, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-name-30.png"))); // NOI18N
-        ControlPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, 30));
+        ControlPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, 30));
+
+        jLabel3.setFont(new java.awt.Font("Forte", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Login Credentials");
+        ControlPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 150, 40));
 
         jSplitPane1.setLeftComponent(ControlPanel);
 
-        container.setBackground(new java.awt.Color(109, 197, 197));
+        container.setBackground(new java.awt.Color(255, 204, 204));
         container.setLayout(new java.awt.CardLayout());
 
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/doggoooo.gif"))); // NOI18N
-        container.add(jLabel4, "card3");
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img2/v1.jpg"))); // NOI18N
+        jLabel5.setFocusable(false);
+        jLabel5.setMaximumSize(new java.awt.Dimension(800, 600));
+        jLabel5.setMinimumSize(new java.awt.Dimension(800, 600));
+        jLabel5.setPreferredSize(new java.awt.Dimension(800, 600));
+        jLabel5.setRequestFocusEnabled(false);
+        jLabel5.setVerifyInputWhenFocusTarget(false);
+        container.add(jLabel5, "card2");
 
         jSplitPane1.setRightComponent(container);
 
@@ -133,7 +144,7 @@ public class MainJFrame extends javax.swing.JFrame {
         container.add("blank", blankJP);
         CardLayout ipccrdLyt = (CardLayout) container.getLayout();
         ipccrdLyt.next(container);
-        //dB4OUtil.storeSystem(ipcsystem);
+        dB4OUtil.storeSystem(ipcsystem);
         container.setVisible(true);
     }//GEN-LAST:event_btnlogoutActionPerformed
 
@@ -194,7 +205,8 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel container;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JPasswordField txtpassword;
     private javax.swing.JTextField txtusername;

@@ -14,7 +14,7 @@ import javax.swing.JPanel;
  *
  * @author saran
  */
-public class VetRole extends Role{
+public class vetRole extends Role{
     @Override
     public JPanel createWorkArea(JPanel ipcuserProcessContainer, UserAccount ipcaccount, Ecosystem ipcsystem) {
         return new VetWorkarea(ipcuserProcessContainer, ipcsystem);

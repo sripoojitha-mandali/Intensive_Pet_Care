@@ -23,42 +23,39 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="883" max="32767" attributes="0"/>
-          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="lblVetRelief" min="-2" pref="883" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="273" pref="273" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="117" pref="117" max="-2" attributes="0"/>
-                                  <Component id="loadingNumber" min="-2" pref="75" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="loadingprogressBar" min="-2" pref="280" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
                   </Group>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="302" max="-2" attributes="0"/>
+                      <Component id="loadingprogressBar" min="-2" pref="280" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="loadingNumber" min="-2" pref="75" max="-2" attributes="0"/>
+                  </Group>
               </Group>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="605" max="32767" attributes="0"/>
-          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblVetRelief" min="-2" pref="527" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="loadingNumber" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
-                      <Component id="loadingprogressBar" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="loadingprogressBar" min="-2" pref="60" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Component id="loadingNumber" min="-2" pref="31" max="-2" attributes="0"/>
+                  </Group>
               </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="lblVetRelief" min="-2" pref="541" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -83,7 +80,7 @@
           <Font name="Trebuchet MS" size="18" style="0"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Images/Hospital-Administration-Courses.jpeg"/>
+          <Image iconType="3" name="/Images/entry.jpg"/>
         </Property>
       </Properties>
     </Component>
