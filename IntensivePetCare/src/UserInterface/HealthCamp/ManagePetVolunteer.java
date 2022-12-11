@@ -321,10 +321,11 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
             return;
         }
         PetVolunteer petVolunterSelected = (PetVolunteer) tbPetHC.getValueAt(selectedRow, 0);
-        txtPetOwn.setText(petVolunterSelected.getIpcName());
-        txtOrgName.setText(petVolunterSelected.getIpchealthCamp());
         txtPetType.setText(petVolunterSelected.getIpcpetType());
         txtPetUser.setText(petVolunterSelected.getIpcuserName());
+        txtPetOwn.setText(petVolunterSelected.getIpcName());
+        txtOrgName.setText(petVolunterSelected.getIpchealthCamp());
+        
     }//GEN-LAST:event_btnView1ActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -381,22 +382,23 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
 
 public void ipcPopulatePetVolunteerTable() {
         String healthCampName = null;
+        
         for (HealthCamp healthCamp : ipcSystem.getHealthCampDirectory().getHealthCampDirectory()) {
             if (healthCamp.getIpcuserName().equals(ipcAccount.getIpcuserName())) {
                 healthCampName = healthCamp.getIpchealthCampName();
             }
         }
-
         DefaultTableModel tablemodel = (DefaultTableModel) tbPetHC.getModel();
         tablemodel.setRowCount(0);
 
         for (PetVolunteer petVolunteer : ipcSystem.getPetVolunteerDirectory().getPetVolunteerDirectory()) {
             if (petVolunteer.getIpchealthCamp().equals(healthCampName)) {
                 Object[] row = new Object[4];
-                row[0] = petVolunteer;
-                row[2] = petVolunteer.getIpcuserName();
                 row[1] = petVolunteer.getIpcpetType();
                 row[3] = petVolunteer.getIpchealthCamp();
+                row[0] = petVolunteer;
+                row[2] = petVolunteer.getIpcuserName();
+                
 
                 tablemodel.addRow(row);
             }
