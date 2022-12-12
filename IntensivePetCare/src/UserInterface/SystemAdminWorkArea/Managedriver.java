@@ -6,8 +6,6 @@
 package UserInterface.SystemAdminWorkArea;
 import Model.Role.HealthCampRole;
 import Model.Role.DriverRole;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import Model.Ecosystem;
 import Model.Driver.Driver;
 import Model.UserAccount.UserAccount;
@@ -210,8 +208,6 @@ public class Managedriver extends javax.swing.JPanel {
 
     private void btnAdd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdd1ActionPerformed
         // TODO add your handling code here:
-        
-        if(ipcValidateInputFields()){
         if (ipcSystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtUserName.getText())) {
             UserAccount userAccount = ipcSystem.getUserAccountDirectory().createUserAccount(txtName.getText(), txtUserName.getText(), txtPassword.getText(), null, new DriverRole());
             Driver driver = ipcSystem.getDriverDirectory().createUserAccount(txtUserName.getText());
@@ -223,8 +219,6 @@ public class Managedriver extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "Please enter Unique User Name");
         }
-        }
-        
     }//GEN-LAST:event_btnAdd1ActionPerformed
 
     private void btnBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack1ActionPerformed
@@ -246,37 +240,6 @@ public void ipcPopulateDriverTable() {
                 row[2] = user.getIpcpassword();
                 tablemodel.addRow(row);
             }
-        }
-    }
-
-private boolean ipcValidateInputFields() {
-
-        Pattern p2 = Pattern.compile("^[A-Za-z0-9 ]+$");
-        Matcher m2 = p2.matcher(txtName.getText());
-        
-        Pattern p3 = Pattern.compile("^[A-Za-z0-9]+$");
-        Matcher m3 = p3.matcher(txtUserName.getText());
-        
-        Pattern p1 = Pattern.compile("^[A-Za-z0-9]+$");
-        Matcher m1 = p1.matcher(txtPassword.getText());
-        
-        
-        if (!m2.matches()) {
-
-            JOptionPane.showMessageDialog(this, "Please provide correct input for Name!!");
-            return false;
-        } else if (!m3.matches()) {
-
-            JOptionPane.showMessageDialog(this, "Please provide correct input for User Name!!");
-            return false;
-        }
-        else if (!m1.matches()) {
-
-            JOptionPane.showMessageDialog(this, "Please provide a strong Password!!");
-            return false;
-        }
-        else {
-            return true;
         }
     }
 
