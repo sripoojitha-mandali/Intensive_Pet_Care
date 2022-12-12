@@ -76,7 +76,7 @@ public class SponsorWorkArea extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tbSponsorPetOwnerInfo);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 650, 200));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 650, 300));
 
         btnApprove1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         btnApprove1.setForeground(new java.awt.Color(102, 0, 0));
@@ -87,7 +87,7 @@ public class SponsorWorkArea extends javax.swing.JPanel {
                 btnApprove1ActionPerformed(evt);
             }
         });
-        add(btnApprove1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 320, 169, 34));
+        add(btnApprove1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 400, 169, 34));
 
         lbl1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         lbl1.setForeground(new java.awt.Color(102, 0, 0));

@@ -138,7 +138,7 @@ private boolean ipcvalidateInputFields() {
         });
         jScrollPane1.setViewportView(tb1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 590, 120));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 590, 180));
 
         btn1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         btn1.setForeground(new java.awt.Color(153, 0, 51));
@@ -149,7 +149,7 @@ private boolean ipcvalidateInputFields() {
                 btn1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 250, 100, 40));
+        jPanel1.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, 100, 40));
 
         btn2.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         btn2.setForeground(new java.awt.Color(153, 0, 51));
@@ -160,7 +160,7 @@ private boolean ipcvalidateInputFields() {
                 btn2ActionPerformed(evt);
             }
         });
-        jPanel1.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 250, 100, 40));
+        jPanel1.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 260, 100, 40));
 
         btn3.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         btn3.setForeground(new java.awt.Color(153, 0, 51));
@@ -171,7 +171,7 @@ private boolean ipcvalidateInputFields() {
                 btn3ActionPerformed(evt);
             }
         });
-        jPanel1.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 250, 100, 40));
+        jPanel1.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 260, 100, 40));
 
         lb3.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         lb3.setForeground(new java.awt.Color(153, 0, 51));

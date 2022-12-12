@@ -71,7 +71,7 @@ public class ManageVet extends javax.swing.JPanel {
         lb2.setForeground(new java.awt.Color(102, 0, 51));
         lb2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lb2.setText("MANAGE VET");
-        jPanel1.add(lb2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, 227, -1));
+        jPanel1.add(lb2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, 227, -1));
 
         tb1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -94,7 +94,7 @@ public class ManageVet extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tb1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 420, 92));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 420, 180));
 
         btn1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         btn1.setForeground(new java.awt.Color(102, 0, 51));
@@ -105,7 +105,7 @@ public class ManageVet extends javax.swing.JPanel {
                 btn1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 80, 30));
+        jPanel1.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 80, 30));
 
         btn2.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         btn2.setForeground(new java.awt.Color(102, 0, 51));
@@ -116,7 +116,7 @@ public class ManageVet extends javax.swing.JPanel {
                 btn2ActionPerformed(evt);
             }
         });
-        jPanel1.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 260, 90, 30));
+        jPanel1.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, 90, 30));
 
         btn3.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         btn3.setForeground(new java.awt.Color(102, 0, 51));
@@ -127,7 +127,7 @@ public class ManageVet extends javax.swing.JPanel {
                 btn3ActionPerformed(evt);
             }
         });
-        jPanel1.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 260, 90, 30));
+        jPanel1.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, 90, 30));
 
         lb3.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         lb3.setForeground(new java.awt.Color(153, 0, 51));

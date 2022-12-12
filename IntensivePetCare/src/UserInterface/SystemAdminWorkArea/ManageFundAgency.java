@@ -73,7 +73,7 @@ public class ManageFundAgency extends javax.swing.JPanel {
         add(btnBack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 40, 36));
 
         lbl1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        lbl1.setForeground(new java.awt.Color(255, 255, 255));
+        lbl1.setForeground(new java.awt.Color(51, 51, 51));
         lbl1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl1.setText("MANAGE FUND AGENCY");
         add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 310, 50));

@@ -64,7 +64,7 @@ public class FundraiserWorkArea extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tbTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 640, 240));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 640, 320));
 
         btnSponsor.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         btnSponsor.setForeground(new java.awt.Color(153, 0, 51));

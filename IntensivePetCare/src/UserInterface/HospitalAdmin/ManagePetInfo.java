@@ -126,7 +126,7 @@ public class ManagePetInfo extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tb1);
 
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, 640, 170));
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, 640, 180));
 
         btn1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         btn1.setForeground(new java.awt.Color(153, 0, 0));
