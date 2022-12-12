@@ -115,7 +115,7 @@ public class ManageDriver extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tb1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 520, 91));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 520, 130));
 
         btn1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btn1.setForeground(new java.awt.Color(153, 0, 51));
@@ -126,7 +126,7 @@ public class ManageDriver extends javax.swing.JPanel {
                 btn1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 60, 30));
+        jPanel1.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 60, 30));
 
         btn2.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btn2.setForeground(new java.awt.Color(153, 0, 51));
@@ -137,7 +137,7 @@ public class ManageDriver extends javax.swing.JPanel {
                 btn2ActionPerformed(evt);
             }
         });
-        jPanel1.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 150, 110, 30));
+        jPanel1.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, 110, 30));
 
         btn3.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btn3.setForeground(new java.awt.Color(153, 0, 0));
@@ -148,7 +148,7 @@ public class ManageDriver extends javax.swing.JPanel {
                 btn3ActionPerformed(evt);
             }
         });
-        jPanel1.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 150, 80, 30));
+        jPanel1.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 170, 80, 30));
 
         lb2.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         lb2.setForeground(new java.awt.Color(153, 0, 51));

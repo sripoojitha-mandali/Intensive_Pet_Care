@@ -82,7 +82,7 @@ private void ipcPopulateVetTable() {
         ));
         jScrollPane1.setViewportView(tb1);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 770, 170));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 770, 230));
 
         btn1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         btn1.setForeground(new java.awt.Color(63, 40, 101));
@@ -93,7 +93,7 @@ private void ipcPopulateVetTable() {
                 btn1ActionPerformed(evt);
             }
         });
-        add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 230, 40));
+        add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 340, 230, 40));
 
         jPanel1.setBackground(new java.awt.Color(102, 0, 51));
 

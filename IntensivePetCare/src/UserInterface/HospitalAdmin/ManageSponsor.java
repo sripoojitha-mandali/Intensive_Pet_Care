@@ -95,7 +95,7 @@ public class ManageSponsor extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tb1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, -1, 96));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, -1, 180));
 
         lb3.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         lb3.setForeground(new java.awt.Color(153, 0, 51));
@@ -134,7 +134,7 @@ public class ManageSponsor extends javax.swing.JPanel {
                 btn2ActionPerformed(evt);
             }
         });
-        jPanel1.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, 110, 30));
+        jPanel1.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 110, 30));
 
         btn3.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         btn3.setForeground(new java.awt.Color(153, 0, 51));
@@ -145,7 +145,7 @@ public class ManageSponsor extends javax.swing.JPanel {
                 btn3ActionPerformed(evt);
             }
         });
-        jPanel1.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, 110, 30));
+        jPanel1.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 110, 30));
 
         btn1.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         btn1.setForeground(new java.awt.Color(153, 0, 51));
@@ -156,7 +156,7 @@ public class ManageSponsor extends javax.swing.JPanel {
                 btn1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 100, 30));
+        jPanel1.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 100, 30));
 
         btn4.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         btn4.setForeground(new java.awt.Color(63, 40, 101));
@@ -173,7 +173,7 @@ public class ManageSponsor extends javax.swing.JPanel {
         lb2.setForeground(new java.awt.Color(153, 0, 51));
         lb2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lb2.setText("MANAGE SPONSOR");
-        jPanel1.add(lb2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 450, 50));
+        jPanel1.add(lb2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-110, 260, 450, 50));
 
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

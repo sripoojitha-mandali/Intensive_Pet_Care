@@ -69,7 +69,7 @@ public class LabAssistantWorkArea extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tb1);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 730, 170));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 730, 200));
 
         lb3.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         lb3.setForeground(new java.awt.Color(153, 0, 0));
