@@ -31,7 +31,6 @@ The project aim is to enhance and create a better health care services to animal
 
 3.0 Flow of the application
 
-
 	Steps Explanation:
 1.	System admin will create logins for hospital admin, pet volunteer admin, health camp admin, sponsor admin, fundraiser admins, driver admin
 2.	Hospital admin can login into the system and can manage hospital information, manage vet information, manage lab assistant and then logout.
