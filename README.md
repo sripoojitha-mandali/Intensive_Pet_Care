@@ -4,29 +4,37 @@ Design Document, Context and Models
 
 1.0	INTRODUCTION
 
-1.0	 Purpose of this document
+1.0	Purpose of this document
+
 The purpose of this document is to implement the server and client side of Intensive Pet Care Management application
 
 2.0   Definitions and Acronyms
+
 Java Swing: It is a GUI toolkit for Java and is a part of Oracle’s Java classes. It is an API for providing GUI elements to Programs of java.
 Db4o: It is an object database for java
 
 3.0 Project Overview
+
 The project aim is to enhance and create a better health care services to animals by implementing an online system for pet owners where they can enable to register the pets under hospitals and health camps according to their preference and convenience.
 
 4.0 Scope
+
 1. Creation of Java Swing application for Intensive Pet Care system application
 
 5.0 Hardware and Software Requirement
+
 1. Hardware Requirement:
+
 		a. Developer PC 
 2. Software Requirement:
+
 		a. NetBeans software
 		b. Java 18
 		c. db4o jar file
 		d. Java jar files such as AbsoluteLayout.jar, javax.activation, javax.mail, jfreechart
 
 2.0 System Diagram:
+
 ![image](https://user-images.githubusercontent.com/114721139/206951492-b24524ae-77d7-45c0-968b-47d131dfdd4b.png)
 
 3.0 Flow of the application
@@ -46,6 +54,7 @@ The project aim is to enhance and create a better health care services to animal
 12.	Funds raiser volunteer can check the sponsor status
 
 Roles:
+
 1.	System Admin
 2.	Hospital Admin
 3.	Health Camp Admin
@@ -56,13 +65,15 @@ Roles:
 8.	Pet volunteer
 9.	Sponsor
  
- 	Enterprises:
+Enterprises:
+	
 1.	Logistics
 2.	Hospital
 3.	Health Camp
 4.	Fundraiser
 
 Organizations:
+
 1.  Driver system
 2.  Sponsor
 3.  Fundraising agency
