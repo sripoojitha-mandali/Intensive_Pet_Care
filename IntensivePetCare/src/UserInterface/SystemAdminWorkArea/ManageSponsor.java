@@ -220,8 +220,6 @@ public class ManageSponsor extends javax.swing.JPanel {
 
     private void btnSave1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSave1ActionPerformed
         // TODO add your handling code here:
-        
-        if(ipcValidateInputFields()){
         if (ipcSystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtUserName.getText())) {
         UserAccount userAccount = ipcSystem.getUserAccountDirectory().createUserAccount(txtName.getText(), txtUserName.getText(), txtPassword.getText(), null, new SponsorRole());
         Sponsor sponsor = ipcSystem.getSponsorDirectory().createUserAccount(txtUserName.getText());
@@ -230,14 +228,12 @@ public class ManageSponsor extends javax.swing.JPanel {
         txtName.setText("");
         txtPassword.setText("");
         txtUserName.setText("");
-        
-        }
         }
     }//GEN-LAST:event_btnSave1ActionPerformed
 
     private void btnUpdate1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdate1ActionPerformed
         // TODO add your handling code here:
-        if(ipcValidateInputFields()){
+        
         int selectRow = tbSponsors.getSelectedRow();
         if (selectRow >= 0) {
         String name = (String) tbSponsors.getValueAt(selectRow, 0);
@@ -255,7 +251,6 @@ public class ManageSponsor extends javax.swing.JPanel {
         {
             JOptionPane.showMessageDialog(null, "to update the Sponsor details, Please select a row");
         }  
-        }
     }//GEN-LAST:event_btnUpdate1ActionPerformed
       private void ipcPopulateSponsorTable() {
 
@@ -292,30 +287,30 @@ public class ManageSponsor extends javax.swing.JPanel {
     private javax.swing.JTextField txtUserName;
     // End of variables declaration//GEN-END:variables
 
-private boolean ipcValidateInputFields() {
+private boolean validateInputFields() {
 
-        Pattern p2 = Pattern.compile("^[A-Za-z0-9 ]+$");
-        Matcher m2 = p2.matcher(txtName.getText());
+        Pattern p = Pattern.compile("^[A-Za-z0-9 ]+$");
+        Matcher m = p.matcher(txtName.getText());
         
-        Pattern p3 = Pattern.compile("^[A-Za-z0-9]+$");
-        Matcher m3 = p3.matcher(txtUserName.getText());
+        Pattern p7 = Pattern.compile("^[A-Za-z0-9]+$");
+        Matcher m7 = p7.matcher(txtUserName.getText());
         
         Pattern p1 = Pattern.compile("^[A-Za-z0-9]+$");
         Matcher m1 = p1.matcher(txtPassword.getText());
         
         
-        if (!m2.matches()) {
+        if (!m.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Please provide correct input for Name!!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided Name has Error");
             return false;
-        } else if (!m3.matches()) {
+        } else if (!m7.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Please provide correct input for User Name!!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided User Name has Error");
             return false;
         }
         else if (!m1.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Please provide a strong Password!!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided Password has Error");
             return false;
         }
         else {

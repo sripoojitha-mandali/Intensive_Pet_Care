@@ -209,7 +209,6 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
 
     private void btnUpdate1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdate1ActionPerformed
         // TODO add your handling code here:
-        if(ipcValidateInputFields()){
         int selectRow = tbPetVolunteer.getSelectedRow();
         if (selectRow >= 0) {
         String name = (String) tbPetVolunteer.getValueAt(selectRow, 0);
@@ -227,7 +226,6 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
         {
             JOptionPane.showMessageDialog(null, "to update the Pet Volunteer details, Please select a row");
         }  
-        }
     }//GEN-LAST:event_btnUpdate1ActionPerformed
 
     private void btnDelete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelete1ActionPerformed
@@ -252,7 +250,6 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
 
     private void btnSubmit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmit1ActionPerformed
         // TODO add your handling code here:
-        if(ipcValidateInputFields()){
         if (ipcSystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtUserName1.getText())) {
             UserAccount userAccount = ipcSystem.getUserAccountDirectory().createUserAccount(txtName1.getText(), txtUserName1.getText(), txtPassword1.getText(), null, new PetVolunteerRole());
             PetVolunteer petVolunteer = ipcSystem.getPetVolunteerDirectory().createUserAccount(txtUserName1.getText());
@@ -262,7 +259,6 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
             txtPassword1.setText("");
         } else {
             JOptionPane.showMessageDialog(null, "Please enter Unique User Name");
-        }
         }
     }//GEN-LAST:event_btnSubmit1ActionPerformed
 
@@ -301,30 +297,30 @@ public class ManagePetVolunteer extends javax.swing.JPanel {
     private javax.swing.JTextField txtUserName1;
     // End of variables declaration//GEN-END:variables
 
-private boolean ipcValidateInputFields() {
+private boolean validateInputFields() {
 
-        Pattern p2 = Pattern.compile("^[A-Za-z0-9 ]+$");
-        Matcher m2 = p2.matcher(txtName1.getText());
+        Pattern p = Pattern.compile("^[A-Za-z0-9 ]+$");
+        Matcher m = p.matcher(txtName1.getText());
         
-        Pattern p3 = Pattern.compile("^[A-Za-z0-9]+$");
-        Matcher m3 = p3.matcher(txtUserName1.getText());
+        Pattern p7 = Pattern.compile("^[A-Za-z0-9]+$");
+        Matcher m7 = p7.matcher(txtUserName1.getText());
         
         Pattern p1 = Pattern.compile("^[A-Za-z0-9]+$");
         Matcher m1 = p1.matcher(txtPassword1.getText());
         
         
-        if (!m2.matches()) {
+        if (!m.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Please provide correct input for Name!!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided Name has Error");
             return false;
-        } else if (!m3.matches()) {
+        } else if (!m7.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Please provide correct input for User Name!!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided User Name has Error");
             return false;
         }
         else if (!m1.matches()) {
 
-            JOptionPane.showMessageDialog(this, "Please provide a strong Password!!");
+            JOptionPane.showMessageDialog(this, "Please Try Again! Provided Password has Error");
             return false;
         }
         else {
