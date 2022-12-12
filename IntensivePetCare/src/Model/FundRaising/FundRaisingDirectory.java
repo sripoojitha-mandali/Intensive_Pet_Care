@@ -45,7 +45,7 @@ public class FundRaisingDirectory {
     public void updateFundRaisingInfo(FundRaising fundRaising, String ipcpetOwner, String ipcpetType, String ipchealthCamp, String ipchospitalName) {
 //        fundRaising.setHealthCamp(healthCamp);
         fundRaising.setIpcpetOwner(ipcpetOwner);
-        fundRaising.setIpcuserName(ipcpetType);
+        fundRaising.setIpcpetType(ipcpetType);
         fundRaising.setIpchealthCamp(ipchealthCamp);
 //        fundRaising.setSponsor(sponsor);
         fundRaising.setIpchospitalName(ipchospitalName);
