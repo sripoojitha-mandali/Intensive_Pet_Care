@@ -71,6 +71,45 @@ Organizations:
 7.  Health Camp
 8.  Lab
 
+Model:
+
+Driver class:
+
+![image](https://user-images.githubusercontent.com/114721139/206952469-a2fe1c7f-43c9-4c19-b380-e7846ae75d12.png)
+
+Fund Raising class:
+
+![image](https://user-images.githubusercontent.com/114721139/206952498-58a05c0c-c6ce-4880-aec8-112b58987548.png)
+
+Health Camp class:
+
+![image](https://user-images.githubusercontent.com/114721139/206952548-d270e51b-50db-43b1-b683-eac92d580b48.png)
+
+Hospital class:
+
+![image](https://user-images.githubusercontent.com/114721139/206952572-e42edc35-ed6f-4f43-9b1b-203c921579c3.png)
+
+
+Lab Assistant class:
+
+![image](https://user-images.githubusercontent.com/114721139/206952597-ddc37be3-3652-4a21-abbd-86ce740e2eee.png)
+
+
+Person class::
+
+![image](https://user-images.githubusercontent.com/114721139/206952620-a43a0b72-e8c4-41e6-aa6e-4bd98cf54562.png)
+
+Pet Volunteer class:
+
+![image](https://user-images.githubusercontent.com/114721139/206952649-de94dcdb-e397-4ded-83ae-97a5b27499cd.png)
+
+Sponsor class:
+
+![image](https://user-images.githubusercontent.com/114721139/206952666-4fc97e88-d804-44e8-9e1f-296f8d19f225.png)
+
+Vet class::
+
+![image](https://user-images.githubusercontent.com/114721139/206952716-ad6cea59-2f86-48a3-bced-ec630de09ab6.png)
 
 Class Diagram:
 ![Class Diagram](https://user-images.githubusercontent.com/114721139/206950356-fec90464-1f89-4c4d-b0d0-0bfccb99706c.png)
@@ -112,7 +151,6 @@ Vet Admin:
 Lab Assistant:
 
 <img width="314" alt="image" src="https://user-images.githubusercontent.com/114721139/206951236-58a65506-5189-49ca-bca3-1ad1a5bb2090.png">
-
 
 
 
